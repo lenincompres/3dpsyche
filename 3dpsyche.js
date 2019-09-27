@@ -12,18 +12,6 @@ const [COS30, SIN30] = [Math.cos(Math.PI / 6), Math.sin(Math.PI / 6)];
 
 // Auxiliary particular
 
-let drawBox = (radius = 40, colour = [128, 128, 128], alpha = 1, inside = true) => {
-  let [x, y] = [radius * COS30, radius * SIN30];
-  alpha *= 255;
-  if (inside) rotate(PI);
-  fill(...colour.plus(32), alpha);
-  quad(0, 0, x, -y, 0, -radius, -x, -y);
-  fill(...colour, alpha);
-  quad(0, 0, 0, radius, -x, y, -x, -y);
-  fill(...colour.plus(-32), alpha);
-  quad(0, 0, x, -y, x, y, 0, radius);
-  if (inside) rotate(PI);
-}
 Number.prototype.toCode = function (base) {
   let code = '' + floor(this / 9) % 3 + floor(this / 3) % 3 + this % 3;
   if (base) code = code.toCoords().plus(base.toCoords()).map(o => o % 3).join('');
@@ -53,6 +41,10 @@ Array.prototype.toHexShade = function () {
 
 // Auxiliary general
 
+String.prototype.toRGB = function () {
+  return /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(this)
+    .filter((v, i) => i > 0 && 1 < 4).map(v => parseInt(v, 16));
+}
 Array.prototype.populate = function (generator) {
   return this.fill().map((n, i) => generator(i));
 }
@@ -75,6 +67,7 @@ function setup() {
   stateCode = CENTERCODE;
   display = CUBE;
   lang = ENG;
+  ref = null;
   // querystring
   var args = location.search.substring(1);
   if (args) {
@@ -85,6 +78,7 @@ function setup() {
       display = STATE; // if state is passed but display is not, it assumes display is STATE
     }
     if (args.display) display = args.display;
+    if (args.ref) ref = args.ref;
   }
   // css
   let style = document.body.style;
@@ -107,6 +101,7 @@ function setup() {
       break;
     case CUBE:
       states = Array(27).populate(i => State(stateCode, i, true)).sort(s => s.tier);
+      if (ref) states.forEach(s => s.setRef(ref));
       nextPost = 1;
       changePost = false;
       setTimeout(() => changePost = true, 1000 * WAIT);
@@ -189,6 +184,7 @@ function State(centerCode = CENTERCODE, index = null, animate = false, wording, 
     tier: tier,
     hex: code.toHexShade(),
     info: symbolInfo[code],
+    value: 1,
     icon: [symbolSprite, -iconSize * 0.5, -iconSize * 0.5, iconSize, iconSize, (ordinal % 3) * grid, floor(ordinal / 3) * grid, grid, grid]
   }
 
@@ -200,14 +196,14 @@ function State(centerCode = CENTERCODE, index = null, animate = false, wording, 
     noStroke();
     translate(...state.coords);
     // base
-    drawBox(radius, colour, 0.86);
+    drawBox(radius, colour, 0.86 * state.value);
     // icon
-    tint(...colour);
+    tint(...colour, Math.pow(state.value, 2) * 255);
     image(...state.icon);
     // top
-    drawBox(radius, colour, 0.34, false);
+    drawBox(radius, colour, 0.34 * state.value >> 1, false);
     // desc
-    fill(0);
+    fill(0, state.value * 255);
     textAlign(CENTER, CENTER);
     textSize(radius * 0.25);
     text(state.text, 0, radius * 0.5);
@@ -215,6 +211,34 @@ function State(centerCode = CENTERCODE, index = null, animate = false, wording, 
   }
 
   state.isNear = () => inCoords.filter(v => v === 1).length >= 2;
+
+  state.setRef = hexRef => {
+    var distFactor = 1.05444; // normalize the center 0.5 / getDistance('2a80d5','808080');
+    state.value = 1 - distFactor * getDistance(hexRef, code.toHexShade(), true);
+    var eValue = 1 - distFactor * getDistance(hexRef, code.toHexShade());
+    state.text =  round(100 * state.value) + "%" + (eValue < state.value ? "*" : "");
+  }
+
+  let drawBox = (radius = 40, colour = [128, 128, 128], alpha = 1, inside = true) => {
+    let [x, y] = [radius * COS30, radius * SIN30];
+    alpha *= 255;
+    if (inside) rotate(PI);
+    fill(...colour.plus(32), alpha);
+    quad(0, 0, x, -y, 0, -radius, -x, -y);
+    fill(...colour, alpha);
+    quad(0, 0, 0, radius, -x, y, -x, -y);
+    fill(...colour.plus(-32), alpha);
+    quad(0, 0, x, -y, x, y, 0, radius);
+    if (inside) rotate(PI);
+  }
+  let getDistance = (hex1, hex2, closerCycle = false) => {
+    var [p1, p2] = [hex1.toRGB().map(v => v / 255), hex2.toRGB().map(v => v / 255)];
+    if (closerCycle) p1 = p1.map((v, i) => {
+      let d = v - p2[i];
+      return abs(d) <= 0.5 ? v : abs(d + 1) < abs(d - 1) ? v + 1 : v - 1;
+    });
+    return dist(...p2, ...p1);
+  };
 
   return state;
 
