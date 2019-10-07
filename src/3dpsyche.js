@@ -11,7 +11,7 @@ const RADIUS = 40;
 // p5 core
 
 function preload() {
-  symbolSprite = loadImage('symbolsprite18.png');
+  symbolSprite = loadImage('assets/symbolsprite18.png');
   symbolInfo = loadJSON('states.json');
 }
 
