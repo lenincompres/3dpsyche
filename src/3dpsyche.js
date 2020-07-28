@@ -8,6 +8,12 @@ const WAIT = 4; //second beteen posts
 const GRID = 36;
 const RADIUS = 40;
 
+
+var stateCode;
+var displayMode ;
+var lang;
+var ref; // this is where the test result values should be
+
 // p5 core
 
 function preload() {
@@ -18,7 +24,7 @@ function preload() {
 function setup() {
   // settings
   stateCode = CENTERCODE;
-  display = CUBE;
+  displayMode = CUBE;
   lang = ENG;
   ref = null;
   // querystring
@@ -28,9 +34,9 @@ function setup() {
     if (args.lang) lang = args.lang;
     if (args.state) {
       stateCode = args.state;
-      display = STATE; // if state is passed but display is not, it assumes display is STATE
+      displayMode = STATE; // if state is passed but display is not, it assumes display is STATE
     }
-    if (args.display) display = args.display;
+    if (args.display) displayMode = args.display;
     if (args.ref) ref = args.ref;
   }
   // css
@@ -43,7 +49,7 @@ function setup() {
   center = [width * 0.5, height * 0.5];
   // creating states
   translate(...center);
-  switch (display) {
+  switch (displayMode) {
     case STATE:
       states = [State(stateCode)];
       states[0].draw();
@@ -64,7 +70,7 @@ function setup() {
 }
 
 function draw() {
-  if (display === CUBE) {
+  if (displayMode === CUBE) {
     clear();
     translate(...center);
     states.forEach(s => s.draw());
@@ -82,7 +88,7 @@ function draw() {
 
 function mouseMoved() {
   if (!canvas) return;
-  isHover = !!parseInt(canvas.get(mouseX, mouseY).join(''));
+  isHover = !!parseInt(canvas.get(mouseX, mouseY).join(''));  // any pixel color under the mouse
   cursor(isHover ? HAND : ARROW);
 }
 
@@ -103,28 +109,28 @@ function drawSign() {
   textSize(RADIUS * 0.5);
   switch (currentPost) {
     case 0:
-      if (nextPost === 1) text('The 3D Pscyhe', 0, y);
+      if (nextPost === 1) text(lang === ESP ? 'La Psiquis en 3D' : 'The 3D Pscyhe', 0, y);
       break;
     case 1:
-      text('Objectives', -x, y);
-      text('Empathy', 0, y);
-      text('Values', x, y);
+      text(lang === ESP ? 'Objetivos' : 'Objectives', -x, y);
+      text(lang === ESP ? 'Expresiones' : 'Expresions', 0, y);
+      text(lang === ESP ? 'Valores' : 'Values', x, y);
       break;
     case 2:
-      text('Actions', -x, y);
-      text('Senses', 0, y);
-      text('Abstraction', x, y);
+      text(lang === ESP ? 'Acciones' : 'Actions', -x, y);
+      text(lang === ESP ? 'Sentidos' : 'Senses', 0, y);
+      text(lang === ESP ? 'Abstracciones' : 'Abstractions', x, y);
       break;
     case 3:
-      text('Instincts', -x * 1.18, y);
-      text('Notions', 0, y);
-      text('Rules', x * 1.18, y);
+      text(lang === ESP ? 'Instintos' : 'Instincts', -x * 1.18, y);
+      text(lang === ESP ? 'Nociones' : 'Notions', 0, y);
+      text(lang === ESP ? 'Reglas' : 'Rules', x * 1.18, y);
       break;
     case 4:
-      text('Core', -x * 1.28, y);
-      text('Extreme\nNeutral', 0, y * 1.1);
+      text(lang === ESP ? 'Base' : 'Core', -x * 1.28, y);
+      text(lang === ESP ? 'Extremo\nNeutro' : 'Extreme\nNeutral', 0, y * 1.1);
       line(-x * 0.25, y * 1.1, x * 0.25, y * 1.1);
-      text('Top', x * 1.28, y);
+      text(lang === ESP ? 'Tope' : 'Top', x * 1.28, y);
       break;
   }
 }

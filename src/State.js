@@ -56,12 +56,12 @@ function State(centerCode = CENTERCODE, index = null, animate = false, wording, 
     noStroke();
     translate(...state.coords);
     // base
-    drawBox(radius, colour, 0.86 * state.value);
+    drawBox(radius, colour, 0.86 * pow(state.value, 3));
     // icon
     tint(...colour, pow(state.value, 2) * 255);
     image(...state.icon);
     // top
-    drawBox(radius, colour, 0.34 * pow(state.value, 4), false);
+    drawBox(radius, colour, 0.34 * pow(state.value, 3), false);
     // desc
     fill(0, state.value * 255);
     textAlign(CENTER, CENTER);

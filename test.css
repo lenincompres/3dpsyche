@@ -1,0 +1,240 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 1em;
+  background-color: #111;
+  max-width: 600px;
+  margin: 0 auto 2em;
+  line-height: 1.34em;
+  color: #fff;
+}
+
+p {
+  font-size: 0.86em;
+  margin: 0 2em 0;
+}
+
+b{
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 1.34em;
+  margin: 1.5em 2em 0;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.17em;
+  margin: 1.5em 2em 0;
+  text-align: center;
+}
+
+main h1 {
+  font-size: 1.17em;
+  margin: 1em 0 0;
+  background: #ccc;
+  padding: 0.68em 0.68em 0.34em;
+  color: black;
+  text-align: left;
+}
+
+.answer {
+  background-color: white;
+  margin: 1px 0;
+  padding: 0.68em 0.68em 0.68em 1.34em;
+  position: relative;
+  color: black;
+}
+
+.answer p {
+  font-size: 1em;
+  display: inline-block;
+  margin: 0;
+  width: 68%;
+}
+
+.answer p i {
+  display: block;
+  font-size: 0.68em;
+  margin: 0 1em;
+}
+
+.answer input {
+  display: inline-block;
+  width: 30%;
+}
+
+.answer .hint {
+  color: gray;
+  visibility: hidden;
+  pointer-events: none;
+  font-size: 0.68em;
+  margin: 0.68em 2em;
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: right;
+  width: 10em;
+}
+
+.answer:hover .hint {
+  visibility: visible;
+  color: black;
+}
+
+.answer .hint:after {
+  content: "%";
+}
+
+footer canvas{
+display: block;
+ margin: 0 auto;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+}

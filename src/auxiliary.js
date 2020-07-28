@@ -1,4 +1,4 @@
-// Auxiliary general
+/* -------------------------- // Auxiliary general -------------------------- */
 
 String.prototype.toRGB = function () {
   return /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(this)
@@ -13,8 +13,11 @@ Array.prototype.plus = function (arr) {
 Array.prototype.minus = function (arr) {
   return this.plus(typeof arr === 'number' ? -arr : arr.map(v => -v))
 };
+Array.prototype.times = function (arr) {
+  return this.map((v, i) => v * (typeof arr === 'number' ? arr : arr[i % arr.length]))
+};
 
-// Auxiliary particular
+/* ------------------------- // Auxiliary particular ------------------------ */
 
 const SHADES = ['2a', '80', 'd5'];
 
@@ -69,4 +72,22 @@ function drawBox(radius = 40, colour = [128, 128, 128], alpha = 1, inside = true
   fill(...colour.plus(-32), alpha);
   quad(0, 0, x, -y, x, y, 0, radius);
   if (inside) rotate(PI);
+}
+
+// for p5
+
+function domify(obj, name = 'div') {
+  elt = createElement(name);
+  Object.keys(obj).forEach(key => {
+    keys = key.split('_');
+    var tag = keys.shift();
+    if(!tag) tag = 'div';
+    elt.child(createElement(tag, obj[key]));
+    keys.forEach(k => elt.addClass(k));
+  });
+  return elt;
+}
+
+function hexColor(colour){
+  return '' + hex(round(red(colour)),2) + hex(round(green(colour)),2) + hex(round(blue(colour)),2);
 }
