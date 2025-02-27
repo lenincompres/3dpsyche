@@ -92,16 +92,17 @@ DOM.set({
   fontSize: `16px`,
   overflowX: `hidden`,
 
-  nav: {
-    textAlign: `right`,
-    padding: `0.5em 1em`,
-    menu: {
-      a: Copy.getToggleLink(),
-    },
-  },
 
   header: {
-    background: rgb ? undefined : `linear-gradient(to bottom, #fff0 0%, ${STYLE.lightScreen} 100%)`,
+    background: rgb ? undefined : `linear-gradient(to bottom, #0009 0%, ${STYLE.lightScreen} 100%)`,
+    paddingBottom: '2em',
+    nav: {
+      textAlign: `right`,
+      padding: `0.5em 1em`,
+      menu: {
+        a: Copy.getToggleLink(),
+      },
+    },
     h1: {
       a: {
         href: `.`,
@@ -139,6 +140,7 @@ DOM.set({
   footer: {
     display: rgb ? undefined : questionnaire._qCounter.as(n => n > qTotal ? 'block' : 'none'),
     backgroundColor: rgb ? rgb : results._feature,
+    background: 'linear-gradient(#8880 0%, #8880 70%, #000a 100%)',
     a: {
       name: 'q14',
     },
@@ -226,7 +228,7 @@ DOM.set({
         es: 'Siguiente',
       }),
     }),
-    background:`linear-gradient(to bottom, #fff8 0%, #8880 15%, #8880 85%, #0006 100%)`,
+    background: `linear-gradient(to bottom, #0000 0%, #0000 85%, #000c 100%)`,
     backgroundColor: questionnaire._qCounter.as({
       [-3]: '#000a',
       [-1]: '#000a',
