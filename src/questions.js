@@ -143,7 +143,7 @@ export default [{
         }),
         hint: Copy.text({
           en: "setting, presentation, company",
-          es: "entorno, presentación, empresa",
+          es: "entorno, presentación, compañía",
         }),
       }
     ]
