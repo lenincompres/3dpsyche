@@ -790,8 +790,8 @@ export default {
             es: "la pasión",
         },
         archetype: {
-            en: "artist",
-            es: "artista",
+            en: "artisan",
+            es: "artesano",
         },
         field: {
             en: "artistry",

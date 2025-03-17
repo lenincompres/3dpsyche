@@ -58,8 +58,8 @@ export default [{
           es: "Conocimiento",
         }),
         hint: Copy.text({
-          en: "records, stats, strategies",
-          es: "registros, estadísticas, estrategias",
+          en: "rules, stats, strategies",
+          es: "reglas, estadísticas, estrategias",
         }),
       },
       {
