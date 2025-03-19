@@ -286,8 +286,8 @@ export default [{
         es: "Tareas prácticas",
       }),
       hint: Copy.text({
-        en: "fix/make, work out, organize",
-        es: "arreglar/hacer, resolver, organizar",
+        en: "fix, work out, organize",
+        es: "reparar, ejercitarte, organizar",
       }),
     }]
   }, {
@@ -419,8 +419,8 @@ export default [{
           es: "Inquisitivo/a",
         }),
         hint: Copy.text({
-          en: "Look to understand and clarify",
-          es: "Buscas discernir y aclarar.",
+          en: "Look to question and clarify",
+          es: "Buscas cuestionar y aclarar.",
         }),
       },
       {
