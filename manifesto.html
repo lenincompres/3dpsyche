@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="lib/p5.js"></script>
+  <script src="lib/DOM.js"></script>
+  <script src="src/components/Cube.js" type="module"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KJ3YLQR8GT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-KJ3YLQR8GT');
+  </script>
+
+  <title>3D Psyche Manifesto</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      line-height: 1.5;
+      max-width: 800px;
+      margin: auto;
+      padding: 2em;
+    }
+
+    h1 {
+      margin-bottom: 0;
+    }
+
+    h2 {
+      margin-top: 1.5em;
+    }
+
+    table {
+      border-collapse: collapse;
+      margin: 1em 0;
+      width: 100%;
+    }
+
+    th,
+    td {
+      border: 1px solid #ccc;
+      padding: 0.5em;
+      text-align: left;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>The 3D Psyche Manifesto</h1>
+    <p><strong>Mapping the Dimensions of the Mind through of Observation, Execution, and Detachment</strong></p>
+    <p>Created by <a href="http://www.lenino.net">Lenin Comprés</a></p>
+  </header>
+
+  <main>
+    <p5-cube id="cube">
+      <script defer>
+        window.cube.stateClick = state => state && state.code && (window.location.href = "./?rgb=" + state.code.codeToHex());
+      </script>
+    </p5-cube>
+    <h2>1. A Rediscovery Hidden in Plain Sight</h2>
+    <p>The 3D Psyche model is not just a new psychological tool—it is the rediscovery of a truth humanity has always
+      intuited: that we are shaped by body, mind, and heart; by action, thought, and feeling; by the dynamic interplay
+      between engagement and redirection, attention and intention, presence and absence.</p>
+    <p>This model reclaims that trinity through a clean, visual, and dimensional structure:</p>
+    <ul>
+      <li style="color:red"><strong>Physical</strong> (X-axis, Red)</li>
+      <li style="color:green"><strong>Rational</strong> (Y-axis, Green)</li>
+      <li style="color:blue"><strong>Emotional</strong> (Z-axis, Blue)</li>
+    </ul>
+    <p>Each dimension operates through three functions:</p>
+    <ul>
+      <li style="color:#000"><strong>Detachment (–)</strong> – redirecting, releasing, disengaging, absenting (Base, Dark)</li>
+      <li style="color:#555"><strong>Observation (O)</strong> – perceiving, opening, sensing, receiving (Center, Gray)</li>
+      <li style="color:#888"><strong>Execution (X)</strong> – acting, determining, judging, engaging (Top, Light)</li>
+    </ul>
+    <p>Nine functions form a 3×3 cube of the psyche—a shape of 27 states that is symmetrical, navigable, and visually
+      intuitive.</p>
+
+    <h2>2. What Jung Observed—A Flattened View of the Cube</h2>
+    <p>Carl Jung intuited the need for structure. His four psychological functions—Sensing, Intuition, Thinking,
+      Feeling—and his Introversion/Extroversion axis were an attempt to map the mind’s complex geography.</p>
+    <p>Yet Jung himself struggled with key pieces:</p>
+    <ul>
+      <li>He found Intuition difficult to define, caught between imagination and insight.</li>
+      <li>He treated Judging (Thinking/Feeling) and Perceiving (Sensing/Intuition) as polarities, yet left out the body
+        as
+        a decision-maker.</li>
+      <li>What he called Perceiving aligns with what 3D Psyche reframes as Observation—a mode of sensing and receiving
+        across dimensions.</li>
+      <li>What he called Judging aligns with Execution, though limited to logic and value, without accounting for bodily
+        action or instinctual drive.</li>
+      <li>His Introversion/Extroversion axis wavered in definition—was it orientation of energy? Function? Attitude?
+      </li>
+    </ul>
+    <p>The 3D Psyche does not discard Jung—it completes him.</p>
+    <p>While Jung’s model introduced psychological structure, it was built upon binary oppositions. The 3D Psyche
+      introduces depth and spectrum to this flattened logic. It reveals not just opposites, but dimensions—layers of
+      perception, intention, and redirection unfolding across body, mind, and heart.</p>
+    <ul>
+      <li>Intuition is split into <em>Conception</em> (Rational Observation) and <em>Inspiration</em> (Emotional
+        Observation), restoring clarity.</li>
+      <li>Judging is expanded to include <em>Physical Execution</em>—the will to act or react, even before filtering
+        with
+        thought or feelings.</li>
+      <li>Introversion emerges at the junction of Execution and Detachment—the absence of Observation.</li>
+    </ul>
+    <p>Rather than boxing a person as "an introvert," 3D Psyche asks: <em>Where are you focused? What are you taking in,
+        acting on, or letting go of?</em></p>
+
+    <h2>3. What Freud Was Looking At—From the Other Side</h2>
+    <p>Freud offered another triad: Id, Ego, Superego. Though useful, his structure was stacked vertically and laden
+      with
+      moral tension—primitive vs. ideal, desire vs. conscience.</p>
+    <p>Yet seen through the 3D Psyche, Freud’s trinity reveals itself as a complementary axis:</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Freud’s Concept</th>
+          <th>3D Psyche Equivalent (Inverted Axis)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Id</td>
+          <td>Sensuality: Emotional & Physical (absence of reason)</td>
+        </tr>
+        <tr>
+          <td>Ego</td>
+          <td>Materiality: Physical & Rational (absence of emotion)</td>
+        </tr>
+        <tr>
+          <td>Superego</td>
+          <td>Morality: Rational & Emotional (absence of body)</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>These are the complementary axes of the psyche—like CMY to RGB. They emerge not as psychological parts to be at
+      war, but as alternative harmonics of dimensional focus.</p>
+    <p>
+      Freud and Jung were each viewing a different face of the same cube. Jung constructed a flattened system of
+      binaries
+      from the bottom up, while Freud deconstructed a multidimensional psyche from the top down. Now, with the 3D
+      Psyche,
+      the full shape rotates into view—revealing not just contrasting surfaces, but the internal space between them.
+    </p>
+
+    <h2>4. A Language of Symbols and Space</h2>
+    <p>Rather than flattening identity into acronyms (e.g. MBTI: INFP, ESTJ), the 3D Psyche offers symbolic coordinates:
+    </p>
+    <ul>
+      <li><strong>O</strong>: Observe (Open/Perceiving)—let it in</li>
+      <li><strong>X</strong>: Execute (Determined/Judging)—act on it</li>
+      <li><strong>–</strong>: Detach (Absent/Redirecting)—pull back from it</li>
+    </ul>
+    <p>These symbols carry structural meaning:</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Symbol</th>
+          <th>Mode</th>
+          <th>Core Energy</th>
+          <th>Openness State</th>
+          <th>Function Essence</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>O</td>
+          <td>Observation</td>
+          <td>Receptive</td>
+          <td>Open</td>
+          <td>Perceiving, allowing, attuning</td>
+        </tr>
+        <tr>
+          <td>X</td>
+          <td>Execution</td>
+          <td>Assertive</td>
+          <td>Closed (Decided)</td>
+          <td>Determining, finalizing, engaging</td>
+        </tr>
+        <tr>
+          <td>–</td>
+          <td>Detachment</td>
+          <td>Releasing</td>
+          <td>Closed (Absent)</td>
+          <td>Redirecting, pausing, withholding</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Mapped across Physical, Rational, and Emotional axes, each state of the psyche becomes a three-letter coordinate.
+    </p>
+    <p>This is not a personality type—it is a profile of focus. It invites reflection, not categorization. It is a tool
+      for mapping change, understanding flow, imbalance, and potential.</p>
+
+    <h2>5. Why Now? Why This?</h2>
+    <p>In a world of distraction and binary simplification, the 3D Psyche offers:</p>
+    <ul>
+      <li>Clarity without reduction</li>
+      <li>Complexity without confusion</li>
+      <li>A visual grammar for understanding how we think, feel, and act—not in isolation, but in relation.</li>
+    </ul>
+    <p>It echoes ancient systems—Doshas, Enneagrams, Elemental Trinities—but offers a modern, visual interface ready for
+      coaching, education, therapy, storytelling, and self-discovery.</p>
+
+    <h2>Manifesto Close: The Invitation</h2>
+    <p>This is not a personality type.</p>
+    <p>It is not a diagnosis. It is not a score.</p>
+    <p>It is a dimensional mirror. A tool for navigating your inner terrain. A compass, not a label.</p>
+    <p><strong>Trace your coordinates. Find the shape of your psyche. Explore the body-mind-heart space you were born to
+        navigate through.</strong></p>
+  </main>
+
+  <footer>
+    <ul>
+      <li><a href="./">Toma el test</a></li>
+      <li><a href="dossier3DPsyche.pdf">Dossier Educacional</a></li>
+    </ul>
+    <p>&copy; 2024 Lenin Comprés. All rights reserved.</p>
+  </footer>
+
+</body>
+
+</html>

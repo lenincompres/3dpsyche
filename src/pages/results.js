@@ -1,5 +1,4 @@
 import Bar from '../components/Bar.js';
-import State from "../classes/State.js";
 import STATES from "../states.js";
 import * as style from "../style.js";
 import * as AUX from "../../lib/auxiliary.js";
@@ -9,12 +8,12 @@ import {
   colorBullet
 } from "../../lib/auxiliary.js";
 import StateElement from '../components/StateElement.js';
-import CubeSection from '../components/Cube.js';
+import * as global from "../global.js";
+import * as questionnaire from "./questionnaire.js";
 
 export const _mbti = new Binder('- - - -');
 export const _feature = new Binder('#808080');
 export const _copy = new Binder();
-const _cubeState = new Binder();
 
 const bars = {
   e: new Bar('Extro/Intro', '6em', 'gray', true),
@@ -43,20 +42,20 @@ Copy.add({
     es: 'Emocionalmente',
   },
   relaxed: {
-    en: 'relaxed',
-    es: 'relajado',
+    en: 'detached',
+    es: 'desapegado',
   },
   flexible: {
-    en: 'flexible',
-    es: 'flexible',
+    en: 'observant',
+    es: 'observante',
   },
   intense: {
-    en: 'intense',
-    es: 'intenso',
+    en: 'executive',
+    es: 'ejecutivo',
   },
   disconnected: {
     en: 'disconnected',
-    es: 'desconectado',
+    es: 'desapegado',
   },
   perceptible: {
     en: 'perceptible',
@@ -101,8 +100,8 @@ const INTROS = [
   ],
   [
     Copy.text({
-      en: 'emotional detachment can make it eccentric and insensitive',
-      es: 'el desapego emocional lo puede hacer excéntrico e insensible',
+      en: 'emotional detachment can make it eccentric and apathetic',
+      es: 'el desapego emocional lo puede hacer excéntrico y apático',
     }),
     undefined,
     Copy.text({
@@ -133,17 +132,14 @@ const TENDECIES = [
 
 const level = (d, i) => {
   const vals = ['2a', '80', 'd5'];
-  const blank = colorBullet(`transparent`);
+  const icons = ['-', 'o', 'x'];
+  const blank = colorBullet(`transparent`, ' ');
   let bullet = [
-    colorBullet(`#${vals[i]}0000`),
-    colorBullet(`#00${vals[i]}00`),
-    colorBullet(`#0000${vals[i]}`),
+    colorBullet(`#${vals[i]}0000`, icons[i]),
+    colorBullet(`#00${vals[i]}00`, icons[i]),
+    colorBullet(`#0000${vals[i]}`, icons[i]),
   ][d];
-  bullet = [
-    `${bullet}${blank}${blank}`,
-    `${blank}${bullet}${blank}`,
-    `${blank}${blank}${bullet}`,
-  ][i];
+  bullet = [bullet, bullet, bullet][i];
   const dimension = [Copy.at.physically, Copy.at.rationally, Copy.at.emotionally][d];
   const level = [Copy.at.relaxed, Copy.at.flexible, Copy.at.intense][i];
   return {
@@ -197,7 +193,7 @@ export const model = {
       text: _copy.as(copy => copy.at.archetype),
     },
     /**
-     * The best concept to define the focus of this state is responsibility. It is the state of determination and duty. It represents a psyche that is physically, rationally and emotionally tense. In it we are prepared to act towards a predetermined goal. We have no time for banalities, and feel deeply involved, pro or con, with everything. It is not really socially extroverted, but socially committed.
+     * The best concept to define the focus of this state is responsibility. It is the state of execution and duty. It represents a psyche that is physically, rationally and emotionally tense. In it we are prepared to act towards a predetermined goal. We have no time for banalities, and feel deeply involved, pro or con, with everything. It is not really socially extroverted, but socially committed.
 
 By definition, this is the state of focus in action, regulation and valuation. Its main properties are bringing principles to action, order to passions, and value to industry. This defines our ability to carry on our ideals with conviction and sense of duty.
 
@@ -221,7 +217,7 @@ People that are strongly imperial like to analyze things thoroughly, but are pas
     section: _copy.as(copy => ({
       p: Copy.text({
         en: `The ${copy.at.tone} (${copy.at.colour}) color is ${copy.at.adjective}; a psyche focused on ${copy.at.concept} as an archetypical ${copy.at.archetype}. It fits comfortably at ${copy.at.location} (${copy.at.map}).`,
-        es: `El color ${copy.at.tone} (${copy.at.colour}) es ${copy.at.adjective}; una psiquis enfocada en ${copy.at.concept}. Como su arquetipo de ${copy.at.archetype}, se manifiesta a gusto en ${copy.at.location} (${copy.at.map}).`,
+        es: `El color ${copy.at.tone} (${copy.at.colour}) es ${copy.at.adjective}; una psique enfocada en ${copy.at.concept}. Como su arquetipo de ${copy.at.archetype}, se manifiesta a gusto en ${copy.at.location} (${copy.at.map}).`,
       })
     })),
     ul: _feature.as(v => ({
@@ -237,10 +233,10 @@ People that are strongly imperial like to analyze things thoroughly, but are pas
         let s = ext === 1 ? '' : 's';
         let only = ext === 1 ? Copy.at.only : '';
         let intros = code.map((n, i) => INTROS[i][n]).filter(n => n);
-        intros[intros.length-1] = Copy.at.and + ' ' + intros[intros.length-1];
+        intros[intros.length - 1] = Copy.at.and + ' ' + intros[intros.length - 1];
         return Copy.text({
-          en: `The levels or coordinates in the three dimensions of the psyche could be ${Copy.at.relaxed}, ${Copy.at.flexible} or ${Copy.at.intense}. The middle level (${Copy.at.flexible}) is equivalent to perception—the point of extroversion or external focus. There ${s?'are':'is'} ${only} ${ext} ${Copy.at.flexible} tendencies, which indicates a ${TENDECIES[ext]} personality. In this case: ${intros.join('; ')}.`,
-          es: `Los niveles o coordenadas en las tres dimentiones de la psiquis pueden ser ${Copy.at.relaxed}, ${Copy.at.flexible} o ${Copy.at.intense}. El nivel medio (${Copy.at.flexible}) equivale a la percepción o enfoque externo. Tenemos ${only} ${ext} tendencia${s} ${Copy.at.flexible}${s}; lo que indica una personalidad ${TENDECIES[ext]}. De modo que: ${intros.join('; ')}.`,
+          en: `The levels or coordinates in the three dimensions (physical, rational, and emotional) of the psyche are ${Copy.at.relaxed}, ${Copy.at.flexible} or ${Copy.at.intense}. The middle level (${Copy.at.flexible}) is the point of perception or external focus. There ${s?'are':'is'} ${only} ${ext} ${Copy.at.flexible} tendency${s}, which indicates a ${TENDECIES[ext]} personality. In the case of this state: ${intros.join('; ')}.`,
+          es: `Los niveles o coordenadas en las tres dimenciones de la psique (física, racional y emocional) pueden ser ${Copy.at.relaxed}, ${Copy.at.flexible} o ${Copy.at.intense}. El nivel medio (${Copy.at.flexible}) equivale a la percepción o enfoque externo. Tenemos ${only} ${ext} tendencia${s} ${Copy.at.flexible}${s}; lo que indica una personalidad ${TENDECIES[ext]}. En el caso este estado: ${intros.join('; ')}.`,
         })
       }),
     }
@@ -305,7 +301,36 @@ People that are strongly imperial like to analyze things thoroughly, but are pas
         es: `Código de color RGB: ${v} (${v.toRGB().map(n => Math.round(100*n/255) + '%')})`,
       })),
     }
-  }
+  },
+  a: [{
+    display: global.rgb ? `none` : `block`,
+    href: DOM.bind([_feature, questionnaire._favorite], (r, f) => `./?global.rgb=${r.substr(1)}&color=${f.substr(1)}`),
+    text: Copy.text({
+      en: `Link to these results for you to save or share.`,
+      es: `Enlace a estos resultados para guardarlos o compartirlos.`,
+    }),
+  }, !global.fav ? undefined : {
+    margin: `0 auto`,
+    padding: `0.5em 1em`,
+    width: `fit-content`,
+    borderRadius: `0.5em`,
+    boxShadow: `1px 1px 2px #000c`,
+    backgroundColor: global.fav,
+    href: `./?global.rgb=${global.fav.substr(1)}`,
+    target: `_blank`,
+    text: Copy.text({
+      en: `This is the result of your favorite color: ${global.fav}`,
+      es: `Este es el resultado para tu color favorito: ${global.fav}`,
+    }),
+  }, {
+    fontSize: `1.25em`,
+    marginTop: `2em`,
+    href: `./`,
+    text: Copy.text({
+      en: `${global.rgb ? `Take` : `Restart`} the test.`,
+      es: `${global.rgb ? `Tomar` : `Reiniciar`} el test.`,
+    }),
+  }]
 };
 
 export default model;

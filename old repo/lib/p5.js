@@ -2942,7 +2942,7 @@
                 file: 'lib/addons/p5.sound.js',
                 line: 9749,
                 description:
-                  '<p>Reverb adds depth to a sound through a large number of decaying\nechoes. It creates the perception that sound is occurring in a\nphysical space. The p5.Reverb has paramters for Time (how long does the\nreverb last) and decayRate (how much the sound decays with each echo)\nthat can be set with the .set() or .process() methods. The p5.Convolver\nextends p5.Reverb allowing you to recreate the sound of actual physical\nspaces through convolution.</p>\n<p>This class extends <a href = "/reference/#/p5.Effect">p5.Effect</a>.\nMethods <a href = "/reference/#/p5.Effect/amp">amp()</a>, <a href = "/reference/#/p5.Effect/chain">chain()</a>,\n<a href = "/reference/#/p5.Effect/drywet">drywet()</a>, <a href = "/reference/#/p5.Effect/connect">connect()</a>, and\n<a href = "/reference/#/p5.Effect/disconnect">disconnect()</a> are available.</p>\n',
+                  '<p>Reverb adds depth to a sound through a large number of decaying\nechoes. It creates the observation that sound is occurring in a\nphysical space. The p5.Reverb has paramters for Time (how long does the\nreverb last) and decayRate (how much the sound decays with each echo)\nthat can be set with the .set() or .process() methods. The p5.Convolver\nextends p5.Reverb allowing you to recreate the sound of actual physical\nspaces through convolution.</p>\n<p>This class extends <a href = "/reference/#/p5.Effect">p5.Effect</a>.\nMethods <a href = "/reference/#/p5.Effect/amp">amp()</a>, <a href = "/reference/#/p5.Effect/chain">chain()</a>,\n<a href = "/reference/#/p5.Effect/drywet">drywet()</a>, <a href = "/reference/#/p5.Effect/connect">connect()</a>, and\n<a href = "/reference/#/p5.Effect/disconnect">disconnect()</a> are available.</p>\n',
                 extends: 'p5.Effect',
                 is_constructor: 1,
                 example: [
@@ -32179,7 +32179,7 @@
   Advanced Usage:
   ---------------
 
-  Promises shine when abstracting away asynchronous interactions such as
+  Promises shine when abstraction away asynchronous interactions such as
   `XMLHttpRequest`s.
 
   ```js

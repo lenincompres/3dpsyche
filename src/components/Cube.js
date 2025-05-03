@@ -8,52 +8,52 @@ const RADIUS = 40;
 
 Copy.add({
   actioning: {
-    en: 'Actioning',
-    es: 'Acción',
+    en: 'Physical Execution\n(Action)',
+    es: 'Ejecución Física\n(Acción)',
   },
   sensing: {
-    en: 'Sensing',
-    es: 'Sensación',
+    en: 'Physical Observation\n(Sensation)',
+    es: 'Observación Física\n(Sensación)',
   },
-  abstracting: {
-    en: 'Abstracting',
-    es: 'Abstracción',
+  abstraction: {
+    en: 'Physical Detachment\n(Abstraction)',
+    es: 'Desapego Físico\n(Abstracción)',
   },
-  instincting: {
-    en: 'Instincting',
-    es: 'Instinto',
+  instinction: {
+    en: 'Rational Detachment\n(Instinction)',
+    es: 'Desapego Racional\n(Instinción)',
   },
   conceiving: {
-    en: 'Conceiving',
-    es: 'Concepto',
+    en: 'Rational Observation\n(Conception',
+    es: 'Observación Racional\n(Concepción)',
   },
   regulating: {
-    en: 'Regulating',
-    es: 'Regulación',
+    en: 'Rational Execution\n(Regulation)',
+    es: 'Ejecución Racional\n(Regulación)',
   },
   detaching: {
-    en: 'Detaching',
-    es: 'Desapego',
+    en: 'Emotional Detachment\n(Objectivation)',
+    es: 'Desapego Emotional\n(Objetivación)',
   },
   empathizing: {
-    en: 'Empathizing',
-    es: 'Empatía',
+    en: 'Emotional Observation\n(Inspiration)',
+    es: 'Observación Emotional\n(Inspiración)',
   },
   valuing: {
-    en: 'Valuing',
-    es: 'Valoración',
+    en: 'Emotional Execution\n(Valuation)',
+    es: 'Ejecución Emotional\n(Valoración)',
   },
   relaxing: {
-    en: 'Relaxation',
-    es: 'Relajación',
+    en: 'Detachment',
+    es: 'Desapego',
   },
   demanding: {
-    en: 'Determination',
-    es: 'Determinación',
+    en: 'Execution',
+    es: 'Ejecución',
   },
   periphery: {
-    en: 'Specializing & Normalizing',
-    es: 'Especialización & Normalización',
+    en: 'Specialization & Observation',
+    es: 'Especialización & Obsevación',
   },
   animatedView: {
     en: "Animated view",
@@ -96,13 +96,13 @@ class Cube extends p5Element {
     onready = () => null,
     onclick = () => null,
     vicinity = false,
-    width = undefined,
+    width = 740,
     height = 400,
     center = '111',
-    animated,
+    animated = true,
     view,
     textSize = 12,
-  }) {
+  } = {}) {
     super(width, height);
     this.ref = ref;
     this.noLabels = noLabels;
@@ -121,6 +121,13 @@ class Cube extends p5Element {
     this.overState;
     this.states = [];
     if (view !== undefined) this.view(view);
+    this.set({
+      tag: "p5-cube",
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "anchor-center",
+      placeContent: "center",
+    });
     if (this.animated) this.set({
       position: "relative",
       select: {
@@ -198,15 +205,15 @@ class Cube extends p5Element {
       this.changePost = false;
     }
     if (!this.currentPost || this.noLabels) return;
-    let y = RADIUS * 4.3;
-    let x = RADIUS * 4.75;
+    let y = RADIUS * 4.5;
+    let x = RADIUS * 4.8;
     let texts = [
       [Copy.at.actioning, -x, y],
       [Copy.at.sensing, 0, y],
-      [Copy.at.abstracting, x, y],
+      [Copy.at.abstraction, x, y],
     ];
     if (this.currentPost === 2) texts = [
-      [Copy.at.instincting, -x * 1.12, y],
+      [Copy.at.instinction, -x * 1.12, y],
       [Copy.at.conceiving, 0, y],
       [Copy.at.regulating, x * 1.12, y],
     ];
@@ -259,6 +266,7 @@ class Cube extends p5Element {
   mouseReleased() {
     if (!this.isHover) return;
     this.onclick(this.overState);
+    this.stateClick(this.overState);
   }
 
   view(view) {
@@ -274,7 +282,7 @@ class Cube extends p5Element {
     this.states.forEach(s => s.hidden = view < 0 && !s.isRim && s.level - 3 > 2 * view);
     this.nextPost = view < 0 ? 0 : parseInt(view);
   }
-}
+};
 
 customElements.define('p5-cube', Cube);
 export default Cube;

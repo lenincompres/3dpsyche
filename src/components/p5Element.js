@@ -18,6 +18,6 @@ class p5Element extends HTMLElement {
       if(t.mouseMoved) p.mouseMoved = () => t.mouseMoved(p);
     });
   }
-}
+};
 customElements.define('p5-element', p5Element);
 export default p5Element;

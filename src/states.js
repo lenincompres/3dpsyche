@@ -59,8 +59,8 @@ export default {
             es: "la empatía",
         },
         archetype: {
-            en: "aide",
-            es: "asistente",
+            en: "companion",
+            es: "compañero",
         },
         colour: {
             en: "dark blue",
@@ -227,8 +227,8 @@ export default {
             es: "azul ciano",
         },
         tone: {
-            en: "azure",
-            es: "azurita",
+            en: "cyan",
+            es: "ciano",
         },
         mbti: "-nf-",
         location: {
@@ -416,7 +416,7 @@ export default {
         },
         archetype: {
             en: "entertainer",
-            es: "comediante",
+            es: "anfitrión",
         },
         field: {
             en: "entretainment",
@@ -455,8 +455,8 @@ export default {
             es: "el gusto",
         },
         archetype: {
-            en: "designer",
-            es: "diseñador",
+            en: "stylist",
+            es: "estilista",
         },
         field: {
             en: "fashion",
@@ -576,7 +576,7 @@ export default {
         },
         archetype: {
             en: "diplomat",
-            es: "diplomático",
+            es: "diplómata",
         },
         field: {
             en: "diplomacy",
@@ -587,7 +587,7 @@ export default {
             es: "azul claro",
         },
         tone: {
-            en: "periwinkle",
+            en: "lavender",
             es: "lavanda",
         },
         mbti: "enfj",
@@ -682,7 +682,7 @@ export default {
             es: "el orden",
         },
         archetype: {
-            en: "arbiter",
+            en: "judge",
             es: "juez",
         },
         field: {
@@ -790,8 +790,8 @@ export default {
             es: "la pasión",
         },
         archetype: {
-            en: "artisan",
-            es: "artesano",
+            en: "artist",
+            es: "artista",
         },
         field: {
             en: "artistry",
@@ -826,8 +826,8 @@ export default {
             es: "la aptitud",
         },
         archetype: {
-            en: "builder",
-            es: "fabricante",
+            en: "mechanic",
+            es: "mecánico",
         },
         field: {
             en: "fabrication",
@@ -971,7 +971,7 @@ export default {
         },
         archetype: {
             en: "manager",
-            es: "manager",
+            es: "gerente",
         },
         field: {
             en: "management",

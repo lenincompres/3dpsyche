@@ -280,6 +280,6 @@ const updateResults = _ => {
   ));
   //_results.value = AUX.hex(r, g, b);
   _results.value = AUX.hex((R + r) / 2, (G + g) / 2, (B + b) / 2);
-}
+};
 
 export default questionnaire;
