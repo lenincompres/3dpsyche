@@ -11,7 +11,6 @@ const siteFooter = {
   }),
   section: {
     maxWidth: "40em",
-    width: "calc(100% - 4rem)",
     padding: "1em",
     margin: "0 auto",
     section: new Collapsable({
@@ -26,11 +25,13 @@ const siteFooter = {
     }), Copy.text({
       en: "✉️ Close Form",
       es: "✉️ Cerrar Formulario"
-    })),
+    }), {
+      marginBottom: '2em',
+    }),
     a: {
       display: "block",
       marginTop: "1em",
-  fontSize: "small",
+      fontSize: "small",
       content: [{
         target: "_blank",
         href: "http://lenino.net",

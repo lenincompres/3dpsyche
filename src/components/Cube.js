@@ -128,6 +128,7 @@ class Cube extends p5Element {
       alignItems: "anchor-center",
       placeContent: "center",
       position: "relative",
+      maxWidth: "100%",
     });
     if (this.animated) this.set({
       select: {
