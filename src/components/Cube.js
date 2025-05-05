@@ -24,7 +24,7 @@ Copy.add({
     es: 'Desapego Racional\n(Instinción)',
   },
   conceiving: {
-    en: 'Rational Observation\n(Conception',
+    en: 'Rational Observation\n(Conception)',
     es: 'Observación Racional\n(Concepción)',
   },
   regulating: {
