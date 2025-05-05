@@ -16,7 +16,7 @@ const siteHeader =  {
     a: {
       href: `.`,
       html: Copy.text({
-        en: `The 3D Psyche`,
+        en: `3D Psyche`,
         es: `La Psique Tridimensional</br>(3D Psyche)`,
       })
     },

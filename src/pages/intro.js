@@ -42,7 +42,7 @@ export default {
       maxWidth: "40em",
       width: "calc(100% - 4rem)",
       lineHeight: "2.5em",
-      margin: "0 auto",
+      margin: "1em auto 0",
       textAlign: "left",
       lineHeight: "1.5em",
       css: {
@@ -99,7 +99,7 @@ export default {
           }, {
             h3: Copy.text({
               en: `Detachment: how we neglect one dimension to focus on others.`,
-              es: `desapego: cómo ignoramos una dimensión para centrarnos en otras.`,
+              es: `Desapego: cómo ignoramos una dimensión para centrarnos en otras.`,
             }),
             ul: {
               li: Copy.text({

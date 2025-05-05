@@ -127,9 +127,9 @@ class Cube extends p5Element {
       flexDirection: "column",
       alignItems: "anchor-center",
       placeContent: "center",
+      position: "relative",
     });
     if (this.animated) this.set({
-      position: "relative",
       select: {
         name: "Cube",
         position: "relative",

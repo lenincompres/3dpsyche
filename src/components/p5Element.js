@@ -5,6 +5,10 @@ class p5Element extends HTMLElement {
     this._canvas = new Binder();
     this.width = w;
     this.height = h;
+    this.set({
+      width: `${this.width}px`,
+      height: `${this.height}px`,
+    });
     const t = this;
     new p5(p => {
       t.p5 = t.sketch = p;

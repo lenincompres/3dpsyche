@@ -32,8 +32,8 @@ export default {
         },
         mbti: "i--p",
         location: {
-            en: "nature",
-            es: "la naturaleza",
+            en: "natural landscape",
+            es: "ambiente natural",
         },
         map: {
             en: "retreat, open range, getaway",
@@ -73,10 +73,10 @@ export default {
         mbti: "-nfp",
         location: {
             en: "garden",
-            es: "jardines",
+            es: "jardín",
         },
         map: {
-            en: "botanical garden, zoo, fair",
+            en: "children's, botanical, zoo, fair",
             es: "infantil, botánico, zoológico, feria",
         },
     },
@@ -113,7 +113,7 @@ export default {
         mbti: "infp",
         location: {
             en: "auditorium",
-            es: "auditorios",
+            es: "auditorio",
         },
         map: {
             en: "concert hall, theatre, opera house",
@@ -152,12 +152,12 @@ export default {
         },
         mbti: "-ntp",
         location: {
-            en: "field",
-            es: "los campos",
+            en: "field of research",
+            es: "campo de investigación",
         },
         map: {
-            en: "research center, journal, excursion",
-            es: "de investigación, excursión, descubrimiento",
+            en: "school, journal, excursion",
+            es: "escuela, documentación, excursión",
         },
     },
     "011": {
@@ -192,12 +192,12 @@ export default {
         },
         mbti: "en-p",
         location: {
-            en: "cafe",
-            es: "los cafés",
+            en: "dialogue",
+            es: "diálogo",
         },
         map: {
-            en: "dialogue, lecture, publication",
-            es: "diálogo, charla, publicaciones",
+            en: "cafe, lecture, publication",
+            es: "café, charla, publicaciones",
         },
     },
     "012": {
@@ -233,7 +233,7 @@ export default {
         mbti: "-nf-",
         location: {
             en: "sanctuary",
-            es: "los santuarios",
+            es: "santuario",
         },
         map: {
             en: "temple, memorial, museum",
@@ -273,7 +273,7 @@ export default {
         mbti: "intp",
         location: {
             en: "study",
-            es: "los estudios",
+            es: "estudio",
         },
         map: {
             en: "desk, board, observatory",
@@ -313,7 +313,7 @@ export default {
         mbti: "-nt-",
         location: {
             en: "seminar",
-            es: "los seminarios",
+            es: "seminario",
         },
         map: {
             en: "forum, expo, classroom",
@@ -353,11 +353,11 @@ export default {
         mbti: "in-j",
         location: {
             en: "library",
-            es: "las bibliotecas",
+            es: "biblioteca",
         },
         map: {
-            en: "rectory, seminar, history",
-            es: "archivos, mentoría, historiales, etc.",
+            en: "rectory, seminar, conservatory",
+            es: "archivo, mentorial, conservatorio, etc.",
         },
     },
     "100": {
@@ -393,7 +393,7 @@ export default {
         mbti: "-s-p",
         location: {
             en: "field",
-            es: "los campos",
+            es: "campo de exploración",
         },
         map: {
             en: "park, hunting ground, yard",
@@ -432,8 +432,8 @@ export default {
         },
         mbti: "esfp",
         location: {
-            en: "club",
-            es: "los clubes",
+            en: "social club",
+            es: "club social",
         },
         map: {
             en: "cafeteria, bar, disco",
@@ -473,7 +473,7 @@ export default {
         mbti: "--f-",
         location: {
             en: "gallery",
-            es: "las galerías",
+            es: "galería",
         },
         map: {
             en: "restaurant, art exhibit, runway",
@@ -513,7 +513,7 @@ export default {
         mbti: "estp",
         location: {
             en: "market",
-            es: "los mercados",
+            es: "mercado",
         },
         map: {
             en: "market, trading floor, casino",
@@ -553,7 +553,7 @@ export default {
         mbti: "e---",
         location: {
             en: "plaza",
-            es: "las plazas",
+            es: "plaza",
         },
         map: {
             en: "hallway, media, main hub",
@@ -593,7 +593,7 @@ export default {
         mbti: "enfj",
         location: {
             en: "community center",
-            es: "centros comunitarios",
+            es: "centro comunitario",
         },
         map: {
             en: "cultural center, embassy, hospitality",
@@ -629,7 +629,7 @@ export default {
         mbti: "--t-",
         location: {
             en: "lab",
-            es: "los laboratorios",
+            es: "laboratorio",
         },
         map: {
             en: "systems, technology, accounting",
@@ -664,7 +664,7 @@ export default {
         },
         location: {
             en: "civic center",
-            es: "los centros civiles",
+            es: "centro civil",
         },
         map: {
             en: "organization, club, politic arena",
@@ -700,7 +700,7 @@ export default {
         mbti: "-n-j",
         location: {
             en: "court",
-            es: "las cortes",
+            es: "lcorte",
         },
         map: {
             en: "assembly, advisory, congress",
@@ -736,7 +736,7 @@ export default {
         mbti: "is-p",
         location: {
             en: "arena",
-            es: "las arenas",
+            es: "arena",
         },
         map: {
             en: "stadium, dojo, track & field",
@@ -771,12 +771,12 @@ export default {
         },
         mbti: "-sf-",
         location: {
-            en: "gym",
-            es: "los gimnasios",
+            en: "stage",
+            es: "escenario",
         },
         map: {
-            en: "ring, stage, dance floor",
-            es: "pista, escenario, salón de baile, etc.",
+            en: "ring, gym, dance floor",
+            es: "pista, gimnasio, salón de baile, etc.",
         },
     },
     "202": {
@@ -808,7 +808,7 @@ export default {
         mbti: "isfj",
         location: {
             en: "studio",
-            es: "los atelieres",
+            es: "ateliere",
         },
         map: {
             en: "atelier, crafts, kitchen",
@@ -844,7 +844,7 @@ export default {
         mbti: "-st-",
         location: {
             en: "workshop",
-            es: "los talleres",
+            es: "taller",
         },
         map: {
             en: "warehouse, garage, construction",
@@ -880,7 +880,7 @@ export default {
         mbti: "es-j",
         location: {
             en: "service center",
-            es: "centros de servicio",
+            es: "centro de servicio",
         },
         map: {
             en: "security, life guarding, agency",
@@ -916,7 +916,7 @@ export default {
         mbti: "-sfj",
         location: {
             en: "clinic",
-            es: "las clínicas",
+            es: "clínica",
         },
         map: {
             en: "aid, health, care center",
@@ -952,7 +952,7 @@ export default {
         mbti: "istj",
         location: {
             en: "industry",
-            es: "las industrias",
+            es: "industria",
         },
         map: {
             en: "factory, engineering, manufactoring",
@@ -988,7 +988,7 @@ export default {
         mbti: "-stj",
         location: {
             en: "company",
-            es: "las compañías",
+            es: "compañía",
         },
         map: {
             en: "venture, business, enterprise",
@@ -1024,7 +1024,7 @@ export default {
         mbti: "i--j",
         location: {
             en: "management",
-            es: "la gerencia",
+            es: "gerencia",
         },
         map: {
             en: "palace, tribune, government",

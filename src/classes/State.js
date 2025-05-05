@@ -169,7 +169,7 @@ export class State {
     var iSize = size * 0.86;
     if (this.image) this.sketch.image(this.image, -iSize * 0.5, -iSize * 0.5, iSize, iSize, (this.ordinal % 3) * STATE_ICON_GRID, Math.floor(this.ordinal / 3) * STATE_ICON_GRID, STATE_ICON_GRID, STATE_ICON_GRID);
     // text
-    if (!this.noText) {
+    if (!this.noText && this.copy.at.archetype) {
       let l = this.sketch.lightness(this.color) < 45 || this.sketch.green(this.color) < 45;
       this.sketch.fill(l ? 255 : 0, opacity * 255);
       this.sketch.strokeWeight(2.5);
