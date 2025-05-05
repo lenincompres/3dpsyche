@@ -302,35 +302,38 @@ People that are strongly imperial like to analyze things thoroughly, but are pas
       })),
     }
   },
-  a: [{
-    display: global.rgb ? `none` : `block`,
-    href: DOM.bind([_feature, questionnaire._favorite], (r, f) => `./?global.rgb=${r.substr(1)}&color=${f.substr(1)}`),
-    text: Copy.text({
-      en: `Link to these results for you to save or share.`,
-      es: `Enlace a estos resultados para guardarlos o compartirlos.`,
-    }),
-  }, !global.fav ? undefined : {
-    margin: `0 auto`,
-    padding: `0.5em 1em`,
-    width: `fit-content`,
-    borderRadius: `0.5em`,
-    boxShadow: `1px 1px 2px #000c`,
-    backgroundColor: global.fav,
-    href: `./?global.rgb=${global.fav.substr(1)}`,
-    target: `_blank`,
-    text: Copy.text({
-      en: `This is the result of your favorite color: ${global.fav}`,
-      es: `Este es el resultado para tu color favorito: ${global.fav}`,
-    }),
-  }, {
-    fontSize: `1.25em`,
-    marginTop: `2em`,
-    href: `./`,
-    text: Copy.text({
-      en: `${global.rgb ? `Take` : `Restart`} the test.`,
-      es: `${global.rgb ? `Tomar` : `Reiniciar`} el test.`,
-    }),
-  }]
+  a: {
+    display:`block`,
+    marginTop: `1em`,
+    content: [{
+      display: global.rgb ? `none` : `block`,
+      href: DOM.bind([_feature, questionnaire._favorite], (r, f) => `./?global.rgb=${r.substr(1)}&color=${f.substr(1)}`),
+      text: Copy.text({
+        en: `Link to these results for you to save or share.`,
+        es: `Enlace a estos resultados para guardarlos o compartirlos.`,
+      }),
+    }, !global.fav ? undefined : {
+      margin: `0 auto`,
+      padding: `0.5em 1em`,
+      width: `fit-content`,
+      borderRadius: `0.5em`,
+      boxShadow: `1px 1px 2px #000c`,
+      backgroundColor: global.fav,
+      href: `./?global.rgb=${global.fav.substr(1)}`,
+      target: `_blank`,
+      text: Copy.text({
+        en: `This is the result of your favorite color: ${global.fav}`,
+        es: `Este es el resultado para tu color favorito: ${global.fav}`,
+      }),
+    }, {
+      fontSize: `1.25em`,
+      href: `./`,
+      text: Copy.text({
+        en: `${global.rgb ? `Take` : `Restart`} the test.`,
+        es: `${global.rgb ? `Toma` : `Reinicia`} el test.`,
+      }),
+    }]
+  },
 };
 
 export default model;

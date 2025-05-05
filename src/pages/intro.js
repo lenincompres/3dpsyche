@@ -1,5 +1,5 @@
 import Copy from "../../lib/Copy.js";
-import Collabsable from "../components/Collapsable.js";
+import Collapsable from "../components/Collapsable.js";
 import * as STYLE from "../style.js";
 import {
   colorBullet
@@ -39,7 +39,7 @@ export default {
 
     main: {
       maxWidth: "40em",
-      width: "calc(100% - 2rem)",
+      width: "calc(100% - 4rem)",
       lineHeight: "2.5em",
       margin: "0 auto",
       textAlign: "left",
@@ -56,7 +56,7 @@ export default {
         en: `This psychometric tool maps your states of focus across three internal dimensions: <b style="color:darkred">physical</b> (${STYLE.getIcon('arrowDL')}), <b style="color:darkgreen">rational</b> (${STYLE.getIcon('arrowU')}) & <b style="color:darkblue">emotional</b> (${STYLE.getIcon('arrowDR')}). In each, we interact with the world through <b>observation</b>, <b>execution</b>, and <b>detachment</b>.`,
         es: `Esta herramienta psicométrica asigna estados de enfoque a tres dimensiones en nuestro panorama interno: <b style="color:darkred">física</b> (↙), <b style="color:darkgreen">racional</b> ( ↑) y <b style="color:darkblue">emocional</b> (↘). Con estas interactuamos a través de la <b>obsercación</b>, <b>ejecución</b> y <b>desapego</b>.`,
       }),
-      section: new Collabsable({
+      section: new Collapsable({
           div: [{
             h3: Copy.text({
               en: 'Observation: How we take in information and stimuli.',
@@ -84,14 +84,14 @@ export default {
             ul: {
               li: Copy.text({
                 en: [
-                  `${colorBullet('#d00', 'x')} Physical execution (action): Exerting change on the environment`,
-                  `${colorBullet('#0d0', 'x')} Rational execution (regulation): Arriving at thinking-based conclusions`,
-                  `${colorBullet('#00d', 'x')} Emotional execution (valuation): Judging based on emotional affect`,
+                  `${colorBullet('#d00', 'x')} Physical execution (action): exerting change on the environment`,
+                  `${colorBullet('#0d0', 'x')} Rational execution (regulation): arriving at thinking-based conclusions`,
+                  `${colorBullet('#00d', 'x')} Emotional execution (valuation): judging based on emotional affect`,
                 ],
                 es: [
-                  `${colorBullet('#d00', 'x')} Ejecución física (acción): Ejercer cambios en el medio ambiente.`,
-                  `${colorBullet('#0d0', 'x')} Ejecución racional (regulación): Concluir en base al pensamiento.`,
-                  `${colorBullet('#00d', 'x')} Ejecución emocional (valoración): Apreciar basándonos en el afecto.`,
+                  `${colorBullet('#d00', 'x')} Ejecución física (acción): ejercer cambios en el medio ambiente.`,
+                  `${colorBullet('#0d0', 'x')} Ejecución racional (regulación): concluir en base al pensamiento.`,
+                  `${colorBullet('#00d', 'x')} Ejecución emocional (valoración): apreciar basándonos en el afecto.`,
                 ],
               }),
             },
@@ -103,9 +103,9 @@ export default {
             ul: {
               li: Copy.text({
                 en: [
-                  `${colorBullet('#300', '-')} Physical detachment (abstraction): Halting action to reflect or imagine`,
-                  `${colorBullet('#030', '-')} Rational detachment (instinction): Letting go of logic to trust intuition`,
-                  `${colorBullet('#003', '-')} Emotional detachment (objectivation): Gaining clarity by pausing feelings`
+                  `${colorBullet('#300', '-')} Physical detachment (abstraction): halting action to reflect or imagine`,
+                  `${colorBullet('#030', '-')} Rational detachment (instinction): letting go of logic to trust intuition`,
+                  `${colorBullet('#003', '-')} Emotional detachment (objectivation): gaining clarity by pausing feelings`
                 ],
                 es: [
                   `${colorBullet('#300', '-')} desapego físico (abstracción): Ayuda al análisis y a la creatividad.`,
@@ -154,13 +154,15 @@ export default {
           }
         },
         Copy.text({
-          en: 'Learn more',
-          es: 'Aprender más',
+          en: '📜 Learn more',
+          es: '📜 Aprende más',
         }),
         Copy.text({
-          en: 'Close',
-          es: 'Cerrar',
-        })),
+          en: '📜 Close',
+          es: '📜 Cerrar',
+        }), {
+          fontSize: 'small',
+        }),
       p_: Copy.text({
         en: [`We constantly shift among these functions to think, create, interact, and rest: solving a math problem requires physical abstraction and rational execution; making a difficult decision may benefit from emotional detachment; quick reflexes or instinctive actions emerge from rational detachment`, `Some tasks are multidimensional: a dance performance calls for physical and emotional focus; car repair demands physical execution and rational clarity; creative writing lives between rational ideas and emotional resonance.`, `Each position in the cube represents a distinct state of being—an archetype of how we align our focus. While we are all dynamic, we tend to gravitate toward certain states more easily than others.`],
         es: [`Cambiamos constantemente entre estas funciones para pensar, crear, interactuar y descansar: resolver un problema de matemáticas requiere abstracción física y ejecución racional; tomar una decisión difícil puede beneficiarse del desapego emocional; los reflejos rápidos o las acciones instintivas surgen del desapego racional.`, `Algunas tareas son multidimensionales: una presentación de danza exige enfoque físico y emocional; reparar un auto requiere ejecución física y claridad racional; la escritura creativa habita entre ideas racionales y resonancia emocional.`, `Cada posición en el cubo representa un estado distinto del ser—un arquetipo de cómo alineamos nuestro enfoque. Aunque todos somos dinámicos, tendemos a gravitar más fácilmente hacia ciertos estados que hacia otros.`],

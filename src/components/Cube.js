@@ -101,7 +101,7 @@ class Cube extends p5Element {
     center = '111',
     animated = true,
     view,
-    textSize = 12,
+    textSize = 10,
   } = {}) {
     super(width, height);
     this.ref = ref;
