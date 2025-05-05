@@ -119,12 +119,12 @@ export default {
           menu: siteMenu,
         },
         Copy.text({
-          en: '📜 Learn more',
-          es: '📜 Aprende más',
+          en: '📄 Learn more',
+          es: '📄 Aprende más',
         }),
         Copy.text({
-          en: '📜 Close',
-          es: '📜 Cerrar',
+          en: '📄 Close',
+          es: '📄 Cerrar',
         }), {
           fontSize: 'small',
         }),
