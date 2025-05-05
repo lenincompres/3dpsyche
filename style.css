@@ -13,8 +13,14 @@ body>footer{
   margin-top: 3em;
 }
 
+h1 {
+  text-align: center;
+}
+
 h2 {
   margin-top: 1em;
+  padding-top: 1em;
+  border-top: solid 1px #999;
 }
 
 table {
@@ -29,8 +35,8 @@ td {
 }
 
 p {
-  margin-bottom: 0.5em;
-  margin-top: 0.5em;
+  margin: 0.5em 0;
+  text-align: justify;
 }
 
 li {
