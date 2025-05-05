@@ -109,9 +109,9 @@ export default {
                   `${colorBullet('#003', '-')} Emotional detachment (objectivation): gaining clarity by pausing feelings`
                 ],
                 es: [
-                  `${colorBullet('#300', '-')} desapego físico (abstracción): Ayuda al análisis y a la creatividad.`,
-                  `${colorBullet('#030', '-')} desapego racional (instinción): Permite respuestas rápidas e intuitivas.`,
-                  `${colorBullet('#003', '-')} desapego emocional (objetivación): Proporciona claridad pragmática.`
+                  `${colorBullet('#300', '-')} Desapego físico (abstracción): ayuda al análisis y a la creatividad.`,
+                  `${colorBullet('#030', '-')} Desapego racional (instinción): permite respuestas rápidas e intuitivas.`,
+                  `${colorBullet('#003', '-')} Desapego emocional (objetivación): proporciona claridad pragmática.`
                 ],
               })
             }
