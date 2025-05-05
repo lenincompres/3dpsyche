@@ -17,7 +17,7 @@ const siteFooter = {
       iframe: {
         src: "https://docs.google.com/forms/d/e/1FAIpQLSdE4cfLkZn7Jf3QUgfaILz8SXSqauQVPltBoGTF6xnKZWbjsQ/viewform?usp=sharing",
         width: "100%",
-        height: 600,
+        height: 1680,
       }
     }, Copy.text({
       en: "✉️ Contact Us",
