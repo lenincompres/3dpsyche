@@ -24,11 +24,11 @@ export default {
         },
         colour: {
             en: "dark",
-            es: "negro",
+            es: "oscuro",
         },
         tone: {
-            en: "charcoal",
-            es: "carbón",
+            en: "black",
+            es: "negro",
         },
         mbti: "i--p",
         location: {
@@ -60,15 +60,15 @@ export default {
         },
         archetype: {
             en: "companion",
-            es: "compañero",
+            es: "acompañante",
         },
         colour: {
             en: "dark blue",
             es: "azul oscuro",
         },
         tone: {
-            en: "navy",
-            es: "marino",
+            en: "sapphire",
+            es: "zafiro",
         },
         mbti: "-nfp",
         location: {
@@ -107,8 +107,8 @@ export default {
             es: "azul puro",
         },
         tone: {
-            en: "indigo",
-            es: "índigo",
+            en: "blue",
+            es: "azul",
         },
         mbti: "infp",
         location: {
@@ -147,8 +147,8 @@ export default {
             es: "verde oscuro",
         },
         tone: {
-            en: "forest",
-            es: "elmo",
+            en: "emerald",
+            es: "esmeralda",
         },
         mbti: "-ntp",
         location: {
@@ -188,7 +188,7 @@ export default {
         },
         tone: {
             en: "teal",
-            es: "menta",
+            es: "cerceta",
         },
         mbti: "en-p",
         location: {
@@ -227,8 +227,8 @@ export default {
             es: "azul ciano",
         },
         tone: {
-            en: "cyan",
-            es: "ciano",
+            en: "azure",
+            es: "azur",
         },
         mbti: "-nf-",
         location: {
@@ -267,8 +267,8 @@ export default {
             es: "verde puro",
         },
         tone: {
-            en: "emerald",
-            es: "emeralda",
+            en: "green",
+            es: "verde",
         },
         mbti: "intp",
         location: {
@@ -347,8 +347,8 @@ export default {
             es: "ciano puro",
         },
         tone: {
-            en: "aqua",
-            es: "aqua",
+            en: "cyan",
+            es: "ciano",
         },
         mbti: "in-j",
         location: {
@@ -416,7 +416,7 @@ export default {
         },
         archetype: {
             en: "entertainer",
-            es: "anfitrión",
+            es: "animador",
         },
         field: {
             en: "entretainment",
@@ -694,8 +694,8 @@ export default {
             es: "ciano claro",
         },
         tone: {
-            en: "sky",
-            es: "cielo",
+            en: "aquamarine",
+            es: "aguamarina",
         },
         mbti: "-n-j",
         location: {
@@ -730,8 +730,8 @@ export default {
             es: "rojo puro",
         },
         tone: {
-            en: "scarlet",
-            es: "escarlata",
+            en: "red",
+            es: "rojo",
         },
         mbti: "is-p",
         location: {
@@ -1018,8 +1018,8 @@ export default {
             es: "claro puro",
         },
         tone: {
-            en: "platinum",
-            es: "platino",
+            en: "blanco",
+            es: "white",
         },
         mbti: "i--j",
         location: {

@@ -10,25 +10,26 @@ import {
 import StateElement from '../components/StateElement.js';
 import * as global from "../global.js";
 import * as questionnaire from "./questionnaire.js";
+import siteMenu from './menu.js';
 
 export const _mbti = new Binder('- - - -');
 export const _feature = new Binder('#808080');
 export const _copy = new Binder();
 
-const bars = {
-  e: new Bar('Extro/Intro', '6em', 'gray', true),
-  s: new Bar('Sense/iNtuit', '6em', 'red', 'cyan'),
-  t: new Bar('Think/Feel', '6em', 'lime', 'blue'),
-  j: new Bar('Judge/Perceive', '6em', 'white', 'black'),
-  id: new Bar('Id', '6em', 'magenta'),
-  ego: new Bar('Ego', '6em', 'yellow'),
-  sup: new Bar('Superego', '6em', 'cyan'),
-  r: new Bar('Physical', '6em', 'red'),
-  g: new Bar('Rational', '6em', 'lime'),
-  b: new Bar('Emotional', '6em', 'blue')
-};
 
 Copy.add({
+  physical: {
+    en: 'Physical',
+    es: 'Físico',
+  },
+  rational: {
+    en: 'Rational',
+    es: 'Racional',
+  },
+  emotional: {
+    en: 'Emotional',
+    es: 'Emocional',
+  },
   physically: {
     en: 'Physically',
     es: 'Físicamente',
@@ -51,7 +52,7 @@ Copy.add({
   },
   intense: {
     en: 'executive',
-    es: 'ejecutivo',
+    es: 'ejecutor',
   },
   disconnected: {
     en: 'disconnected',
@@ -75,54 +76,67 @@ Copy.add({
   },
 });
 
+const bars = {
+  e: new Bar('Extro/Intro', '6em', 'gray', true),
+  s: new Bar('Sense/iNtuit', '6em', 'red', 'cyan'),
+  t: new Bar('Think/Feel', '6em', 'lime', 'blue'),
+  j: new Bar('Judge/Perceive', '6em', 'white', 'black'),
+  id: new Bar('Id', '6em', 'magenta'),
+  ego: new Bar('Ego', '6em', 'yellow'),
+  sup: new Bar('Superego', '6em', 'cyan'),
+  r: new Bar(Copy.at.physical, '6em', 'red'),
+  g: new Bar(Copy.at.rational, '6em', 'lime'),
+  b: new Bar(Copy.at.emotional, '6em', 'blue')
+};
+
 const INTROS = [
   [
     Copy.text({
-      en: 'physical abstraction can make it aloof and fearful',
-      es: 'la abstracción física lo puede hacer apartado y temeroso',
+      en: 'physical detachment (abstraction) can make it intorspective and fearful',
+      es: 'el desapego físico (abstracción) lo puede hacer introspectivo y temeroso',
     }),
     undefined,
     Copy.text({
-      en: 'physical action can make it competitive and impatient',
-      es: 'la acción física lo puede hacer competitivo e impaciente',
+      en: 'physical execution (action) can make it competitive and impatient',
+      es: 'la ejecución física (acción) lo puede hacer competitivo e impaciente',
     }),
   ],
   [
     Copy.text({
-      en: 'rational instiction can make it impulsive and obstinate',
-      es: 'la instinción racional lo puede hacer impulsivo y obstinado',
+      en: 'rational detachment (instiction) can make it volatile and obstinate',
+      es: 'el desapego racional (instinción) lo puede hacer volátil y obstinado',
     }),
     undefined,
     Copy.text({
-      en: 'rational regulation can make it rightgeous and sctrict',
-      es: 'la regulación racional lo puede hacer santurrón y estricto',
+      en: 'rational execution (regulation) can make it rightgeous and sctrict',
+      es: 'la ejecución racional (regulación) lo puede hacer santurrón y estricto',
     }),
   ],
   [
     Copy.text({
-      en: 'emotional detachment can make it eccentric and apathetic',
-      es: 'el desapego emocional lo puede hacer excéntrico y apático',
+      en: 'emotional detachment (objectivation) can make it preculiar and apathetic',
+      es: 'el desapego emocional (objetivación) lo puede hacer peculiar y apático',
     }),
     undefined,
     Copy.text({
-      en: 'emotional valuation can make it biased and sensitive',
-      es: 'la valoración emocional lo puede hacer sesgado y sensible',
+      en: 'emotional execution (valuation) can make it biased and sensitive',
+      es: 'la ejecución emocional (valoración) lo puede hacer sesgado y sensible',
     }),
   ],
 ];
 
 const TENDECIES = [
   Copy.text({
-    es: 'altamente introvertida',
-    en: 'highly introverted',
+    es: 'introvertida',
+    en: 'introverted',
   }),
   Copy.text({
-    es: 'mayormente introvertida',
-    en: 'more introverted',
+    es: 'ligeramente introvertida',
+    en: 'slightly introverted',
   }),
   Copy.text({
-    es: 'mayormente extrovertida',
-    en: 'more extroverted',
+    es: 'extrovertida',
+    en: 'extroverted',
   }),
   Copy.text({
     es: 'altamente extrovertida',
@@ -192,59 +206,47 @@ export const model = {
       margin: '0.5em 0',
       text: _copy.as(copy => copy.at.archetype),
     },
-    /**
-     * The best concept to define the focus of this state is responsibility. It is the state of execution and duty. It represents a psyche that is physically, rationally and emotionally tense. In it we are prepared to act towards a predetermined goal. We have no time for banalities, and feel deeply involved, pro or con, with everything. It is not really socially extroverted, but socially committed.
-
-By definition, this is the state of focus in action, regulation and valuation. Its main properties are bringing principles to action, order to passions, and value to industry. This defines our ability to carry on our ideals with conviction and sense of duty.
-
-It has three tendencies towards introversion:
-
-- Action cultivates competition and impatience, prompting self-reliance.
-- Regulation cultivates righteousness and strictness, maintaining self-confidence.
-- Valuation cultivates particular interests and sensibility, causing self-absorption.
-
-Topographic Map location: Government
-
-MBTI approximation: I**J
-
-
-Archetype: The Chief
-
-Rulers, Executives… people who have a constant tendency to this state love being productive, are passionate about order, and religious about habits. They tend to achieve relaxation through control. They are committed, and remain focused on their duties even on vacation. Others would think they make a big event out of trivial things, or stress unnecessarily. They are effective in carrying out any enterprise, as they struggle to cover every subject. They may tend to feel righteous; this can make them the most decisive and successful people, but the less likely to question their goals. They are bound for leadership. They enjoy acknowledging merits, inspiring others, having strong adversaries, power and victory.
-
-People that are strongly imperial like to analyze things thoroughly, but are passionate about their feelings, beliefs, likes and dislikes; this may constrict analysis towards a particular goal. Also, they are eager to act, and this limits patience. They look at the greater good or big picture, but are lenient towards customs, routines and personal preferences. They have great focus, and thus a tunneled view. This combination results in great achievements, but they must beware not to lead arbitrarily. They tend to be philosophic when relaxed, passionate when having fun, and industrious when alone.
-     */
-    section: _copy.as(copy => ({
-      p: Copy.text({
-        en: `The ${copy.at.tone} (${copy.at.colour}) color is ${copy.at.adjective}; a psyche focused on ${copy.at.concept} as an archetypical ${copy.at.archetype}. It fits comfortably at ${copy.at.location} (${copy.at.map}).`,
-        es: `El color ${copy.at.tone} (${copy.at.colour}) es ${copy.at.adjective}; una psique enfocada en ${copy.at.concept}. Como su arquetipo de ${copy.at.archetype}, se manifiesta a gusto en ${copy.at.location} (${copy.at.map}).`,
-      })
-    })),
     ul: _feature.as(v => ({
       textAlign: 'left',
       margin: '0 auto',
       width: 'fit-content',
       li: [...STATES[v.hexToCode()].code].map((n, i) => level(i, parseInt(n) || 0)),
     })),
-    footer: {
-      p: _feature.as(v => {
-        let code = [...STATES[v.hexToCode()].code].map(n => parseInt(n));
-        let ext = code.reduce((o, n) => n === 1 ? (o + 1) : o, 0);
-        let s = ext === 1 ? '' : 's';
-        let only = ext === 1 ? Copy.at.only : '';
-        let intros = code.map((n, i) => INTROS[i][n]).filter(n => n);
-        intros[intros.length - 1] = Copy.at.and + ' ' + intros[intros.length - 1];
-        return Copy.text({
-          en: `The levels or coordinates in the three dimensions (physical, rational, and emotional) of the psyche are ${Copy.at.relaxed}, ${Copy.at.flexible} or ${Copy.at.intense}. The middle level (${Copy.at.flexible}) is the point of perception or external focus. There ${s?'are':'is'} ${only} ${ext} ${Copy.at.flexible} tendency${s}, which indicates a ${TENDECIES[ext]} personality. In the case of this state: ${intros.join('; ')}.`,
-          es: `Los niveles o coordenadas en las tres dimenciones de la psique (física, racional y emocional) pueden ser ${Copy.at.relaxed}, ${Copy.at.flexible} o ${Copy.at.intense}. El nivel medio (${Copy.at.flexible}) equivale a la percepción o enfoque externo. Tenemos ${only} ${ext} tendencia${s} ${Copy.at.flexible}${s}; lo que indica una personalidad ${TENDECIES[ext]}. En el caso este estado: ${intros.join('; ')}.`,
+    section: _copy.with(_feature).as((copy, hex) => {
+      let code = [...STATES[hex.hexToCode()].code].map(n => parseInt(n));
+      let ext = code.reduce((o, n) => n === 1 ? (o + 1) : o, 0);
+      let s = ext === 1 ? '' : 's';
+      let only = ext === 1 ? Copy.at.only : '';
+      let intros = code.map((n, i) => INTROS[i][n]).filter(n => n);
+      if (intros.length > 1) intros[intros.length - 1] = Copy.at.and + ' ' + intros[intros.length - 1];
+      else if (!intros.length) intros = [Copy.text({
+        es: 'no hay tendecias introvertidas',
+        en: 'there are no introverted tendencies',
+      })];
+      return {
+        p: Copy.text({
+          en: [
+            `The state with the ${copy.at.tone} (${copy.at.colour}) color is ${copy.at.adjective}—a psyche focused on ${copy.at.concept} as an archetypical ${copy.at.archetype}. It fits comfortably at ${copy.at.location} (${copy.at.map}).`,
+            `In this state there ${s?'are':'is'} ${only} ${ext} ${Copy.at.flexible} tendency${s}, which indicates a personality that is ${TENDECIES[ext]}. In this case: ${intros.join('; ')}.`,
+            `To learn to navigate this and other states of the 3D Psyche, please contact us (below) or consult our educational dossier.`,
+          ],
+          es: [
+            `El estado de color ${copy.at.tone} (${copy.at.colour}) es ${copy.at.adjective}; una psique enfocada en ${copy.at.concept}. Como su arquetipo de ${copy.at.archetype}, se manifiesta a gusto en ${copy.at.location} (${copy.at.map}).`,
+            `En este estado tenemos ${only} ${ext} tendencia${s} ${Copy.at.flexible}${s}, lo que indica una personalidad ${TENDECIES[ext]}. En este caso: ${intros.join('; ')}.`,
+            `Para aprender a explorar este y los demás estados de la Psique Tridimensional, contáctanos (más abajo) o refiérete a nuestro dossier educativo.`,
+          ],
         })
-      }),
-    }
-    //aside: _cubeState,
+      };
+    }),
+    small: _feature.as(v => Copy.text({
+      en: `RGB color code: ${v}`,
+      es: `Código de color RGB: ${v}`,
+    })),
   },
-  aside: {
+  section: {
     css: style.floatingSign,
     margin: '1em 0',
+    padding: '1.5em',
     header: {
       h4: Copy.text({
         en: 'Break down and extrapolation to other frameworks',
@@ -274,10 +276,10 @@ People that are strongly imperial like to analyze things thoroughly, but are pas
       left: 0,
       margin: 0,
       li: [
-        new Stats('3DPsyche', './', [bars.r, bars.g, bars.b], true),
-        new Stats('Freudian', 'https://en.wikipedia.org/wiki/Id,_ego_and_super-ego', [bars.id, bars.ego, bars.sup], true),
-        new Stats('Jungian', 'https://en.wikipedia.org/wiki/Jungian_cognitive_functions', [bars.e, bars.s, bars.t], true),
-        new Stats('MBTI', 'https://en.wikipedia.org/wiki/Myers%E2%80%93Briggs_Type_Indicator', [{
+        new Stats('3D Psyche', [bars.r, bars.g, bars.b], true),
+        new Stats('Freud', [bars.id, bars.ego, bars.sup], true),
+        new Stats('Jung', [bars.e, bars.s, bars.t], true),
+        new Stats('MBTI', [{
             display: 'block',
             margin: '2em 0 0.5em',
             fontSize: '1.5em',
@@ -289,21 +291,12 @@ People that are strongly imperial like to analyze things thoroughly, but are pas
       ].map(s => ({
         stat: s,
       })),
-      /*p: Copy.text({
-        en: `* Extroversion here refers to sociability (${Copy.text(STATES['111'].colour)} color): empathy, openness, agreeability. Meanwhile, there are three paths to infroversion: physical impulses, rational conclusions, and emotional biases.`,
-        es: `* La extroversión aquí se refiere a la sociabilidad (${Copy.text(STATES['111'].colour)} color): empatía, apertura, amabilidad.`,
-      }),*/
     },
+    menu: siteMenu,
     dragstart: () => _fixed.value = !_fixed.value,
-    footer: {
-      small: _feature.as(v => Copy.text({
-        en: `RGB color code: ${v}`,
-        es: `Código de color RGB: ${v} (${v.toRGB().map(n => Math.round(100*n/255) + '%')})`,
-      })),
-    }
   },
   a: {
-    display:`block`,
+    display: `block`,
     marginTop: `1em`,
     content: [{
       display: global.rgb ? `none` : `block`,

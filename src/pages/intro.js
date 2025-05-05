@@ -6,6 +6,7 @@ import {
 } from "../../lib/auxiliary.js";
 import Cube from "../components/Cube.js";
 import * as global from "../global.js";
+import siteMenu from "./menu.js";
 
 export default {
   main: {
@@ -54,32 +55,32 @@ export default {
       },
       p: Copy.text({
         en: `This psychometric tool maps your states of focus across three internal dimensions: <b style="color:darkred">physical</b> (${STYLE.getIcon('arrowDL')}), <b style="color:darkgreen">rational</b> (${STYLE.getIcon('arrowU')}) & <b style="color:darkblue">emotional</b> (${STYLE.getIcon('arrowDR')}). In each, we interact with the world through <b>observation</b>, <b>execution</b>, and <b>detachment</b>.`,
-        es: `Esta herramienta psicométrica asigna estados de enfoque a tres dimensiones en nuestro panorama interno: <b style="color:darkred">física</b> (↙), <b style="color:darkgreen">racional</b> ( ↑) y <b style="color:darkblue">emocional</b> (↘). Con estas interactuamos a través de la <b>obsercación</b>, <b>ejecución</b> y <b>desapego</b>.`,
+        es: `Esta herramienta psicométrica asigna estados de enfoque a tres dimensiones en nuestro panorama interno: <b style="color:darkred">física</b> (↙), <b style="color:darkgreen">racional</b> ( ↑) y <b style="color:darkblue">emocional</b> (↘). En cada una interactuamos con <b>observación</b>, <b>ejecución</b> y <b>desapego</b>.`,
       }),
       section: new Collapsable({
           div: [{
             h3: Copy.text({
-              en: 'Observation: How we take in information and stimuli.',
-              es: 'Observación: Cómo asimilamos información y estímulos.',
+              en: 'Observation: how we take in information and stimuli.',
+              es: 'Observación: cómo asimilamos información y estímulos.',
             }),
             ul: {
               li: Copy.text({
                 en: [
-                  `${colorBullet('#800', 'o')} Physical observation (sensation): Sensory awareness of surroundings`,
-                  `${colorBullet('#080', 'o')} Rational observation (conception): Grasping ideas, meanings, and patterns`,
-                  `${colorBullet('#008', 'o')} Emotional observation (inspiration): Sensing moods, vibes, and empathy`,
+                  `${colorBullet('#800', 'o')} Physical observation (sensation): sensory awareness of surroundings`,
+                  `${colorBullet('#080', 'o')} Rational observation (conception): grasping ideas, meanings, and patterns`,
+                  `${colorBullet('#008', 'o')} Emotional observation (inspiration): feeling moods, vibes, and empathy`,
                 ],
                 es: [
-                  `${colorBullet('#800', 'o')} Observación física (sensación): Observar el entorno sensorial inmediato.`,
-                  `${colorBullet('#080', 'o')} Observación racional (concepción): Concebir ideas, significados y datos.`,
-                  `${colorBullet('#008', 'o')} Observación emocional (inspiración): Empatizar o percibir ánimos y vibras.`,
+                  `${colorBullet('#800', 'o')} Observación física (sensación): percibir el entorno sensorial inmediato.`,
+                  `${colorBullet('#080', 'o')} Observación racional (concepción): contemplar ideas, significados y datos.`,
+                  `${colorBullet('#008', 'o')} Observación emocional (inspiración): empatizar o percibir ánimos y vibras.`,
                 ]
               }),
             },
           }, {
             h3: Copy.text({
-              en: 'Execution: How we reach conclusive judgments or behaviors.',
-              es: 'Ejecución: Cómo creamos juicios concluyentes o comportamientos.',
+              en: 'Execution: how we reach conclusive judgments or behaviors.',
+              es: 'Ejecución: cómo creamos juicios concluyentes o comportamientos.',
             }),
             ul: {
               li: Copy.text({
@@ -97,7 +98,7 @@ export default {
             },
           }, {
             h3: Copy.text({
-              en: `Detachment: How we neglect one dimension to focus on others.`,
+              en: `Detachment: how we neglect one dimension to focus on others.`,
               es: `desapego: cómo ignoramos una dimensión para centrarnos en otras.`,
             }),
             ul: {
@@ -115,43 +116,7 @@ export default {
               })
             }
           }],
-          menu: {
-            p: "Further Reading:",
-            ul: {
-              marginTop: "-1em",
-              display: "flex",
-              justifyContent: "space-around",
-              li: {
-                margin: "0 0.7em",
-                textAlign: "center",
-                content: [{
-                    a: {
-                      html: Copy.text({
-                        en: `3D Psyche Manifesto`,
-                        es: `Manifiesto de la Psique 3D`,
-                      }),
-                      href: Copy.text({
-                        en: `manifesto.html`,
-                        es: `manifiesto.html`,
-                      }),
-                    }
-                  },
-                  {
-                    a: {
-                      html: Copy.text({
-                        en: `Educational Dossier`,
-                        es: `Dossier Educacional`,
-                      }),
-                      href: Copy.text({
-                        en: `dossier3DPsyche.pdf`,
-                        es: `dossierPsique3D.pdf`,
-                      }),
-                    }
-                  }
-                ]
-              }
-            }
-          }
+          menu: siteMenu,
         },
         Copy.text({
           en: '📜 Learn more',

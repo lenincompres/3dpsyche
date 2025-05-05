@@ -1,17 +1,11 @@
 export class Stats extends HTMLElement {
 
-  constructor(title, link, bars, blank, ) {
+  constructor(title, bars, blank, ) {
     super();
     this.set({
       display: 'flex',
       flexDirection: 'column',
-      heading: {
-        a: {
-          text: title,
-          href: link,
-          target: blank === true ? '_blank' : undefined,
-        }
-      },
+      header: title,
       ul: {
         margin: '0 0 1em',
         li: bars.map(b => ({

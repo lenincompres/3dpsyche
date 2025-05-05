@@ -215,9 +215,9 @@ export const questionnaire = {
       style: style.floatingSign,
       backgroundColor: style.darkScreen,
       color: 'white',
-      text: Copy.text({
-        en: 'The following questionaire averages your answers and map them to a color archetype in the cube. To answer it, you must rate each option individually, but compare them to others in the same group.',
-        es: 'El siguiente cuestionario promedia tus respuestas y las asigna a un arquetipo de color en el cubo. Para responderla, debes calificar cada opción individualmente, pero compararlas con otras del mismo grupo.'
+      html: Copy.text({
+        en: 'The following questionaire averages your answers and map them to a state—a color archetype in the cube. To answer it, you must rate each option individually, but compare them to others in the same group.',
+        es: 'El siguiente cuestionario promedia tus respuestas y las asigna a un estado, a un arquetipo de color en el cubo. Para responder, debes calificar cada opción individualmente, pero compararlas con las demás del mismo grupo.'
       })
     },
     h2: Copy.text({
@@ -225,18 +225,16 @@ export const questionnaire = {
       es: "Ejemplo",
     }),
     section: samples,
-    small: {
-      marginTop: '4em',
-      a: {
-        fontSize: '1.14em',
-        target: '_blank',
-        text: _favorite.as(v => Copy.text({
-          en: 'The RGB code for the resulting average color is: ',
-          es: "El código RGB para el color promedio resultante es:",
-        }) + v),
-        href: _favorite.as(v => './?rgb=' + v.substr(1)),
-      },
-    }
+    a: {
+      marginTop: '1em',
+      target: '_blank',
+      display: _qCounter.as(v => v < 0 ? 'none' : 'block'),
+      text: _favorite.as(v => Copy.text({
+        en: 'The RGB code for the resulting color is: ',
+        es: "El código RGB para el color resultante es:",
+      }) + v),
+      href: _favorite.as(v => './?rgb=' + v.substr(1)),
+    },
   },
   main: {
     marginTop: '4em',

@@ -302,7 +302,7 @@ export default [{
         }),
         hint: Copy.text({
           en: "Gotta be done.",
-          es: "Hay que hacerlo.",
+          es: "Hay que hacerlos.",
         }),
       },
       {
@@ -322,7 +322,7 @@ export default [{
         }),
         hint: Copy.text({
           en: "Won't give them up.",
-          es: "No los rendiras.",
+          es: "No los rendirás.",
         }),
       }
     ]
@@ -335,7 +335,7 @@ export default [{
       [{
         choice: Copy.text({
           en: "Thoughts",
-          es: "Pensamientos",
+          es: "Ideas",
         }),
       }, {
         choice: Copy.text({
@@ -397,7 +397,7 @@ export default [{
         }),
         hint: Copy.text({
           en: "Like it the way you like it.",
-          es: "De gustos específicos.",
+          es: "Tienes gustos específicos.",
         }),
       }
     ]
@@ -426,11 +426,11 @@ export default [{
       {
         choice: Copy.text({
           en: "Softhearted",
-          es: "Bondadoso/a",
+          es: "Sensible",
         }),
         hint: Copy.text({
-          en: "Even with strangers or critters.",
-          es: "Incluso con extraños o alimañas.",
+          en: "Even with strangers and critters.",
+          es: "Incluso con extraños y alimañas.",
         }),
       }
     ]
@@ -469,7 +469,7 @@ export default [{
       {
         choice: Copy.text({
           en: "Enjoy discussions",
-          es: "Disfrutar de debates",
+          es: "Disfrutar de los debates",
         }),
       },
       {

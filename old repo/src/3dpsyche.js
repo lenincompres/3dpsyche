@@ -109,7 +109,7 @@ function drawSign() {
   textSize(RADIUS * 0.5);
   switch (currentPost) {
     case 0:
-      if (nextPost === 1) text(lang === ESP ? 'La Psique 3D' : 'The 3D Pscyhe', 0, y);
+      if (nextPost === 1) text(lang === ESP ? 'La Psique Tridimensional' : 'The 3D Pscyhe', 0, y);
       break;
     case 1:
       text(lang === ESP ? 'Objetivos' : 'Objectives', -x, y);

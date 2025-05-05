@@ -14,14 +14,21 @@ export class Bar extends HTMLElement {
     }, 24);
 
     this.set({
-      whiteSpace: 'nowrap',
       position: 'relative',
       p: {
         marginBottom: '-0.5em',
         fontFamily: 'monospace',
+        whiteSpace: 'nowrap',
         textAlign: 'center',
         marginRight: '0.25em',
         text: label
+      },
+      span: {
+        display: 'block',
+        width: '100%',
+        textAlign: 'center',
+        marginBottom: '-1.5em',
+        text: '|',
       },
       div: {
         position: 'relative',

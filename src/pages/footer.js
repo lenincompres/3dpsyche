@@ -4,14 +4,13 @@ import Collapsable from "../components/Collapsable.js";
 import Copy from "../../lib/Copy.js";
 
 const siteFooter = {
-  fontSize: `small`,
   paddingBottom: "2em",
   background: global.rgb ? '#000a' : questionnaire._qCounter.as({
     [-3]: 'none',
     default: `#000a`,
   }),
   section: {
-    maxWidth: '50em',
+    maxWidth: '40em',
     margin: '0 auto',
     section: new Collapsable({
       iframe: {
@@ -29,6 +28,7 @@ const siteFooter = {
     a: {
       display: "block",
       marginTop: `1em`,
+  fontSize: `small`,
       content: [{
         target: `_blank`,
         href: `http://lenino.net`,
