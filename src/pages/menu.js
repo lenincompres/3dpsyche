@@ -30,8 +30,8 @@ const siteMenu =  {
               es: `Dossier Educativo`,
             }),
             href: Copy.text({
-              en: `dossier3DPsyche.pdf`,
-              es: `dossierPsique3D.pdf`,
+              en: `educationalDossier.pdf`,
+              es: `dossierEducativo.pdf`,
             }),
           }
         }
