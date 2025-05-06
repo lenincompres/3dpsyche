@@ -5,19 +5,16 @@ import Copy from "../../lib/Copy.js";
 
 const siteFooter = {
   paddingBottom: "2em",
-  background: global.rgb ? "#000a" : questionnaire._qCounter.as({
-    [-3]: "none",
-    default: "#000a",
-  }),
+  background: "#000a",
   section: {
     maxWidth: "40em",
     padding: "1em",
     margin: "0 auto",
     section: new Collapsable({
       iframe: {
-        src: "https://docs.google.com/forms/d/e/1FAIpQLSdE4cfLkZn7Jf3QUgfaILz8SXSqauQVPltBoGTF6xnKZWbjsQ/viewform?usp=sharing",
+        src: "https://docs.google.com/forms/d/e/1FAIpQLSdE4cfLkZn7Jf3QUgfaILz8SXSqauQVPltBoGTF6xnKZWbjsQ/viewform?embedded=true",
         width: "100%",
-        height: 1680,
+        height: window.innerWidth > 800 ? 1600 : 1800,
       }
     }, Copy.text({
       en: "✉️ Contact Us",
@@ -40,7 +37,7 @@ const siteFooter = {
         target: "_blank",
         href: "https://github.com/lenincompres/DOM.js",
         text: "Developed with DOM.js",
-      }]
+      }],
     },
   }
 };
