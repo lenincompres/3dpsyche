@@ -826,7 +826,7 @@ export default {
             es: "la aptitud",
         },
         archetype: {
-            en: "mechanic",
+            en: "mechanician",
             es: "mecánico",
         },
         field: {
