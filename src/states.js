@@ -11,8 +11,8 @@ export default {
             es: "ethereal",
         },
         adjective: {
-            en: "pacifist",
-            es: "pacifista"
+            en: "stoic",
+            es: "estoico"
         },
         concept: {
             en: "serenity",
@@ -56,8 +56,8 @@ export default {
             es: "inspiracional",
         },
         adjective: {
-            en: "caring",
-            es: "cuidadoso"
+            en: "humanistic",
+            es: "humanista"
         },
         field: {
             en: "humanity",
@@ -101,8 +101,8 @@ export default {
             es: "sentimental",
         },
         adjective: {
-            en: "introspective",
-            es: "introspectivo"
+            en: "romantic",
+            es: "romántico"
         },
         concept: {
             en: "feelings",
@@ -141,9 +141,9 @@ export default {
             en: "Knowledge and analysis",
             es: "Conocimiento y análisis"
         },
-        quality: {
-            en: "conceptual",
-            es: "conceptual",
+        adjective: {
+            en: "empirical",
+            es: "empírico"
         },
         adjective: {
             en: "inquisitive",
@@ -191,8 +191,8 @@ export default {
             es: "ideacional",
         },
         adjective: {
-            en: "imaginative",
-            es: "imaginativo"
+            en: "idealistic",
+            es: "idealista"
         },
         concept: {
             en: "creativity",
@@ -232,8 +232,8 @@ export default {
             es: "Reflexión y apoyo"
         },
         adjective: {
-            en: "supportive",
-            es: "solidario"
+            en: "existentialist",
+            es: "existencialista"
         },
         concept: {
             en: "meaning",
@@ -277,8 +277,8 @@ export default {
             es: "analítico",
         },
         adjective: {
-            en: "logical",
-            es: "lógico"
+            en: "rationalist",
+            es: "racionalista"
         },
         concept: {
             en: "logic",
@@ -322,8 +322,8 @@ export default {
             es: "teórica",
         },
         adjective: {
-            en: "instructional",
-            es: "instructivo"
+            en: "didactic",
+            es: "didáctico"
         },
         concept: {
             en: "ideas",
@@ -367,8 +367,8 @@ export default {
             es: "ético",
         },
         adjective: {
-            en: "contemplative",
-            es: "contemplativo"
+            en: "moralist",
+            es: "moralista"
         },
         concept: {
             en: "morals",
@@ -412,8 +412,8 @@ export default {
             es: "sensorial",
         },
         adjective: {
-            en: "alert",
-            es: "alerta"
+            en: "phenomenological",
+            es: "fenomenológico"
         },
         concept: {
             en: "alertness",
@@ -457,8 +457,8 @@ export default {
             es: "jovial",
         },
         adjective: {
-            en: "joyful",
-            es: "alegre"
+            en: "hedonistic",
+            es: "hedonista"
         },
         concept: {
             en: "mood",
@@ -502,8 +502,8 @@ export default {
             es: "sensual",
         },
         adjective: {
-            en: "aesthetic",
-            es: "estético"
+            en: "aestheticist",
+            es: "esteticista"
         },
         concept: {
             en: "taste",
@@ -547,7 +547,7 @@ export default {
             es: "factual",
         },
         adjective: {
-            en: "pragmatic",
+            en: "pragmatist",
             es: "pragmático"
         },
         concept: {
@@ -592,8 +592,8 @@ export default {
             es: "social",
         },
         adjective: {
-            en: "expressive",
-            es: "expresivo"
+            en: "communicative",
+            es: "comunicativo"
         },
         concept: {
             en: "communication",
@@ -678,8 +678,8 @@ export default {
             es: "Implementación y destreza técnica"
         },
         adjective: {
-            en: "technical",
-            es: "técnico"
+            en: "technocratic",
+            es: "tecnocrático"
         },
         concept: {
             en: "functionality",
@@ -719,8 +719,8 @@ export default {
             es: "Organización y logística"
         },
         adjective: {
-            en: "organizational",
-            es: "organizacional"
+            en: "structuralist",
+            es: "estructuralista"
         },
         concept: {
             en: "logistics",
@@ -759,8 +759,8 @@ export default {
             es: "Disciplina y crítica constructiva"
         },
         adjective: {
-            en: "disciplined",
-            es: "disciplinado"
+            en: "juridical",
+            es: "jurídico"
         },
         concept: {
             en: "order",
@@ -800,8 +800,8 @@ export default {
             es: "Acción y energía física"
         },
         adjective: {
-            en: "active",
-            es: "activo"
+            en: "vitalist",
+            es: "vitalista"
         },
         concept: {
             en: "action",
@@ -882,8 +882,8 @@ export default {
             es: "Pasión y entrega artística"
         },
         adjective: {
-            en: "passionate",
-            es: "apasionado"
+            en: "devotional",
+            es: "devocional"
         },
         concept: {
             en: "passion",
@@ -923,8 +923,8 @@ export default {
             es: "Habilidad y construcción práctica"
         },
         adjective: {
-            en: "hands-on",
-            es: "práctico"
+            en: "mechanistic",
+            es: "mecanicista"
         },
         concept: {
             en: "aptitude",
@@ -964,8 +964,8 @@ export default {
             es: "Dedicación y servicio"
         },
         adjective: {
-            en: "dedicated",
-            es: "dedicado"
+            en: "servicial",
+            es: "servicial"
         },
         concept: {
             en: "service",
@@ -1005,8 +1005,8 @@ export default {
             es: "Cuidado y protección"
         },
         adjective: {
-            en: "protective",
-            es: "protector"
+            en: "protectoral",
+            es: "protectoral"
         },
         concept: {
             en: "security",
@@ -1046,8 +1046,8 @@ export default {
             es: "Producción y eficiencia"
         },
         adjective: {
-            en: "industrious",
-            es: "industrioso"
+            en: "industrial",
+            es: "industrial"
         },
         concept: {
             en: "productivity",
@@ -1087,8 +1087,8 @@ export default {
             es: "Gestión y metas"
         },
         adjective: {
-            en: "goal-oriented",
-            es: "orientado a metas"
+            en: "managerial",
+            es: "gerencial"
         },
         concept: {
             en: "goals",
@@ -1128,8 +1128,8 @@ export default {
             es: "Poder y dominio"
         },
         adjective: {
-            en: "commanding",
-            es: "dominante"
+            en: "authoritarian",
+            es: "autoritario"
         },
         concept: {
             en: "control",
