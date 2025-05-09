@@ -92,35 +92,35 @@ const bars = {
 const INTROS = [
   [
     Copy.text({
-      en: "physical detachment (abstraction) can make it intorspective and fearful",
-      es: "el desapego físico (abstracción) lo puede hacer introspectivo y temeroso",
+      en: "Physical detachment (abstraction) may lead to withdrawal or aloofness",
+      es: "el desapego físico (abstracción) conducir a alejamiento o ensimismamiento",
     }),
     undefined,
     Copy.text({
-      en: "physical execution (action) can make it competitive and impatient",
-      es: "la ejecución física (acción) lo puede hacer competitivo e impaciente",
+      en: "Physical execution (action) may lead to impatience or competitiveness",
+      es: "La ejecución física (acción) puede llevar a impaciencia o competitividad",
     }),
   ],
   [
     Copy.text({
-      en: "rational detachment (instiction) can make it volatile and obstinate",
-      es: "el desapego racional (instinción) lo puede hacer volátil y obstinado",
+      en: "Rational detachment (instinction) may lead to impulsiveness or pattern projection",
+      es: "el desapego racional (instinción) llevar a impulsividad o proyección de patrones",
     }),
     undefined,
     Copy.text({
-      en: "rational execution (regulation) can make it rightgeous and sctrict",
-      es: "la ejecución racional (regulación) lo puede hacer santurrón y estricto",
+      en: "Rational execution (regulation) may lead to rigidity or righteousnes",
+      es: "la ejecución racional (regulación) puede llevar a rigidez o rectitud excesiva",
     }),
   ],
   [
     Copy.text({
-      en: "emotional detachment (objectivation) can make it preculiar and apathetic",
-      es: "el desapego emocional (objetivación) lo puede hacer peculiar y apático",
+      en: "Emotional detachment (objectivation) may lead to apathy or emotional distancing",
+      es: "el desapego emocional (objetivación) llevar a apatía o distanciamiento emocional",
     }),
     undefined,
     Copy.text({
-      en: "emotional execution (valuation) can make it biased and sensitive",
-      es: "la ejecución emocional (valoración) lo puede hacer sesgado y sensible",
+      en: "Emotional execution (valuation) may lead to bias or emotional reactivity",
+      es: "la ejecución emocional (valoración) puede conducir a sesgo o reactividad emocional",
     }),
   ],
 ];
@@ -225,19 +225,19 @@ export const model = {
       let intros = code.map((n, i) => INTROS[i][n]).filter(n => n);
       if (intros.length > 1) intros[intros.length - 1] = Copy.at.and + " " + intros[intros.length - 1];
       else if (!intros.length) intros = [Copy.text({
-        es: "no hay tendecias introvertidas",
-        en: "there are no introverted tendencies",
+        es: "no hay tendecias ejecutivas o de desapego; es una psyque completamente abierta",
+        en: "there are no executive or detached tendencies—this psyche is fully open",
       })];
       return {
         p: Copy.text({
           en: [
-            `The state with the ${copy.at.tone} (${copy.at.colour}) color is ${copy.at.adjective}—a psyche focused on ${copy.at.concept} as an archetypical ${copy.at.archetype}. It fits comfortably at any type of ${copy.at.location}—${copy.at.map}.`,
-            `In this state there ${s?"are":"is"} ${only} ${ext} ${Copy.at.flexible} tendency${s}, which indicates a personality that is ${TENDECIES[ext]}. In this case: ${intros.join("; ")}.`,
+            `The state with the ${copy.at.tone} (${copy.at.colour}) color is ${copy.at.adjective}; a psyche focused on ${copy.at.focus.toLocaleLowerCase()}—the archetypical ${copy.at.archetype}. It fits comfortably in spaces of ${copy.at.location}.`,
+            `In this state there ${s?"are":"is"} ${only} ${ext} ${Copy.at.flexible} tendency${s}, which indicates a personality that is ${TENDECIES[ext]}. In this case: ${intros.join("; ").toLocaleLowerCase()}.`,
             `To learn to navigate this and other states of the 3D Psyche, please contact us (below) or consult our educational dossier.`,
           ],
           es: [
-            `El estado de color ${copy.at.tone} (${copy.at.colour}) es ${copy.at.adjective}; una psique enfocada en ${copy.at.concept}. Como su arquetipo de ${copy.at.archetype}, se manifiesta a gusto en cualquier tipo de ${copy.at.location} (${copy.at.map}).`,
-            `En este estado tenemos ${only} ${ext} tendencia${s} ${Copy.at.flexible}${s}, lo que indica una personalidad ${TENDECIES[ext]}. En este caso: ${intros.join("; ")}.`,
+            `El estado de color ${copy.at.tone} (${copy.at.colour}) es ${copy.at.adjective}; una psique enfocada en ${copy.at.focus.toLocaleLowerCase()}. Como su arquetipo de ${copy.at.archetype}, se manifiesta a gusto en cualquier tipo de ${copy.at.location}.`,
+            `En este estado tenemos ${only} ${ext} tendencia${s} ${Copy.at.flexible}${s}, lo que indica una personalidad ${TENDECIES[ext]}. En este caso: ${intros.join("; ").toLowerCase()}.`,
             `Para aprender a explorar este y los demás estados de la Psique Tridimensional, contáctanos (más abajo) o refiérete a nuestro dossier educativo.`,
           ],
         })

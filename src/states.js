@@ -1,7 +1,11 @@
 export default {
     "000": {
-        code: "nnn",
-        coords: "000",
+        code: "000",
+        coords: "---",
+        focus: {
+            en: "Silence and inner peace",
+            es: "Silencio y paz interior"
+        },
         quality: {
             en: "ethereal",
             es: "ethereal",
@@ -33,7 +37,7 @@ export default {
         mbti: "i--p",
         location: {
             en: "natural landscape",
-            es: "ambiente natural",
+            es: "ambiente natural"
         },
         map: {
             en: "retreat, open range, getaway",
@@ -42,6 +46,11 @@ export default {
     },
     "001": {
         code: "001",
+        coords: "--o",
+        focus: {
+            en: "Care and presence",
+            es: "Cuidado y presencia"
+        },
         quality: {
             en: "inspirational",
             es: "inspiracional",
@@ -72,8 +81,8 @@ export default {
         },
         mbti: "-nfp",
         location: {
-            en: "garden",
-            es: "jardín",
+            en: "gardens and fairs",
+            es: "jardines y ferias"
         },
         map: {
             en: "children's, botanical, zoo, fair",
@@ -82,6 +91,11 @@ export default {
     },
     "002": {
         code: "002",
+        coords: "--x",
+        focus: {
+            en: "Introspection and beauty",
+            es: "Introspección y belleza"
+        },
         quality: {
             en: "sentimental",
             es: "sentimental",
@@ -112,8 +126,8 @@ export default {
         },
         mbti: "infp",
         location: {
-            en: "auditorium",
-            es: "auditorio",
+            en: "auditoriums and theaters",
+            es: "auditorios y teatros"
         },
         map: {
             en: "concert hall, theatre, opera house",
@@ -122,6 +136,11 @@ export default {
     },
     "010": {
         code: "010",
+        coords: "-o-",
+        focus: {
+            en: "Knowledge and analysis",
+            es: "Conocimiento y análisis"
+        },
         quality: {
             en: "conceptual",
             es: "conceptual",
@@ -152,8 +171,8 @@ export default {
         },
         mbti: "-ntp",
         location: {
-            en: "field of research",
-            es: "campo de investigación",
+            en: "research fields",
+            es: "campos de investigación"
         },
         map: {
             en: "school, journal, excursion",
@@ -162,6 +181,11 @@ export default {
     },
     "011": {
         code: "011",
+        coords: "-oo",
+        focus: {
+            en: "Narrative and connection",
+            es: "Narrativa y conexión"
+        },
         quality: {
             en: "ideational",
             es: "ideacional",
@@ -192,8 +216,8 @@ export default {
         },
         mbti: "en-p",
         location: {
-            en: "dialogue",
-            es: "diálogo",
+            en: "dialogue and discussion",
+            es: "diálogo y charla"
         },
         map: {
             en: "cafe, lecture, publication",
@@ -202,9 +226,10 @@ export default {
     },
     "012": {
         code: "012",
-        adjective: { // This was duplicated, I assumed you meant to have one as "quality"
-            en: "existential",
-            es: "existencial",
+        coords: "-ox",
+        focus: {
+            en: "Reflection and support",
+            es: "Reflexión y apoyo"
         },
         adjective: {
             en: "existentialist",
@@ -232,8 +257,8 @@ export default {
         },
         mbti: "-nf-",
         location: {
-            en: "sanctuary",
-            es: "santuario",
+            en: "sanctuaries and museums",
+            es: "santuarios y museos"
         },
         map: {
             en: "temple, memorial, museum",
@@ -242,6 +267,11 @@ export default {
     },
     "020": {
         code: "020",
+        coords: "-x-",
+        focus: {
+            en: "Calculation and systems",
+            es: "Cálculo y sistemas"
+        },
         quality: {
             en: "analytical",
             es: "analítico",
@@ -272,8 +302,8 @@ export default {
         },
         mbti: "intp",
         location: {
-            en: "study",
-            es: "estudio",
+            en: "studies and labs",
+            es: "estudios y laboratorios"
         },
         map: {
             en: "desk, board, observatory",
@@ -282,6 +312,11 @@ export default {
     },
     "021": {
         code: "021",
+        coords: "-xo",
+        focus: {
+            en: "Training and transfer",
+            es: "Entrenamiento y transferencia"
+        },
         quality: {
             en: "theoretical",
             es: "teórica",
@@ -312,8 +347,8 @@ export default {
         },
         mbti: "-nt-",
         location: {
-            en: "seminar",
-            es: "seminario",
+            en: "seminars and classrooms",
+            es: "seminarios y aulas"
         },
         map: {
             en: "forum, expo, classroom",
@@ -322,6 +357,11 @@ export default {
     },
     "022": {
         code: "022",
+        coords: "-xx",
+        focus: {
+            en: "Thought and contemplation",
+            es: "Pensamiento y contemplación"
+        },
         quality: {
             en: "ethical",
             es: "ético",
@@ -352,8 +392,8 @@ export default {
         },
         mbti: "in-j",
         location: {
-            en: "library",
-            es: "biblioteca",
+            en: "libraries and conservatories",
+            es: "bibliotecas y conservatorios"
         },
         map: {
             en: "rectory, seminar, conservatory",
@@ -362,6 +402,11 @@ export default {
     },
     "100": {
         code: "100",
+        coords: "o--",
+        focus: {
+            en: "Exploration and alertness",
+            es: "Exploración y alerta"
+        },
         quality: {
             en: "sensorial",
             es: "sensorial",
@@ -392,8 +437,8 @@ export default {
         },
         mbti: "-s-p",
         location: {
-            en: "field",
-            es: "campo de exploración",
+            en: "exploration fields",
+            es: "campos de exploración"
         },
         map: {
             en: "park, hunting ground, yard",
@@ -402,6 +447,11 @@ export default {
     },
     "101": {
         code: "101",
+        coords: "o-o",
+        focus: {
+            en: "Joy and shared energy",
+            es: "Alegría y energía compartida"
+        },
         quality: {
             en: "jovial",
             es: "jovial",
@@ -432,8 +482,8 @@ export default {
         },
         mbti: "esfp",
         location: {
-            en: "social club",
-            es: "club social",
+            en: "social clubs",
+            es: "clubes sociales"
         },
         map: {
             en: "cafeteria, bar, disco",
@@ -442,6 +492,11 @@ export default {
     },
     "102": {
         code: "102",
+        coords: "o-x",
+        focus: {
+            en: "Taste and attention",
+            es: "Gusto y atención"
+        },
         quality: {
             en: "sensual",
             es: "sensual",
@@ -472,8 +527,8 @@ export default {
         },
         mbti: "--f-",
         location: {
-            en: "gallery",
-            es: "galería",
+            en: "galleries and runways",
+            es: "galerías y pasarelas"
         },
         map: {
             en: "restaurant, art exhibit, runway",
@@ -482,6 +537,11 @@ export default {
     },
     "110": {
         code: "110",
+        coords: "oo-",
+        focus: {
+            en: "Exchange and negotiation",
+            es: "Intercambio y negociación"
+        },
         quality: {
             en: "factual",
             es: "factual",
@@ -512,8 +572,8 @@ export default {
         },
         mbti: "estp",
         location: {
-            en: "market",
-            es: "mercado",
+            en: "markets and casinos",
+            es: "mercados y casinos"
         },
         map: {
             en: "market, trading floor, casino",
@@ -522,6 +582,11 @@ export default {
     },
     "111": {
         code: "111",
+        coords: "ooo",
+        focus: {
+            en: "Flow and communication",
+            es: "Fluidez y comunicación"
+        },
         quality: {
             en: "social",
             es: "social",
@@ -552,8 +617,8 @@ export default {
         },
         mbti: "e---",
         location: {
-            en: "plaza",
-            es: "plaza",
+            en: "plazas and halls",
+            es: "plazas y salones"
         },
         map: {
             en: "hallway, media, main hub",
@@ -562,6 +627,11 @@ export default {
     },
     "112": {
         code: "112",
+        coords: "00x",
+        focus: {
+            en: "Representation and tact",
+            es: "Representación y tacto"
+        },
         quality: {
             en: "congenial",
             es: "congenial",
@@ -592,8 +662,8 @@ export default {
         },
         mbti: "enfj",
         location: {
-            en: "community center",
-            es: "centro comunitario",
+            en: "community centers",
+            es: "centros comunitarios"
         },
         map: {
             en: "cultural center, embassy, hospitality",
@@ -602,6 +672,11 @@ export default {
     },
     "120": {
         code: "120",
+        coords: "ox-",
+        focus: {
+            en: "Implementation and technical skill",
+            es: "Implementación y destreza técnica"
+        },
         adjective: {
             en: "technical",
             es: "técnico",
@@ -628,8 +703,8 @@ export default {
         },
         mbti: "--t-",
         location: {
-            en: "lab",
-            es: "laboratorio",
+            en: "labs and technology spaces",
+            es: "laboratorios y espacios de tecnología"
         },
         map: {
             en: "systems, technology, accounting",
@@ -638,6 +713,11 @@ export default {
     },
     "121": {
         code: "121",
+        coords: "oxo",
+        focus: {
+            en: "Organization and logistics",
+            es: "Organización y logística"
+        },
         adjective: {
             en: "organizational",
             es: "organizacional",
@@ -663,8 +743,8 @@ export default {
             es: "menta",
         },
         location: {
-            en: "civic center",
-            es: "centro civil",
+            en: "civic institutions",
+            es: "instituciones cívicas"
         },
         map: {
             en: "organization, club, politic arena",
@@ -673,6 +753,11 @@ export default {
     },
     "122": {
         code: "122",
+        coords: "oxx",
+        focus: {
+            en: "Discipline and constructive critique",
+            es: "Disciplina y crítica constructiva"
+        },
         adjective: {
             en: "critical",
             es: "crítico",
@@ -699,8 +784,8 @@ export default {
         },
         mbti: "-n-j",
         location: {
-            en: "court",
-            es: "lcorte",
+            en: "judicial and deliberative spaces",
+            es: "espacios judiciales y deliberativos"
         },
         map: {
             en: "assembly, advisory, congress",
@@ -709,6 +794,11 @@ export default {
     },
     "200": {
         code: "200",
+        coords: "x--",
+        focus: {
+            en: "Action and physical energy",
+            es: "Acción y energía física"
+        },
         adjective: {
             en: "martial",
             es: "marcial",
@@ -735,8 +825,8 @@ export default {
         },
         mbti: "is-p",
         location: {
-            en: "arena",
-            es: "arena",
+            en: "arenas and stadiums",
+            es: "arenas y estadios"
         },
         map: {
             en: "stadium, dojo, track & field",
@@ -745,6 +835,11 @@ export default {
     },
     "201": {
         code: "201",
+        coords: "x-o",
+        focus: {
+            en: "Attitude and expression",
+            es: "Actitud y expresión"
+        },
         adjective: {
             en: "sensational",
             es: "sensacionalista",
@@ -771,8 +866,8 @@ export default {
         },
         mbti: "-sf-",
         location: {
-            en: "stage",
-            es: "escenario",
+            en: "performance and training venues",
+            es: "escenarios y espacios de entrenamiento"
         },
         map: {
             en: "ring, gym, dance floor",
@@ -781,6 +876,11 @@ export default {
     },
     "202": {
         code: "202",
+        coords: "x-x",
+        focus: {
+            en: "Passion and artistic devotion",
+            es: "Pasión y entrega artística"
+        },
         adjective: {
             en: "devotional",
             es: "devocional",
@@ -807,8 +907,8 @@ export default {
         },
         mbti: "isfj",
         location: {
-            en: "studio",
-            es: "ateliere",
+            en: "studios and ateliers",
+            es: "estudios y talleres"
         },
         map: {
             en: "atelier, crafts, kitchen",
@@ -817,6 +917,11 @@ export default {
     },
     "210": {
         code: "210",
+        coords: "xo-",
+        focus: {
+            en: "Skill and practical construction",
+            es: "Habilidad y construcción práctica"
+        },
         adjective: {
             en: "practical",
             es: "práctico",
@@ -843,8 +948,8 @@ export default {
         },
         mbti: "-st-",
         location: {
-            en: "workshop",
-            es: "taller",
+            en: "workshops and garages",
+            es: "talleres y garajes"
         },
         map: {
             en: "warehouse, garage, construction",
@@ -853,6 +958,11 @@ export default {
     },
     "211": {
         code: "211",
+        coords: "xoo",
+        focus: {
+            en: "Dedication and service",
+            es: "Dedicación y servicio"
+        },
         adjective: {
             en: "diligent",
             es: "diligente",
@@ -879,8 +989,8 @@ export default {
         },
         mbti: "es-j",
         location: {
-            en: "service center",
-            es: "centro de servicio",
+            en: "service centers",
+            es: "centros de servicio"
         },
         map: {
             en: "security, life guarding, agency",
@@ -889,6 +999,11 @@ export default {
     },
     "212": {
         code: "212",
+        coords: "xox",
+        focus: {
+            en: "Care and protection",
+            es: "Cuidado y protección"
+        },
         adjective: {
             en: "protectoral",
             es: "protectoral",
@@ -915,8 +1030,8 @@ export default {
         },
         mbti: "-sfj",
         location: {
-            en: "clinic",
-            es: "clínica",
+            en: "health and caregiving spaces",
+            es: "espacios de salud y cuidado"
         },
         map: {
             en: "aid, health, care center",
@@ -925,6 +1040,11 @@ export default {
     },
     "220": {
         code: "220",
+        coords: "xx-",
+        focus: {
+            en: "Production and efficiency",
+            es: "Producción y eficiencia"
+        },
         adjective: {
             en: "industrial",
             es: "industrial",
@@ -951,8 +1071,8 @@ export default {
         },
         mbti: "istj",
         location: {
-            en: "industry",
-            es: "industria",
+            en: "factories and industries",
+            es: "fábricas e industrias"
         },
         map: {
             en: "factory, engineering, manufactoring",
@@ -961,6 +1081,11 @@ export default {
     },
     "221": {
         code: "221",
+        coords: "xxo",
+        focus: {
+            en: "Management and goals",
+            es: "Gestión y metas"
+        },
         adjective: {
             en: "motivational",
             es: "motivacional",
@@ -987,8 +1112,8 @@ export default {
         },
         mbti: "-stj",
         location: {
-            en: "company",
-            es: "compañía",
+            en: "corporate ventures",
+            es: "proyectos corporativos"
         },
         map: {
             en: "venture, business, enterprise",
@@ -997,6 +1122,11 @@ export default {
     },
     "222": {
         code: "222",
+        coords: "xxx",
+        focus: {
+            en: "Power and command",
+            es: "Poder y dominio"
+        },
         adjective: {
             en: "imperial",
             es: "imperial",
@@ -1023,8 +1153,8 @@ export default {
         },
         mbti: "i--j",
         location: {
-            en: "management",
-            es: "gerencia",
+            en: "government institutions",
+            es: "instituciones gubernamentales"
         },
         map: {
             en: "palace, tribune, government",
