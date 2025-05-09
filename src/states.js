@@ -10,7 +10,7 @@ export default {
             en: "ethereal",
             es: "ethereal",
         },
-        adjective: {
+        philosophy: {
             en: "stoic",
             es: "estoico"
         },
@@ -26,7 +26,7 @@ export default {
             en: "nature",
             es: "naturaleza",
         },
-        colour: {
+        color: {
             en: "dark",
             es: "oscuro",
         },
@@ -38,10 +38,6 @@ export default {
         location: {
             en: "natural landscape",
             es: "ambiente natural"
-        },
-        map: {
-            en: "retreat, open range, getaway",
-            es: "campo abierto, retiro, excursion",
         },
     },
     "001": {
@@ -55,7 +51,7 @@ export default {
             en: "inspirational",
             es: "inspiracional",
         },
-        adjective: {
+        philosophy: {
             en: "humanistic",
             es: "humanista"
         },
@@ -71,7 +67,7 @@ export default {
             en: "companion",
             es: "acompañante",
         },
-        colour: {
+        color: {
             en: "dark blue",
             es: "azul oscuro",
         },
@@ -83,10 +79,6 @@ export default {
         location: {
             en: "gardens and fairs",
             es: "jardines y ferias"
-        },
-        map: {
-            en: "children's, botanical, zoo, fair",
-            es: "infantil, botánico, zoológico, feria",
         },
     },
     "002": {
@@ -100,7 +92,7 @@ export default {
             en: "sentimental",
             es: "sentimental",
         },
-        adjective: {
+        philosophy: {
             en: "romantic",
             es: "romántico"
         },
@@ -116,7 +108,7 @@ export default {
             en: "poetry",
             es: "poesía",
         },
-        colour: {
+        color: {
             en: "pure blue",
             es: "azul puro",
         },
@@ -129,10 +121,6 @@ export default {
             en: "auditoriums and theaters",
             es: "auditorios y teatros"
         },
-        map: {
-            en: "concert hall, theatre, opera house",
-            es: "recital, teatro, templo, ópera",
-        },
     },
     "010": {
         code: "010",
@@ -141,11 +129,11 @@ export default {
             en: "Knowledge and analysis",
             es: "Conocimiento y análisis"
         },
-        adjective: {
+        philosophy: {
             en: "empirical",
             es: "empírico"
         },
-        adjective: {
+        philosophy: {
             en: "inquisitive",
             es: "inquisitivo"
         },
@@ -161,7 +149,7 @@ export default {
             en: "investigation",
             es: "invetigación",
         },
-        colour: {
+        color: {
             en: "dark green",
             es: "verde oscuro",
         },
@@ -173,10 +161,6 @@ export default {
         location: {
             en: "research fields",
             es: "campos de investigación"
-        },
-        map: {
-            en: "school, journal, excursion",
-            es: "escuela, documentación, excursión",
         },
     },
     "011": {
@@ -190,7 +174,7 @@ export default {
             en: "ideational",
             es: "ideacional",
         },
-        adjective: {
+        philosophy: {
             en: "idealistic",
             es: "idealista"
         },
@@ -206,7 +190,7 @@ export default {
             en: "narrative",
             es: "narrativa",
         },
-        colour: {
+        color: {
             en: "dark cyan",
             es: "verde azulado",
         },
@@ -219,10 +203,6 @@ export default {
             en: "dialogue and discussion",
             es: "diálogo y charla"
         },
-        map: {
-            en: "cafe, lecture, publication",
-            es: "café, charla, publicaciones",
-        },
     },
     "012": {
         code: "012",
@@ -231,7 +211,7 @@ export default {
             en: "Reflection and support",
             es: "Reflexión y apoyo"
         },
-        adjective: {
+        philosophy: {
             en: "existentialist",
             es: "existencialista"
         },
@@ -247,7 +227,7 @@ export default {
             en: "counseling",
             es: "consejería",
         },
-        colour: {
+        color: {
             en: "cyan blue",
             es: "azul ciano",
         },
@@ -259,10 +239,6 @@ export default {
         location: {
             en: "sanctuaries and museums",
             es: "santuarios y museos"
-        },
-        map: {
-            en: "temple, memorial, museum",
-            es: "templo, memorial, museo, etc.",
         },
     },
     "020": {
@@ -276,7 +252,7 @@ export default {
             en: "analytical",
             es: "analítico",
         },
-        adjective: {
+        philosophy: {
             en: "rationalist",
             es: "racionalista"
         },
@@ -292,7 +268,7 @@ export default {
             en: "science",
             es: "ciencia",
         },
-        colour: {
+        color: {
             en: "pure green",
             es: "verde puro",
         },
@@ -304,10 +280,6 @@ export default {
         location: {
             en: "studies and labs",
             es: "estudios y laboratorios"
-        },
-        map: {
-            en: "desk, board, observatory",
-            es: "escritorio, aula, observatorio, etc.",
         },
     },
     "021": {
@@ -321,7 +293,7 @@ export default {
             en: "theoretical",
             es: "teórica",
         },
-        adjective: {
+        philosophy: {
             en: "didactic",
             es: "didáctico"
         },
@@ -337,7 +309,7 @@ export default {
             en: "educacion",
             es: "educación",
         },
-        colour: {
+        color: {
             en: "cyan green",
             es: "verde ciano",
         },
@@ -349,10 +321,6 @@ export default {
         location: {
             en: "seminars and classrooms",
             es: "seminarios y aulas"
-        },
-        map: {
-            en: "forum, expo, classroom",
-            es: "foro, expo, academia, etc.",
         },
     },
     "022": {
@@ -366,7 +334,7 @@ export default {
             en: "ethical",
             es: "ético",
         },
-        adjective: {
+        philosophy: {
             en: "moralist",
             es: "moralista"
         },
@@ -382,7 +350,7 @@ export default {
             en: "philosophy",
             es: "filosofía",
         },
-        colour: {
+        color: {
             en: "pure cyan",
             es: "ciano puro",
         },
@@ -394,10 +362,6 @@ export default {
         location: {
             en: "libraries and conservatories",
             es: "bibliotecas y conservatorios"
-        },
-        map: {
-            en: "rectory, seminar, conservatory",
-            es: "archivo, mentorial, conservatorio, etc.",
         },
     },
     "100": {
@@ -411,7 +375,7 @@ export default {
             en: "sensorial",
             es: "sensorial",
         },
-        adjective: {
+        philosophy: {
             en: "phenomenological",
             es: "fenomenológico"
         },
@@ -427,7 +391,7 @@ export default {
             en: "exploration",
             es: "exploración",
         },
-        colour: {
+        color: {
             en: "dark red",
             es: "rojo oscuro",
         },
@@ -439,10 +403,6 @@ export default {
         location: {
             en: "exploration fields",
             es: "campos de exploración"
-        },
-        map: {
-            en: "park, hunting ground, yard",
-            es: "caza, deporte, excursión, parque, etc.",
         },
     },
     "101": {
@@ -456,7 +416,7 @@ export default {
             en: "jovial",
             es: "jovial",
         },
-        adjective: {
+        philosophy: {
             en: "hedonistic",
             es: "hedonista"
         },
@@ -472,7 +432,7 @@ export default {
             en: "entretainment",
             es: "entretenimineto",
         },
-        colour: {
+        color: {
             en: "dark magenta",
             es: "magenta oscuro",
         },
@@ -484,10 +444,6 @@ export default {
         location: {
             en: "social clubs",
             es: "clubes sociales"
-        },
-        map: {
-            en: "cafeteria, bar, disco",
-            es: "cafetería, bar, salón de fiestas, etc.",
         },
     },
     "102": {
@@ -501,7 +457,7 @@ export default {
             en: "sensual",
             es: "sensual",
         },
-        adjective: {
+        philosophy: {
             en: "aestheticist",
             es: "esteticista"
         },
@@ -517,7 +473,7 @@ export default {
             en: "fashion",
             es: "moda",
         },
-        colour: {
+        color: {
             en: "stylmagenta blueist",
             es: "magenta azul",
         },
@@ -529,10 +485,6 @@ export default {
         location: {
             en: "galleries and runways",
             es: "galerías y pasarelas"
-        },
-        map: {
-            en: "restaurant, art exhibit, runway",
-            es: "exhibición, restaurant, pasarela, etc.",
         },
     },
     "110": {
@@ -546,7 +498,7 @@ export default {
             en: "factual",
             es: "factual",
         },
-        adjective: {
+        philosophy: {
             en: "pragmatist",
             es: "pragmático"
         },
@@ -562,7 +514,7 @@ export default {
             en: "marketing",
             es: "mercadeo",
         },
-        colour: {
+        color: {
             en: "dark yellow",
             es: "amarillo oscuro",
         },
@@ -574,10 +526,6 @@ export default {
         location: {
             en: "markets and casinos",
             es: "mercados y casinos"
-        },
-        map: {
-            en: "market, trading floor, casino",
-            es: "comercio, banca, casino, etc.",
         },
     },
     "111": {
@@ -591,7 +539,7 @@ export default {
             en: "social",
             es: "social",
         },
-        adjective: {
+        philosophy: {
             en: "communicative",
             es: "comunicativo"
         },
@@ -607,7 +555,7 @@ export default {
             en: "communications",
             es: "comunicación",
         },
-        colour: {
+        color: {
             en: "gray",
             es: "gris",
         },
@@ -619,10 +567,6 @@ export default {
         location: {
             en: "plazas and halls",
             es: "plazas y salones"
-        },
-        map: {
-            en: "hallway, media, main hub",
-            es: "pasillo, medios, centro, etc.",
         },
     },
     "112": {
@@ -636,7 +580,7 @@ export default {
             en: "congenial",
             es: "congenial",
         },
-        adjective: {
+        philosophy: {
             en: "diplomatic",
             es: "diplomático"
         },
@@ -652,7 +596,7 @@ export default {
             en: "diplomacy",
             es: "diplomacia",
         },
-        colour: {
+        color: {
             en: "light blue",
             es: "azul claro",
         },
@@ -665,10 +609,6 @@ export default {
             en: "community centers",
             es: "centros comunitarios"
         },
-        map: {
-            en: "cultural center, embassy, hospitality",
-            es: "centro cultural, embajada, hotelería, etc.",
-        },
     },
     "120": {
         code: "120",
@@ -677,7 +617,7 @@ export default {
             en: "Implementation and technical skill",
             es: "Implementación y destreza técnica"
         },
-        adjective: {
+        philosophy: {
             en: "technocratic",
             es: "tecnocrático"
         },
@@ -693,7 +633,7 @@ export default {
             en: "technology",
             es: "tecnología",
         },
-        colour: {
+        color: {
             en: "yellow green",
             es: "verde amarillo",
         },
@@ -706,10 +646,6 @@ export default {
             en: "labs and technology spaces",
             es: "laboratorios y espacios de tecnología"
         },
-        map: {
-            en: "systems, technology, accounting",
-            es: "sistemas, tecnología, contabilidad, etc.",
-        },
     },
     "121": {
         code: "121",
@@ -718,7 +654,7 @@ export default {
             en: "Organization and logistics",
             es: "Organización y logística"
         },
-        adjective: {
+        philosophy: {
             en: "structuralist",
             es: "estructuralista"
         },
@@ -734,7 +670,7 @@ export default {
             en: "logistics",
             es: "logística",
         },
-        colour: {
+        color: {
             en: "light green",
             es: "verde claro",
         },
@@ -746,10 +682,6 @@ export default {
             en: "civic institutions",
             es: "instituciones cívicas"
         },
-        map: {
-            en: "organization, club, politic arena",
-            es: "organización, club, arena política, etc.",
-        },
     },
     "122": {
         code: "122",
@@ -758,7 +690,7 @@ export default {
             en: "Discipline and constructive critique",
             es: "Disciplina y crítica constructiva"
         },
-        adjective: {
+        philosophy: {
             en: "juridical",
             es: "jurídico"
         },
@@ -774,7 +706,7 @@ export default {
             en: "law",
             es: "leyes",
         },
-        colour: {
+        color: {
             en: "light cyan",
             es: "ciano claro",
         },
@@ -787,10 +719,6 @@ export default {
             en: "judicial and deliberative spaces",
             es: "espacios judiciales y deliberativos"
         },
-        map: {
-            en: "assembly, advisory, congress",
-            es: "asamblea, consejería, congreso, etc.",
-        },
     },
     "200": {
         code: "200",
@@ -799,7 +727,7 @@ export default {
             en: "Action and physical energy",
             es: "Acción y energía física"
         },
-        adjective: {
+        philosophy: {
             en: "vitalist",
             es: "vitalista"
         },
@@ -815,7 +743,7 @@ export default {
             en: "athletism",
             es: "atletismo",
         },
-        colour: {
+        color: {
             en: "pure red",
             es: "rojo puro",
         },
@@ -828,10 +756,6 @@ export default {
             en: "arenas and stadiums",
             es: "arenas y estadios"
         },
-        map: {
-            en: "stadium, dojo, track & field",
-            es: "estadio, dojo, campo y pista, etc.",
-        },
     },
     "201": {
         code: "201",
@@ -840,7 +764,7 @@ export default {
             en: "Attitude and expression",
             es: "Actitud y expresión"
         },
-        adjective: {
+        philosophy: {
             en: "performative",
             es: "performativo"
         },
@@ -856,7 +780,7 @@ export default {
             en: "histrionism",
             es: "histrionismo",
         },
-        colour: {
+        color: {
             en: "magenta red",
             es: "rojo magenta",
         },
@@ -869,10 +793,6 @@ export default {
             en: "performance and training venues",
             es: "escenarios y espacios de entrenamiento"
         },
-        map: {
-            en: "ring, gym, dance floor",
-            es: "pista, gimnasio, salón de baile, etc.",
-        },
     },
     "202": {
         code: "202",
@@ -881,7 +801,7 @@ export default {
             en: "Passion and artistic devotion",
             es: "Pasión y entrega artística"
         },
-        adjective: {
+        philosophy: {
             en: "devotional",
             es: "devocional"
         },
@@ -897,7 +817,7 @@ export default {
             en: "artistry",
             es: "artesanía",
         },
-        colour: {
+        color: {
             en: "pure magenta",
             es: "magenta puro",
         },
@@ -910,10 +830,6 @@ export default {
             en: "studios and ateliers",
             es: "estudios y talleres"
         },
-        map: {
-            en: "atelier, crafts, kitchen",
-            es: "artesanía, cocina, manualidades, etc.",
-        },
     },
     "210": {
         code: "210",
@@ -922,7 +838,7 @@ export default {
             en: "Skill and practical construction",
             es: "Habilidad y construcción práctica"
         },
-        adjective: {
+        philosophy: {
             en: "mechanistic",
             es: "mecanicista"
         },
@@ -938,7 +854,7 @@ export default {
             en: "fabrication",
             es: "fabricación",
         },
-        colour: {
+        color: {
             en: "yellow red",
             es: "rojo amarillo",
         },
@@ -951,10 +867,6 @@ export default {
             en: "workshops and garages",
             es: "talleres y garajes"
         },
-        map: {
-            en: "warehouse, garage, construction",
-            es: "almacen, garage, construcción, etc.",
-        },
     },
     "211": {
         code: "211",
@@ -963,7 +875,7 @@ export default {
             en: "Dedication and service",
             es: "Dedicación y servicio"
         },
-        adjective: {
+        philosophy: {
             en: "servicial",
             es: "servicial"
         },
@@ -979,7 +891,7 @@ export default {
             en: "service",
             es: "servicio",
         },
-        colour: {
+        color: {
             en: "light red",
             es: "rojo claro",
         },
@@ -992,10 +904,6 @@ export default {
             en: "service centers",
             es: "centros de servicio"
         },
-        map: {
-            en: "security, life guarding, agency",
-            es: "seguridad, agencia, etc.",
-        },
     },
     "212": {
         code: "212",
@@ -1004,7 +912,7 @@ export default {
             en: "Care and protection",
             es: "Cuidado y protección"
         },
-        adjective: {
+        philosophy: {
             en: "protectoral",
             es: "protectoral"
         },
@@ -1020,7 +928,7 @@ export default {
             en: "caregiving",
             es: "cuidado",
         },
-        colour: {
+        color: {
             en: "light magenta",
             es: "magenta claro",
         },
@@ -1033,10 +941,6 @@ export default {
             en: "health and caregiving spaces",
             es: "espacios de salud y cuidado"
         },
-        map: {
-            en: "aid, health, care center",
-            es: "asistencia, centro de salud, etc.",
-        },
     },
     "220": {
         code: "220",
@@ -1045,7 +949,7 @@ export default {
             en: "Production and efficiency",
             es: "Producción y eficiencia"
         },
-        adjective: {
+        philosophy: {
             en: "industrial",
             es: "industrial"
         },
@@ -1061,7 +965,7 @@ export default {
             en: "ingeniering",
             es: "ingeniería",
         },
-        colour: {
+        color: {
             en: "pure yellow",
             es: "amarillo puro",
         },
@@ -1074,10 +978,6 @@ export default {
             en: "factories and industries",
             es: "fábricas e industrias"
         },
-        map: {
-            en: "factory, engineering, manufactoring",
-            es: "fábrica, ingeniería, manufactura, etc.",
-        },
     },
     "221": {
         code: "221",
@@ -1086,7 +986,7 @@ export default {
             en: "Management and goals",
             es: "Gestión y metas"
         },
-        adjective: {
+        philosophy: {
             en: "managerial",
             es: "gerencial"
         },
@@ -1102,7 +1002,7 @@ export default {
             en: "management",
             es: "gestión",
         },
-        colour: {
+        color: {
             en: "light yellow",
             es: "amarillo claro",
         },
@@ -1115,10 +1015,6 @@ export default {
             en: "corporate ventures",
             es: "proyectos corporativos"
         },
-        map: {
-            en: "venture, business, enterprise",
-            es: "projectos, negocios, empresas, etc.",
-        },
     },
     "222": {
         code: "222",
@@ -1127,7 +1023,7 @@ export default {
             en: "Power and command",
             es: "Poder y dominio"
         },
-        adjective: {
+        philosophy: {
             en: "authoritarian",
             es: "autoritario"
         },
@@ -1143,7 +1039,7 @@ export default {
             en: "government",
             es: "gobierno",
         },
-        colour: {
+        color: {
             en: "pure light",
             es: "claro puro",
         },
@@ -1155,10 +1051,6 @@ export default {
         location: {
             en: "government institutions",
             es: "instituciones gubernamentales"
-        },
-        map: {
-            en: "palace, tribune, government",
-            es: "palacio, tribunal, gobierno, etc.",
         },
     }
 };
