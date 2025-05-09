@@ -42,11 +42,6 @@ export const siteTest = {
       [qTotal]: '#000a',
       default: '#fffa',
     }),
-    div: global.rgb ? undefined : {
-      display: questionnaire._qCounter.as(n => n > qTotal ? 'block' : 'none'),
-      height: `60rem`,
-      background: global.rgb ? global.rgb : results._feature.as(v => `linear-gradient(to bottom, ${questionnaire._favorite.value} 0%, ${v} 100%)`),
-    },
     color: questionnaire._qCounter.as({
       [-3]: '#fff',
       [-1]: '#fff',
@@ -63,6 +58,11 @@ export const siteTest = {
       questionnaire._qCounter.value = questionnaire._qCounter.value + 1;
       location.href = "#q" + questionnaire._qCounter.value;
     },
+  },
+  div: global.rgb ? undefined : {
+    display: questionnaire._qCounter.as(n => n > qTotal ? 'block' : 'none'),
+    height: `60rem`,
+    background: global.rgb ? global.rgb : results._feature.as(v => `linear-gradient(to bottom, ${questionnaire._favorite.value} 0%, ${v} 100%)`),
   },
   footer: {
     display: global.rgb ? undefined : questionnaire._qCounter.as(n => n > qTotal ? 'block' : 'none'),
@@ -83,8 +83,8 @@ export const siteTest = {
         margin: `1em 0 -2.25em -11em`,
         zIndex: 1,
         text: Copy.text({
-          en: `Closests:`,
-          es: `Más cercano:`,
+          en: `Closest state:`,
+          es: `Estado más cercano:`,
         }),
       },
 

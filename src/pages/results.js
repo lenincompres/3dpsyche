@@ -243,20 +243,21 @@ export const model = {
         })
       };
     }),
-    small: _feature.as(v => Copy.text({
-      en: `RGB color code: ${v}`,
-      es: `Código de color RGB: ${v}`,
-    })),
   },
   section: {
     css: style.floatingSign,
     margin: "1em 0",
     padding: "1.5em",
     header: {
+      marginBottom: "1em",
       h4: Copy.text({
         en: "Break down and extrapolation to other frameworks",
         es: "Desglose y extrapolación a otros sistemas.",
       }),
+      small: _feature.as(v => Copy.text({
+        en: `RGB color code: ${v}`,
+        es: `Código de color RGB: ${v}`,
+      })),
     },
     ul: {
       css: {
