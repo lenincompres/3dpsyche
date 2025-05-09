@@ -93,7 +93,7 @@ const INTROS = [
   [
     Copy.text({
       en: "Physical detachment (abstraction) may lead to withdrawal or aloofness",
-      es: "el desapego físico (abstracción) conducir a alejamiento o ensimismamiento",
+      es: "el desapego físico (abstracción) puede conducir a alejamiento o ensimismamiento",
     }),
     undefined,
     Copy.text({
@@ -104,7 +104,7 @@ const INTROS = [
   [
     Copy.text({
       en: "Rational detachment (instinction) may lead to impulsiveness or pattern projection",
-      es: "el desapego racional (instinción) llevar a impulsividad o proyección de patrones",
+      es: "el desapego racional (instinción) puede llevar a impulsividad o proyección de patrones",
     }),
     undefined,
     Copy.text({
@@ -115,7 +115,7 @@ const INTROS = [
   [
     Copy.text({
       en: "Emotional detachment (objectivation) may lead to apathy or emotional distancing",
-      es: "el desapego emocional (objetivación) llevar a apatía o distanciamiento emocional",
+      es: "el desapego emocional (objetivación) puede llevar a apatía o distanciamiento emocional",
     }),
     undefined,
     Copy.text({
@@ -231,12 +231,12 @@ export const model = {
       return {
         p: Copy.text({
           en: [
-            `The state with the ${copy.at.tone} (${copy.at.color}) color is ${copy.at.philosophy}; a psyche focused on ${copy.at.focus.toLocaleLowerCase()}—the archetypical ${copy.at.archetype}. It fits comfortably in spaces of ${copy.at.location}.`,
+            `The state with the ${copy.at.tone} (${copy.at.color}) color is ${copy.at.philosophy}—the state of ${copy.at.concept}. It represents a psyche focused on ${copy.at.focus.toLocaleLowerCase()}—the archetypical ${copy.at.archetype}. It fits comfortably in spaces of ${copy.at.location}.`,
             `In this state there ${s?"are":"is"} ${only} ${ext} ${Copy.at.flexible} tendency${s}, which indicates a personality that is ${TENDECIES[ext]}. In this case: ${intros.join("; ").toLocaleLowerCase()}.`,
             `To learn to navigate this and other states of the 3D Psyche, please contact us (below) or consult our educational dossier.`,
           ],
           es: [
-            `El estado de color ${copy.at.tone} (${copy.at.color}) es ${copy.at.philosophy}; una psique enfocada en ${copy.at.focus.toLocaleLowerCase()}. Como su arquetipo de ${copy.at.archetype}, se manifiesta a gusto en cualquier tipo de ${copy.at.location}.`,
+            `El estado de color ${copy.at.tone} (${copy.at.color}) es ${copy.at.philosophy}, el estado de ${copy.at.concept}. Representa una psique enfocada en ${copy.at.focus.toLocaleLowerCase()}. Como su arquetipo de ${copy.at.archetype}, se manifiesta a gusto en cualquier tipo de ${copy.at.location}.`,
             `En este estado tenemos ${only} ${ext} tendencia${s} ${Copy.at.flexible}${s}, lo que indica una personalidad ${TENDECIES[ext]}. En este caso: ${intros.join("; ").toLowerCase()}.`,
             `Para aprender a explorar este y los demás estados de la Psique Tridimensional, contáctanos (más abajo) o refiérete a nuestro dossier educativo.`,
           ],

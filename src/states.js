@@ -16,7 +16,7 @@ export default {
         },
         concept: {
             en: "serenity",
-            es: "la serenidad",
+            es: "la serenidad"
         },
         archetype: {
             en: "monk",
@@ -60,8 +60,8 @@ export default {
             es: "humanidad",
         },
         concept: {
-            en: "empathy",
-            es: "la empatía",
+            en: "care",
+            es: "el cariño"
         },
         archetype: {
             en: "companion",
@@ -97,8 +97,8 @@ export default {
             es: "romántico"
         },
         concept: {
-            en: "feelings",
-            es: "los sentimientos",
+            en: "feeling",
+            es: "el sentimiento"
         },
         archetype: {
             en: "poet",
@@ -133,13 +133,9 @@ export default {
             en: "empirical",
             es: "empírico"
         },
-        philosophy: {
-            en: "inquisitive",
-            es: "inquisitivo"
-        },
         concept: {
             en: "inquiry",
-            es: "la curiosidad",
+            es: "la curiosidad"
         },
         archetype: {
             en: "researcher",
@@ -180,7 +176,7 @@ export default {
         },
         concept: {
             en: "creativity",
-            es: "la creatividad",
+            es: "la creatividad"
         },
         archetype: {
             en: "storyteller",
@@ -217,7 +213,7 @@ export default {
         },
         concept: {
             en: "meaning",
-            es: "el significado",
+            es: "el significado"
         },
         archetype: {
             en: "counselor",
@@ -258,7 +254,7 @@ export default {
         },
         concept: {
             en: "logic",
-            es: "la lógica",
+            es: "la lógica"
         },
         archetype: {
             en: "analyst",
@@ -299,7 +295,7 @@ export default {
         },
         concept: {
             en: "ideas",
-            es: "las ideas",
+            es: "las ideas"
         },
         archetype: {
             en: "instructor",
@@ -339,8 +335,8 @@ export default {
             es: "moralista"
         },
         concept: {
-            en: "morals",
-            es: "la moralidad",
+            en: "morality",
+            es: "la moralidad"
         },
         archetype: {
             en: "philosopher",
@@ -381,7 +377,7 @@ export default {
         },
         concept: {
             en: "alertness",
-            es: "la atención",
+            es: "la atención"
         },
         archetype: {
             en: "scout",
@@ -422,7 +418,7 @@ export default {
         },
         concept: {
             en: "mood",
-            es: "el humor",
+            es: "el humor"
         },
         archetype: {
             en: "entertainer",
@@ -463,7 +459,7 @@ export default {
         },
         concept: {
             en: "taste",
-            es: "el gusto",
+            es: "el gusto"
         },
         archetype: {
             en: "stylist",
@@ -503,8 +499,8 @@ export default {
             es: "pragmático"
         },
         concept: {
-            en: "objectivity",
-            es: "la objetividad",
+            en: "exchange",
+            es: "el intercambio"
         },
         archetype: {
             en: "merchant",
@@ -545,7 +541,7 @@ export default {
         },
         concept: {
             en: "communication",
-            es: "la comunicación",
+            es: "la comunicación"
         },
         archetype: {
             en: "messenger",
@@ -586,7 +582,7 @@ export default {
         },
         concept: {
             en: "relationships",
-            es: "los vínculos",
+            es: "los vínculos"
         },
         archetype: {
             en: "diplomat",
@@ -623,7 +619,7 @@ export default {
         },
         concept: {
             en: "functionality",
-            es: "la funcionalidad",
+            es: "la funcionalidad"
         },
         archetype: {
             en: "technician",
@@ -660,7 +656,7 @@ export default {
         },
         concept: {
             en: "logistics",
-            es: "logística",
+            es: "la logística"
         },
         archetype: {
             en: "coordinador",
@@ -696,7 +692,7 @@ export default {
         },
         concept: {
             en: "order",
-            es: "el orden",
+            es: "el orden"
         },
         archetype: {
             en: "judge",
@@ -733,7 +729,7 @@ export default {
         },
         concept: {
             en: "action",
-            es: "la acción",
+            es: "la acción"
         },
         archetype: {
             en: "athlete",
@@ -769,8 +765,8 @@ export default {
             es: "performativo"
         },
         concept: {
-            en: "attitude",
-            es: "la actitud",
+            en: "expression",
+            es: "la expresión"
         },
         archetype: {
             en: "performer",
@@ -807,7 +803,7 @@ export default {
         },
         concept: {
             en: "passion",
-            es: "la pasión",
+            es: "la pasión"
         },
         archetype: {
             en: "artist",
@@ -844,7 +840,7 @@ export default {
         },
         concept: {
             en: "aptitude",
-            es: "la aptitud",
+            es: "la aptitud"
         },
         archetype: {
             en: "mechanician",
@@ -881,7 +877,7 @@ export default {
         },
         concept: {
             en: "service",
-            es: "el servicio",
+            es: "el servicio"
         },
         archetype: {
             en: "agent",
@@ -918,7 +914,7 @@ export default {
         },
         concept: {
             en: "security",
-            es: "la seguridad",
+            es: "la seguridad"
         },
         archetype: {
             en: "caretaker",
@@ -955,7 +951,7 @@ export default {
         },
         concept: {
             en: "productivity",
-            es: "la productividad",
+            es: "la productividad"
         },
         archetype: {
             en: "engineer",
@@ -991,8 +987,8 @@ export default {
             es: "gerencial"
         },
         concept: {
-            en: "goals",
-            es: "las metas",
+            en: "motivation",
+            es: "la motivación"
         },
         archetype: {
             en: "manager",
@@ -1029,7 +1025,7 @@ export default {
         },
         concept: {
             en: "control",
-            es: "el control",
+            es: "el control"
         },
         archetype: {
             en: "cheif",
