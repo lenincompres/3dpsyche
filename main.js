@@ -1,7 +1,5 @@
 import * as questionnaire from "./src/pages/questionnaire.js";
 import * as results from "./src/pages/results.js";
-import * as STYLE from "./src/style.js";
-import Copy from "./lib/Copy.js";
 import intro from "./src/pages/intro.js";
 import QUESTIONS from "./src/questions.js";
 import siteFooter from "./src/pages/footer.js";
@@ -59,7 +57,7 @@ const CSS = {
     textTransform: `capitalize`,
   },
   h2: {
-    fontSize: `1.4rem`,
+    fontSize: `1.25rem`,
     paddingTop: `1em`,
     textAlign: `center`,
     color: `#fff`,
@@ -67,10 +65,10 @@ const CSS = {
     textShadow: `0 0 3px #000c, 0 0 3px #000c`,
   },
   h3: {
-    fontSize: `1.2rem`,
+    fontSize: `1.15rem`,
   },
   h4: {
-    fontSize: `1.1rem`,
+    fontSize: `1.07rem`,
   }
 };
 
