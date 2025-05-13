@@ -216,8 +216,8 @@ export default {
             es: "el significado"
         },
         archetype: {
-            en: "counselor",
-            es: "consejero",
+            en: "psychologist",
+            es: "psicólogo",
         },
         field: {
             en: "counseling",
@@ -298,8 +298,8 @@ export default {
             es: "las ideas"
         },
         archetype: {
-            en: "instructor",
-            es: "instructor",
+            en: "educator",
+            es: "educador",
         },
         field: {
             en: "educacion",
@@ -528,24 +528,24 @@ export default {
         code: "111",
         coords: "ooo",
         focus: {
-            en: "Flow and communication",
-            es: "Fluidez y comunicación"
+            en: "Flow and interchange",
+            es: "Fluidez e intercambio"
         },
         quality: {
             en: "social",
             es: "social",
         },
         philosophy: {
-            en: "communicative",
-            es: "comunicativo"
+            en: "social",
+            es: "social",
         },
         concept: {
             en: "communication",
-            es: "la comunicación"
+            es: "al comunicación"
         },
         archetype: {
-            en: "messenger",
-            es: "mensajero",
+            en: "communicator",
+            es: "comunicador",
         },
         field: {
             en: "communications",

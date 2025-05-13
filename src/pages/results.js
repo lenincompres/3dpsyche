@@ -232,12 +232,12 @@ export const model = {
         p: Copy.text({
           en: [
             `The state with the ${copy.at.tone} (${copy.at.color}) color is ${copy.at.philosophy}—the state of ${copy.at.concept}. It represents a psyche focused on ${copy.at.focus.toLocaleLowerCase()}—the archetypical ${copy.at.archetype}. It fits comfortably in spaces of ${copy.at.location}.`,
-            `In this state there ${s?"are":"is"} ${only} ${ext} ${Copy.at.flexible} tendency${s}, which indicates a personality that is ${TENDECIES[ext]}. In this case: ${intros.join("; ").toLocaleLowerCase()}.`,
+            `This state ${s?"have":"has"} ${only} ${ext} ${Copy.at.flexible} tendency${s}, which indicates a personality that is ${TENDECIES[ext]}. In this case: ${intros.join("; ").toLocaleLowerCase()}.`,
             `To learn to navigate this and other states of the 3D Psyche, please contact us (below) or consult our educational dossier.`,
           ],
           es: [
             `El estado de color ${copy.at.tone} (${copy.at.color}) es ${copy.at.philosophy}, el estado de ${copy.at.concept}. Representa una psique enfocada en ${copy.at.focus.toLocaleLowerCase()}. Como su arquetipo de ${copy.at.archetype}, se manifiesta a gusto en cualquier tipo de ${copy.at.location}.`,
-            `En este estado tenemos ${only} ${ext} tendencia${s} ${Copy.at.flexible}${s}, lo que indica una personalidad ${TENDECIES[ext]}. En este caso: ${intros.join("; ").toLowerCase()}.`,
+            `Este estado tiene ${only} ${ext} tendencia${s} ${Copy.at.flexible}${s}, lo que indica una personalidad ${TENDECIES[ext]}. En este caso: ${intros.join("; ").toLowerCase()}.`,
             `Para aprender a explorar este y los demás estados de la Psique Tridimensional, contáctanos (más abajo) o refiérete a nuestro dossier educativo.`,
           ],
         })
