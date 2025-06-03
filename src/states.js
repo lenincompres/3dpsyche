@@ -1028,7 +1028,7 @@ export default {
             es: "el control"
         },
         archetype: {
-            en: "cheif",
+            en: "chief",
             es: "jefe",
         },
         field: {
