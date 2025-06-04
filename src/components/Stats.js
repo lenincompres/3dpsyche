@@ -5,7 +5,10 @@ export class Stats extends HTMLElement {
     this.set({
       display: 'flex',
       flexDirection: 'column',
-      header: title,
+      header: {
+        textDecoration: 'underline',
+        content: title,
+      },
       ul: {
         margin: '0 0 1em',
         li: bars.map(b => ({

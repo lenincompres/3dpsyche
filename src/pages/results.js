@@ -11,6 +11,7 @@ import StateElement from "../components/StateElement.js";
 import * as global from "../global.js";
 import * as questionnaire from "./questionnaire.js";
 import siteMenu from "./menu.js";
+import Cube from "../components/Cube.js";
 
 export const _mbti = new Binder("- - - -");
 export const _feature = new Binder("#808080");
@@ -217,32 +218,68 @@ export const model = {
       width: "fit-content",
       li: [...STATES[v.hexToCode()].code].map((n, i) => level(i, parseInt(n) || 0)),
     })),
-    section: _copy.with(_feature).as((copy, hex) => {
-      let code = [...STATES[hex.hexToCode()].code].map(n => parseInt(n));
-      let ext = code.reduce((o, n) => n === 1 ? (o + 1) : o, 0);
-      let s = ext === 1 ? "" : "s";
-      let only = ext === 1 ? Copy.at.only : "";
-      let intros = code.map((n, i) => INTROS[i][n]).filter(n => n);
-      if (intros.length > 1) intros[intros.length - 1] = Copy.at.and + " " + intros[intros.length - 1];
-      else if (!intros.length) intros = [Copy.text({
-        es: "no hay tendecias ejecutivas o de desapego; es una psyque completamente abierta",
-        en: "there are no executive or detached tendencies—this psyche is fully open",
-      })];
-      return {
-        p: Copy.text({
-          en: [
-            `The state with the ${copy.at.tone} (${copy.at.color}) color is ${copy.at.philosophy}—the state of ${copy.at.concept}. It represents a psyche focused on ${copy.at.focus.toLocaleLowerCase()}—the archetypical ${copy.at.archetype}. It fits comfortably in spaces of ${copy.at.location}.`,
-            `This state ${s?"have":"has"} ${only} ${ext} ${Copy.at.flexible} tendency${s}, which indicates a personality that is ${TENDECIES[ext]}. In this case: ${intros.join("; ").toLocaleLowerCase()}.`,
-            `To learn to navigate this and other states of the 3D Psyche, please contact us (below) or consult our educational dossier.`,
-          ],
-          es: [
-            `El estado de color ${copy.at.tone} (${copy.at.color}) es ${copy.at.philosophy}, el estado de ${copy.at.concept}. Representa una psique enfocada en ${copy.at.focus.toLocaleLowerCase()}. Como su arquetipo de ${copy.at.archetype}, se manifiesta a gusto en cualquier tipo de ${copy.at.location}.`,
-            `Este estado tiene ${only} ${ext} tendencia${s} ${Copy.at.flexible}${s}, lo que indica una personalidad ${TENDECIES[ext]}. En este caso: ${intros.join("; ").toLowerCase()}.`,
-            `Para aprender a explorar este y los demás estados de la Psique Tridimensional, contáctanos (más abajo) o refiérete a nuestro dossier educativo.`,
-          ],
-        })
-      };
-    }),
+    section: [
+      _copy.with(_feature).as((copy, hex) => {
+        let code = [...STATES[hex.hexToCode()].code].map(n => parseInt(n));
+        let ext = code.reduce((o, n) => n === 1 ? (o + 1) : o, 0);
+        let s = ext === 1 ? "" : "s";
+        let only = ext === 1 ? Copy.at.only : "";
+        let intros = code.map((n, i) => INTROS[i][n]).filter(n => n);
+        if (intros.length > 1) intros[intros.length - 1] = Copy.at.and + " " + intros[intros.length - 1];
+        else if (!intros.length) intros = [Copy.text({
+          es: "no hay tendecias ejecutivas o de desapego; es una psyque completamente abierta",
+          en: "there are no executive or detached tendencies—this psyche is fully open",
+        })];
+        return {
+          p: [
+            Copy.text({
+              en: [
+                `The state with the ${copy.at.tone} (${copy.at.color}) color is ${copy.at.philosophy}—the state of ${copy.at.concept}. It represents a psyche focused on ${copy.at.focus.toLocaleLowerCase()}—the archetypical ${copy.at.archetype}. It is a state fostered by environments such as ${copy.at.location}.`,
+                `This state ${s?"have":"has"} ${only} ${ext} ${Copy.at.flexible} tendency${s}, which suggests a personality that is ${TENDECIES[ext]}. In this case: ${intros.join("; ").toLocaleLowerCase()}.`,
+                `If you received this state in your test results and it feels fairly accurate, consider which of the adjacent states might be your second closest.`,
+              ],
+              es: [
+                `El estado de color ${copy.at.tone} (${copy.at.color}) es ${copy.at.philosophy}, el estado de ${copy.at.concept}. Representa una psique enfocada en ${copy.at.focus.toLocaleLowerCase()}. Como su arquetipo de ${copy.at.archetype}, es un estado que se fomenta en entornos de ${copy.at.location}.`,
+                `Este estado tiene ${only} ${ext} tendencia${s} ${Copy.at.flexible}${s}, lo que indica una personalidad ${TENDECIES[ext]}. En este caso: ${intros.join("; ").toLowerCase()}.`,
+                `Si obtuviste este estado en tus resultados y sientes que te representa con bastante precisión, considera cuál de los estados adyacentes podría ser el segundo más cercano a ti.`,
+              ],
+            }), {
+              tag: 'h3',
+              text: Copy.text({
+                en: 'Adjacent States',
+                es: 'Estados adyacentes',
+              }),
+            }, {
+              tag: 'figure',
+              display: 'flex',
+              justifyContent: 'center',
+              content: _feature.as(hex => new Cube({
+                vicinity: true,
+                width: 200,
+                height: 200,
+                center: hex.hexToCode(),
+                onclick: state => state && state.code && (window.location.href = "./?rgb=" + state.code.codeToHex()),
+              })),
+            },
+            Copy.text({
+              en: [`If you sense that you're more introverted than this state suggests, you may have a dual tendency—pulling toward two states at opposite ends of the adjacents—and the test may have averaged your results into this one.`,
+              `Alternatively, consider whether your second closest state is an adjacent that falls outside the color spectrum—these are adjacents through introversion.`],
+              es: [`Si sientes que eres más introvertido de lo que este estado sugiere, puede que tengas una tendencia dual, que te empuja hacia dos estados ubicados en extremos opuestos de los adyacentes, y el test haya promediado tus respuestas para asignarte este estado.`,
+              `Alternativamente, considera si tu segundo estado más cercano es un adyacente que queda fuera del espectro de color (estos son adyacentes por introversión).`],
+            }),
+            Copy.text({
+              en: `To learn to navigate this and other states of the 3D Psyche, please contact us (below) or consult our educational dossier.`,
+              es: `Para aprender a explorar este y los demás estados de la Psique Tridimensional, contáctanos (más abajo) o refiérete a nuestro dossier educativo.`,
+            }),
+          ]
+        };
+      }), {
+        margin: "0 auto 0",
+        content: new Cube({
+          onclick: state => state && state.code && (window.location.href = "./?rgb=" + state.code.codeToHex()),
+        }),
+      }
+    ],
   },
   section: {
     css: style.floatingSign,
@@ -286,9 +323,10 @@ export const model = {
         new Stats("Freud", [bars.id, bars.ego, bars.sup], true),
         new Stats("Jung", [bars.e, bars.s, bars.t], true),
         new Stats("MBTI", [{
+            fontWeight: 'bold',
             display: "block",
-            margin: "2em 0 0.5em",
-            fontSize: "1.5em",
+            margin: "1em 0",
+            fontSize: "2em",
             fontFamily: "monospace",
             text: _mbti,
           },

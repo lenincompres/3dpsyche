@@ -112,7 +112,7 @@ class Cube extends p5Element {
     this.width = width;
     this.height = height;
     this.center = center;
-    this.animated = animated;
+    this.animated = this.vicinity ? false : animated;
     this.textSize = textSize;
     this.isHover = false;
     this.nextPost = Math.floor(Math.random() * POSTS);
@@ -244,7 +244,7 @@ class Cube extends p5Element {
   }
 
   mouseMoved() {
-    if (this.canvas && !this.animated) return;
+    //if (this.canvas && !this.animated) return;
     this.isHover = !!parseInt(this.sketch.get(this.sketch.mouseX, this.sketch.mouseY).join('')); // any pixel color under the mouse
     this.sketch.cursor(this.isHover ? this.sketch.HAND : this.sketch.ARROW);
     if (this.isHover) {
@@ -258,7 +258,7 @@ class Cube extends p5Element {
       if (this.overState) {
         this.overState.selected = false;
         if (this.sketch.onmouseout) this.sketch.onmouseout(this.overState);
-        this.animate();
+        if(this.animated) this.animate();
       }
       this.overState = false;
     }
@@ -272,7 +272,7 @@ class Cube extends p5Element {
 
   view(view) {
     this.changePost = true;
-    if (isNaN(view) && animated) {
+    if (isNaN(view) && this.animated) {
       states.forEach(s => s.hidden = false);
       this.freeze = false;
       this.nextPost = (this.nextPost + 1) % POSTS;

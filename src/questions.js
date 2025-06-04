@@ -76,7 +76,7 @@ export default [{
   },
   {
     question: Copy.text({
-      en: "In studies, what peaks your interest?",
+      en: "In fields of study, what peaks your interest?",
       es: "En los estudios, ¿qué despierta tu interés?",
     }),
     options: [{

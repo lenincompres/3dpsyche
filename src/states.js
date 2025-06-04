@@ -487,8 +487,8 @@ export default {
         code: "110",
         coords: "oo-",
         focus: {
-            en: "Exchange and negotiation",
-            es: "Intercambio y negociación"
+            en: "objectivity and negotiation",
+            es: "objetividad y negociación"
         },
         quality: {
             en: "factual",
@@ -868,8 +868,8 @@ export default {
         code: "211",
         coords: "xoo",
         focus: {
-            en: "Dedication and service",
-            es: "Dedicación y servicio"
+            en: "Dedication and assistance",
+            es: "Dedicación y asistencia"
         },
         philosophy: {
             en: "servicial",
