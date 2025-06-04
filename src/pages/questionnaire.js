@@ -166,9 +166,11 @@ const modelQuestion = q => {
               display: 'block',
               width: '100%',
               type: 'range',
+              height: '0.6em',
+              appearance : isVS ? 'none' : undefined,
               min: 0,
               max: 100,
-              step: 5,
+              //step: 5,
               value: answer.value,
               oninput: e => {
                 answer.value = parseInt(e.target.value);
@@ -182,16 +184,22 @@ const modelQuestion = q => {
               bottom: '3em',
               position: 'absolute',
               pointerEvents: 'none',
-              margin: isVS ? '0 2em' : '0 1em',
+              margin: isVS ? '-1em 2em' : '0 1em',
               maxWidth: '15%',
               overflow: 'hidden',
               textOverflow: 'ellipsis',
               content: [{
                 right: 0,
-                text: isVS ? '⟶' : answer.as(v => v + '%')
+                text: isVS ? '▶' : answer.as(v => v + '%')
+              }, {
+                margin: '-1em 0',
+                display: isVS ? 'block': 'none',
+                left: 'calc(50% - 0.5em)',
+                width: '1em',
+                text: '|',
               }, {
                 left: 0,
-                text: isVS ? '⟵' : answer.as(v => frequencies[Math.floor(v * frequencies.length / 100)])
+                text: isVS ? '◀' : answer.as(v => frequencies[Math.floor(v * frequencies.length / 100)])
               }]
             }
           }

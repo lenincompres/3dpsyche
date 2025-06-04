@@ -14,7 +14,7 @@ const siteMenu =  {
       content: [{
           a: {
             html: Copy.text({
-              en: `3D Psyche Manifesto`,
+              en: `The 3D Psyche Manifesto`,
               es: `Manifiesto`,
             }),
             href: Copy.text({

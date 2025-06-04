@@ -345,8 +345,8 @@ export default [{
       }],
       [{
         choice: Copy.text({
-          en: "Whims",
-          es: "Caprichos",
+          en: "Instinct",
+          es: "Instinto",
         }),
       }, {
         choice: Copy.text({
@@ -377,8 +377,8 @@ export default [{
           es: "Consistente",
         }),
         hint: Copy.text({
-          en: "Do as you always do.",
-          es: "Haces lo que siempre haces.",
+          en: "Tend to do as you always do.",
+          es: "Tiendes a hacer lo que siempre haces.",
         }),
       },
       {
@@ -392,11 +392,11 @@ export default [{
         }),
       }, {
         choice: Copy.text({
-          en: "Picky",
-          es: "Quisquilloso/a",
+          en: "Particular",
+          es: "Particular",
         }),
         hint: Copy.text({
-          en: "Like it the way you like it.",
+          en: "Like things the way you like them.",
           es: "Tienes gustos específicos.",
         }),
       }
@@ -462,24 +462,20 @@ export default [{
     reverse: true,
     options: [{
         choice: Copy.text({
-          en: "Seek group activities",
-          es: "Buscar actividades grupales",
+          en: "Participate in group activities or sports",
+          es: "Participar en actividades grupales o deportes",
         }),
       },
       {
         choice: Copy.text({
-          en: "Enjoy discussions",
-          es: "Disfrutar de los debates",
+          en: "Enjoy discussions and debates",
+          es: "Disfrutar de debates y charlas",
         }),
       },
       {
         choice: Copy.text({
-          en: "Interact with a diversity of people",
-          es: "Interactuar con personas diversas",
-        }),
-        hint: Copy.text({
-          en: "other ages, genders, backgrounds",
-          es: "otras edades, géneros, orígenes",
+          en: "Interact with people unlike yourself",
+          es: "Interactuar con personas diferentes a ti",
         }),
       }
     ]
