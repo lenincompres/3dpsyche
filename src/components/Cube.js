@@ -244,7 +244,7 @@ class Cube extends p5Element {
   }
 
   mouseMoved() {
-    if (this.canvas && !this.animated) return;
+    //if (this.canvas && !this.animated) return;
     this.isHover = !!parseInt(this.sketch.get(this.sketch.mouseX, this.sketch.mouseY).join('')); // any pixel color under the mouse
     this.sketch.cursor(this.isHover ? this.sketch.HAND : this.sketch.ARROW);
     if (this.isHover) {
