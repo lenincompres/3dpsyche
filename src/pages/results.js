@@ -239,8 +239,8 @@ export const model = {
                 `If you received this state in your test results and it feels somewhat accurate, consider which of the adjacent states is your second closest.`,
               ],
               es: [
-                `El estado de color ${copy.at.tone} (${copy.at.color}) es ${copy.at.philosophy}, el estado de ${copy.at.concept}. Representa una psique enfocada en ${copy.at.focus.toLocaleLowerCase()}. Como su arquetipo de ${copy.at.archetype}, es un estado que se fomenta en entornos de ${copy.at.location}.`,
-                `Este estado tiene ${only} ${['cero', 'uno', 'dos', 'tres'][ext]} aspecto${s} ${Copy.at.flexible}${s} or extrovertido${s} (de tres), lo que indica una personalidad ${TENDECIES[ext]}. En este caso: ${intros.join("; ").toLowerCase()}.`,
+                `El estado de color ${copy.at.tone} (${copy.at.color}) es ${copy.at.philosophy}, el estado de ${copy.at.concept}. Representa una psique enfocada en ${copy.at.focus.toLocaleLowerCase()}. Como su arquetipo de ${copy.at.archetype}, es el estado que se fomenta en entornos de ${copy.at.location}.`,
+                `Este estado tiene ${only} ${['cero', 'uno', 'dos', 'tres'][ext]} (de tres) aspecto${s} ${Copy.at.flexible}${s} or extrovertido${s}, lo que indica una personalidad ${TENDECIES[ext]}. En este caso: ${intros.join("; ").toLowerCase()}.`,
                 `Si obtuviste este estado en tus resultados y sientes que te representa con bastante precisión, considera cuál de los estados adyacentes podría ser el segundo más cercano a ti.`,
               ],
             }), {
@@ -273,12 +273,7 @@ export const model = {
             }),
           ]
         };
-      }), {
-        margin: "0 auto 0",
-        content: new Cube({
-          onclick: state => state && state.code && (window.location.href = "./?rgb=" + state.code.codeToHex()),
-        }),
-      }
+      }),
     ],
   },
   section: {
