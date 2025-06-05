@@ -36,7 +36,7 @@ export default {
         },
         mbti: "i--p",
         location: {
-            en: "natural landscape",
+            en: "natural landscapes",
             es: "ambiente natural"
         },
     },
@@ -44,8 +44,8 @@ export default {
         code: "001",
         coords: "--o",
         focus: {
-            en: "Care and presence",
-            es: "Cuidado y presencia"
+            en: "Empathy and presence",
+            es: "Empatía y presencia"
         },
         quality: {
             en: "inspirational",
