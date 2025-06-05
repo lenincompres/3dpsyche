@@ -94,34 +94,34 @@ const INTROS = [
   [
     Copy.text({
       en: "Physical detachment—which promotes the ability for abstraction—may lead to withdrawal or aloofness",
-      es: "el desapego físico, que promueve la capacidad de abstracción, puede conducir a alejamiento o ensimismamiento",
+      es: "el desapego físico, que le provee la capacidad de abstracción, también puede llevar al alejamiento o ensimismamiento",
     }),
     undefined,
     Copy.text({
       en: "Physical execution—which promotes the ability for action—may lead to impatience or competitiveness",
-      es: "La ejecución física, que promueve la capacidad de acción, puede llevar a impaciencia o competitividad",
+      es: "La ejecución física, que le provee la capacidad de acción, también puede llevar a la impaciencia o competitividad",
     }),
   ],
   [
     Copy.text({
       en: "Rational detachment—which promotes the ability for instinction—may lead to impulsiveness or pattern projection",
-      es: "el desapego racional, que promueve la capacidad de instinción, puede llevar a impulsividad o proyección de patrones",
+      es: "el desapego racional, que le provee la capacidad de instinción, también puede llevar a la impulsividad o proyección de patrones",
     }),
     undefined,
     Copy.text({
       en: "Rational execution—which promotes the ability for regulation—may lead to rigidity or righteousnes",
-      es: "la ejecución racional, que promueve la capacidad de regulación, puede llevar a rigidez o rectitud excesiva",
+      es: "la ejecución racional, que le provee la capacidad de regulación, también puede llevar a la rigidez o rectitud excesiva",
     }),
   ],
   [
     Copy.text({
       en: "Emotional detachment—which promotes the ability for objectivation—may lead to apathy or emotional distancing",
-      es: "el desapego emocional, que promueve la capacidad de objetivación, puede llevar a apatía o distanciamiento emocional",
+      es: "el desapego emocional, que le provee la capacidad de objetivación, también puede llevar a la apatía o distanciamiento emocional",
     }),
     undefined,
     Copy.text({
       en: "Emotional execution—which promotes the ability for valuation—may lead to bias or emotional reactivity",
-      es: "la ejecución emocional, que promueve la capacidad de valoración, puede conducir a sesgo o reactividad emocional",
+      es: "la ejecución emocional, que le provee la capacidad de valoración, puede conducir al sesgo o reactividad emocional",
     }),
   ],
 ];
@@ -239,9 +239,9 @@ export const model = {
                 `If you received this state in your test results and it feels somewhat accurate, consider which of the adjacent states is your second closest.`,
               ],
               es: [
-                `El estado de color ${copy.at.tone} (${copy.at.color}) es ${copy.at.philosophy}, el estado de ${copy.at.concept}. Representa una psique enfocada en ${copy.at.focus.toLocaleLowerCase()}. Como su arquetipo de ${copy.at.archetype}, es el estado que se fomenta en entornos de ${copy.at.location}.`,
-                `Este estado tiene ${only} ${['cero', 'uno', 'dos', 'tres'][ext]} (de tres) aspecto${s} ${Copy.at.flexible}${s} or extrovertido${s}, lo que indica una personalidad ${TENDECIES[ext]}. En este caso: ${intros.join("; ").toLowerCase()}.`,
-                `Si obtuviste este estado en tus resultados y sientes que te representa con bastante precisión, considera cuál de los estados adyacentes podría ser el segundo más cercano a ti.`,
+                `El estado de color ${copy.at.tone} (${copy.at.color}) es ${copy.at.philosophy}, el estado de ${copy.at.concept}. Representa una psique enfocada en ${copy.at.focus.toLocaleLowerCase()}. Como su arquetipo de ${copy.at.archetype}, se fomenta en entornos de ${copy.at.location}.`,
+                `Este estado presenta ${only} ${['cero', 'una', 'dos', 'tres'][ext]} de las tres dimensiones de la psyche como ${Copy.at.flexible}${s} o extrovertidas, lo que indica una personalidad ${TENDECIES[ext]}. En este caso: ${intros.join("; ").toLowerCase()}.`,
+                `Si obtuviste este estado en tus resultados y sientes que te representa con un poco de precisión, considera cuál de los estados adyacentes podría ser el segundo más cercano a ti.`,
               ],
             }), {
               tag: 'h3',
@@ -265,11 +265,11 @@ export const model = {
               en: [`If you feel more introverted than this state suggests, you may be split between two opposite states on the adjacent spectrum, and the test may have averaged your result into this one.`,
               `Alternatively, consider whether your second closest state is an adjacent that seems far away in the color spectrum—indicating an internal link.`],
               es: [`Si sientes que eres más introvertido de lo que este estado sugiere, puede que estés dividido entre dos estados opuestos dentro del espectro adyacente, y que el test haya promediado tus respuestas para ubicarte en este.`,
-              `Alternativamente, considera si tu segundo estado más cercano es un adyacente que parece lejano en el espectro de color, lo que indicaría un vínculo interno.`],
+              `Alternativamente, considera si tu segundo estado más cercano es un adyacente que parece lejano en el espectro de color; lo que indica un vínculo interno.`],
             }),
             Copy.text({
-              en: `To learn to navigate this and other states of the 3D Psyche, please contact us (below) or consult our educational dossier.`,
-              es: `Para aprender a explorar este y los demás estados de la Psique Tridimensional, contáctanos (más abajo) o refiérete a nuestro dossier educativo.`,
+              en: `To learn to navigate this and other states of the 3D Psyche, please contact us (below) or consult our manifest and educational dossier.`,
+              es: `Para aprender a explorar este y los demás estados de la Psique Tridimensional, contáctanos (más abajo) o refiérete a nuestro manifiesto y dossier educativo.`,
             }),
           ]
         };

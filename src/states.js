@@ -447,7 +447,7 @@ export default {
         coords: "o-x",
         focus: {
             en: "Taste and attention",
-            es: "Gusto y atención"
+            es: "Apreciación y atención"
         },
         quality: {
             en: "sensual",
@@ -794,8 +794,8 @@ export default {
         code: "202",
         coords: "x-x",
         focus: {
-            en: "Passion and artistic devotion",
-            es: "Pasión y entrega artística"
+            en: "emotion and devotion",
+            es: "emoción y entrega"
         },
         philosophy: {
             en: "devotional",
