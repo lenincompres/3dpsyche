@@ -75,6 +75,42 @@ Copy.add({
     en: "and",
     es: "y",
   },
+  sensation: {
+    en: "sensation",
+    es: "sensación",
+  },
+  sensationDefinition: {
+    en: "physical observation",
+    es: "observación física",
+  },
+  sensationTendency: {
+    en: "alertness, distraction, and also overstimulation",
+    es: "la vigilancia, la distracción y también la sobrestimulación",
+  },
+  conception: {
+    en: "conception",
+    es: "concepción",
+  },
+  conceptionDefinition: {
+    en: "rational observation",
+    es: "observación racional",
+  },
+  conceptionTendency: {
+    en: "curiosity, second-guessing, and also indecision",
+    es: "la curiosidad, la duda y también la indecisión",
+  },
+  inspiration: {
+    en: "inspiration",
+    es: "inspiración",
+  },
+  inspirationDefinition: {
+    en: "emotional observation",
+    es: "observación emocional",
+  },
+  inspirationTendency: {
+    en: "empathy, emotional contagion, and also people-pleasing",
+    es: "la empatía, el contagio emocional y también la complacencia",
+  },
   abstraction: {
     en: "abstraction",
     es: "abstracción",
@@ -176,7 +212,16 @@ const introText = (a) => {
     en: `${definition}—which enables ${focus}—may lead to ${tendency}`,
     es: `${definition}, que le proporciona la ${focus}, también promueve ${tendency}`,
   });
-}
+};
+const extroText = (a) => {
+  const extros = FOCI.map(f => f[1]);
+  if (!extros.includes(a)) return;
+  let [dimenssion, focus, tendency] = [Copy.at[a + 'Definition'], Copy.at[a], Copy.at[a + 'Tendency']];
+  return  Copy.text({
+    en: `${dimenssion} (${focus}), which implies ${tendency}`,
+    es: `la ${dimenssion} (${focus}), que implica ${tendency}`,
+  });;
+};
 
 const TENDECIES = [
   Copy.text({
@@ -188,12 +233,12 @@ const TENDECIES = [
     en: "slightly introverted",
   }),
   Copy.text({
-    es: "mayormente extrovertida",
-    en: "mostly extroverted",
+    es: "raramente introvertida",
+    en: "rarely introverted",
   }),
   Copy.text({
-    es: "altamente extrovertida",
-    en: "highly extroverted",
+    es: "para nada introvertida",
+    en: "that is never introverted",
   }),
 ];
 
@@ -280,20 +325,29 @@ export const model = {
         if (intros.length > 1) intros[intros.length - 1] = Copy.at.and + " " + intros[intros.length - 1];
         else if (!intros.length) intros = [Copy.text({
           es: "no hay tendecias ejecutivas o de desapego; es una psyque completamente abierta, lo que también la hace condicionada o sensible al ambiente social o entorno",
-          en: "there are no executive or detached tendencies—this psyche is fully open, which also makes it condiciotioned o sensitive to the social or immediate environment",
+          en: "there are no executive or detached tendencies—this psyche is fully open, which also makes it conditioned o sensitive to the social or immediate environment",
         })];
+
+        let extros = code.map((n, i) => extroText(FOCI[i][n])).filter(n => n);
+        if (extros.length > 1) extros[extros.length - 1] = Copy.at.and + " " + extros[extros.length - 1];
+        if(extros.length) extros = Copy.text({
+          en: `In terms of extroversion, its openness comes through ${extros.join("; ")}.`,
+          es: `En cuanto a la extrovesión, su apertura proviene de ${extros.join("; ")}.`,
+        }); 
         return {
           p: [
             Copy.text({
               en: [
                 `The state with the ${copy.at.tone} (${copy.at.color}) color is ${copy.at.philosophy}—the state of ${copy.at.concept}. It represents a psyche focused on ${copy.at.focus.toLocaleLowerCase()}—the archetypical ${copy.at.archetype}, fostered by environments such as ${copy.at.location}.`,
-                `This state ${s?"have":"has"} ${only} ${['zero', 'one', 'two', 'three'][ext]} out of three ${Copy.at.observant} or extroverted dimensions, which suggests a personality that is ${TENDECIES[ext]}. In this case: ${intros.join("; ").toLocaleLowerCase()}.`,
+                `This state ${s?"have":"has"} ${only} ${['zero', 'one', 'two', 'three'][ext]} out of three ${Copy.at.observant} dimenssions, which suggests a personality that is ${TENDECIES[ext]}. In this case: ${intros.join("; ").toLocaleLowerCase()}.`,
+                `${extros}`,
                 `If you received this state in your test results and it feels somewhat accurate, consider which of the adjacent states is your second closest. You may find yourself split between the two.`,
               ],
               es: [
                 `El estado de color ${copy.at.tone} (${copy.at.color}) es ${copy.at.philosophy}, el estado de ${copy.at.concept}. Representa una psique enfocada en ${copy.at.focus.toLocaleLowerCase()}. Como su arquetipo de ${copy.at.archetype}, se fomenta en entornos de ${copy.at.location}.`,
-                `Este estado presenta ${only} ${['cero', 'una', 'dos', 'tres'][ext]} de las tres dimensiones de la psyche como ${Copy.at.observant}${s} o extrovertidas, lo que indica una personalidad ${TENDECIES[ext]}. En este caso: ${intros.join("; ").toLowerCase()}.`,
-                `Si obtuviste este estado en tus resultados y sientes que te representa con poca precisión, considera cuál de los estados adyacentes podría ser el segundo más cercano a ti. Puede que te encuentres en medio de ambos.`,
+                `Este estado presenta ${only} ${['cero', 'una', 'dos', 'tres'][ext]} de las tres dimensiones de la psyche como ${Copy.at.observant}${s}, lo que indica una personalidad ${TENDECIES[ext]}. En este caso: ${intros.join("; ").toLowerCase()}.`,
+                `${extros}`,
+                `Si obtuviste este estado en tus resultados y te parece un poco acertado, considera cuál de los estados adyacentes podría ser el segundo más cercano a ti. Puede que te encuentres en medio de ambos.`,
               ],
             }), {
               tag: 'h3',
@@ -315,17 +369,15 @@ export const model = {
             },
             Copy.text({
               en: [
-                `If you feel more introverted than this state suggests, you may be split between two opposite states on the adjacent spectrum, and the test may have averaged your result into this one.`,
-                `Alternatively, consider whether your second closest state is an adjacent that seems far away in the color spectrum—indicating an internal link.`
+                `You may also find yourself split between two opposite states on the adjacent spectrum, and the test may have mistakenly averaged your result into this one. Sometimes, this suggests that you may be more introverted than this state implies.`,
+                `Alternatively, consider whether your second closest state is an adjacent that seems far away in the color spectrum—indicating an internal (introverted) link.`,
+                `To learn to navigate this and other states of the 3D Psyche, please contact us (below) or consult our manifest and educational dossier.`,
               ],
               es: [
-                `Si sientes tener mayor tendencia a la introversión de lo que este estado sugiere, puede que te muevas entre dos estados opuestos dentro del espectro adyacente, y que el test haya promediado tus respuestas para ubicarte en este.`,
-                `Alternativamente, considera si tu segundo estado más cercano es un adyacente que parece lejano en el espectro de color (lo que indica un vínculo interno).`
+                `También puede que te muevas entre dos estados opuestos dentro de este espectro adyacente, y que el test haya promediado erróneamente tu resultado en este. A veces, esto sugiere que podrías ser más introvertido de lo que este estado indica.`,
+                `Alternativamente, considera si tu segundo estado más cercano es un adyacente que parece lejano en el espectro de color—lo que indicaría un vínculo interno (introvertido).`,
+                `Para aprender a explorar este y los demás estados de la Psique Tridimensional, contáctanos (más abajo) o refiérete a nuestro manifiesto y dossier educativo.`,
               ],
-            }),
-            Copy.text({
-              en: `To learn to navigate this and other states of the 3D Psyche, please contact us (below) or consult our manifest and educational dossier.`,
-              es: `Para aprender a explorar este y los demás estados de la Psique Tridimensional, contáctanos (más abajo) o refiérete a nuestro manifiesto y dossier educativo.`,
             }),
           ]
         };

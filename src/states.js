@@ -720,8 +720,8 @@ export default {
         code: "200",
         coords: "x--",
         focus: {
-            en: "Action and physical energy",
-            es: "Acción y energía física"
+            en: "Dynamism and physical energy",
+            es: "Dinamismo y energía física"
         },
         philosophy: {
             en: "vitalist",
@@ -831,8 +831,8 @@ export default {
         code: "210",
         coords: "xo-",
         focus: {
-            en: "Skill and practical construction",
-            es: "Habilidad y construcción práctica"
+            en: "Skill and practicality",
+            es: "Habilidad y practicalidad"
         },
         philosophy: {
             en: "mechanistic",
