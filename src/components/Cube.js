@@ -111,7 +111,7 @@ class Cube extends p5Element {
     this.vicinity = vicinity;
     this.width = width;
     this.height = height;
-    this.center = center;
+    this._center = center;
     this.animated = this.vicinity ? false : animated;
     this.textSize = textSize;
     this.isHover = false;
@@ -167,6 +167,15 @@ class Cube extends p5Element {
       },
       canvas: this.canvas,
     });
+  };
+
+  set center(val){
+    this._center = val;
+    this.reset();
+  }
+
+  get center(){
+    return this._center;
   }
 
   setup() {
@@ -175,6 +184,10 @@ class Cube extends p5Element {
     this.sketch.textSize(this.textSize);
     this.sketch.center = [this.sketch.width * 0.5, this.sketch.height * 0.5];
     this.sketch.textAlign(this.sketch.CENTER, this.sketch.CENTER);
+    this.reset();
+  }
+
+  reset(){
     if (this.animated) this.animate();
     this.states = new Array(27).fill().map((_, i) => new State({
       sketch: this.sketch,
