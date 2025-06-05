@@ -373,7 +373,7 @@ export const model = {
               ],
               es: [
                 !ext ? undefined : `También puede que te muevas entre dos estados opuestos dentro de este espectro adyacente, y que el test haya promediado erróneamente tu resultado en este. A veces, esto sugiere que podrías ser más introvertido de lo que este estado indica.`,
-                ext > 2 ? undefined : `Alternativamente, considera si tu segundo estado más cercano es un adyacente que parece lejano en el espectro de color—lo que indica un vínculo interno (introvertido).`,
+                ext > 2 ? undefined : `Alternativamente, considera si tu segundo estado más cercano es un adyacente que parece lejano en el espectro de color, lo que indica un vínculo interno (introvertido).`,
                 `Para aprender a explorar este y los demás estados de la Psique Tridimensional, contáctanos (más abajo) o refiérete a nuestro manifiesto y dossier educativo.`,
               ],
             }),
