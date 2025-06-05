@@ -1040,8 +1040,8 @@ export default {
             es: "claro puro",
         },
         tone: {
-            en: "blanco",
-            es: "white",
+            en: "white",
+            es: "blanco",
         },
         mbti: "i--j",
         location: {
