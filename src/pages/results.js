@@ -259,11 +259,18 @@ const level = (d, i) => {
 };
 
 var stateElt = new StateElement();
+var vicinityElt = new Cube({
+  vicinity: true,
+  width: 250,
+  height: 200,
+  onclick: state => state && state.code && (window.location.href = "./?rgb=" + state.code.codeToHex()),
+});
 
 _feature.onChange(hex => {
   if (!hex) return;
   let code = hex.hexToCode();
   stateElt.code = code;
+  vicinityElt.center = code;
   _copy.value = new Copy(STATES[code]);
   let [r, g, b] = AUX.rgb(hex).map(v => v * 100 / 255);
   //let getI = n => 100 * Math.pow(Math.abs(n - 50) / 50, 0.68);
@@ -356,13 +363,7 @@ export const model = {
               tag: 'figure',
               display: 'flex',
               justifyContent: 'center',
-              content: new Cube({
-                vicinity: true,
-                width: 250,
-                height: 200,
-                center: hex.hexToCode(),
-                onclick: state => state && state.code && (window.location.href = "./?rgb=" + state.code.codeToHex()),
-              }),
+              canvas: vicinityElt,
             },
             Copy.text({
               en: [
