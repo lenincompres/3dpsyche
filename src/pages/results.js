@@ -104,7 +104,7 @@ Copy.add({
     es: "instinción",
   },
   instinctionTendency: {
-    en: "impulsiveness or pattern projection",
+    en: "impulsiveness or projection of patterns",
     es: "la impulsividad o proyección de patrones",
   },
   instinctionDefinition: {
@@ -173,8 +173,8 @@ const introText = (a) => {
   if(FOCI.map(f => f[1]).includes(a)) return;
   let [definition, focus, tendency] = [Copy.at[a + 'Definition'], Copy.at[a], Copy.at[a + 'Tendency']];
   return Copy.text({
-    en: `${definition}—which promotes the ability for ${focus}—may lead to ${tendency}`,
-    es: `${definition}, que le provee la capacidad de ${focus}, también promueve ${tendency}`,
+    en: `${definition}—which enables ${focus}—may lead to ${tendency}`,
+    es: `${definition}, que le proporciona la ${focus}, también promueve ${tendency}`,
   });
 }
 
@@ -287,13 +287,13 @@ export const model = {
             Copy.text({
               en: [
                 `The state with the ${copy.at.tone} (${copy.at.color}) color is ${copy.at.philosophy}—the state of ${copy.at.concept}. It represents a psyche focused on ${copy.at.focus.toLocaleLowerCase()}—the archetypical ${copy.at.archetype}, fostered by environments such as ${copy.at.location}.`,
-                `This state ${s?"have":"has"} ${only} ${['zero', 'one', 'two', 'three'][ext]} ${Copy.at.observant} or extroverted dimension${s} (out of three), which suggests a personality that is ${TENDECIES[ext]}. In this case: ${intros.join("; ").toLocaleLowerCase()}.`,
+                `This state ${s?"have":"has"} ${only} ${['zero', 'one', 'two', 'three'][ext]} out of three ${Copy.at.observant} or extroverted dimensions, which suggests a personality that is ${TENDECIES[ext]}. In this case: ${intros.join("; ").toLocaleLowerCase()}.`,
                 `If you received this state in your test results and it feels somewhat accurate, consider which of the adjacent states is your second closest.`,
               ],
               es: [
                 `El estado de color ${copy.at.tone} (${copy.at.color}) es ${copy.at.philosophy}, el estado de ${copy.at.concept}. Representa una psique enfocada en ${copy.at.focus.toLocaleLowerCase()}. Como su arquetipo de ${copy.at.archetype}, se fomenta en entornos de ${copy.at.location}.`,
                 `Este estado presenta ${only} ${['cero', 'una', 'dos', 'tres'][ext]} de las tres dimensiones de la psyche como ${Copy.at.observant}${s} o extrovertidas, lo que indica una personalidad ${TENDECIES[ext]}. En este caso: ${intros.join("; ").toLowerCase()}.`,
-                `Si obtuviste este estado en tus resultados y sientes que te representa con poca de precisión, considera cuál de los estados adyacentes podría ser el segundo más cercano a ti.`,
+                `Si obtuviste este estado en tus resultados y sientes que te representa con poca precisión, considera cuál de los estados adyacentes podría ser el segundo más cercano a ti.`,
               ],
             }), {
               tag: 'h3',
