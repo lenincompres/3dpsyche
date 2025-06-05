@@ -7,8 +7,8 @@ import * as global from "../global.js";
 
 const qTotal = QUESTIONS.length - 1;
 
-questionnaire._results.bind(results._feature);
 
+questionnaire._results.bind(results._feature);
 if (global.rgb) results._feature.value = global.rgb;
 
 export const siteTest = {

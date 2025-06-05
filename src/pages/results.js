@@ -196,10 +196,8 @@ const bars = {
   r: new Bar(Copy.at.physical, "6em", "red"),
   g: new Bar(Copy.at.rational, "6em", "lime"),
   b: new Bar(Copy.at.emotional, "6em", "blue")
-};
+}; 
 
-const DIMENSIONS = [Copy.at.physical, Copy.at.rational, Copy.at.emotional];
-const FUNCTIONS = [Copy.at.detachment, Copy.at.observation, Copy.at.execution];
 const FOCI = [
   ['abstraction', 'sensation', 'action'],
   ['instinction', 'conception', 'regulation'],
@@ -268,7 +266,7 @@ _feature.onChange(hex => {
   stateElt.code = code;
   _copy.value = new Copy(STATES[code]);
   let [r, g, b] = AUX.rgb(hex).map(v => v * 100 / 255);
-  let getI = n => 100 * Math.pow(Math.abs(n - 50) / 50, 0.68);
+  //let getI = n => 100 * Math.pow(Math.abs(n - 50) / 50, 0.68);
   let j = (r + g + b) / 3;
   let t = 100 * g / (g + b);
   let s = 100 * r / (0.5 * (g + b) + r);
@@ -288,7 +286,6 @@ _feature.onChange(hex => {
   bars.id.value = 0.5 * (r + b);
   bars.ego.value = 0.5 * (g + r);
   bars.sup.value = 0.5 * (g + b);
-
 });
 
 const _fixed = new Binder(false);
@@ -341,13 +338,13 @@ export const model = {
                 `The state with the ${copy.at.tone} (${copy.at.color}) color is ${copy.at.philosophy}—the state of ${copy.at.concept}. It represents a psyche focused on ${copy.at.focus.toLocaleLowerCase()}—the archetypical ${copy.at.archetype}, fostered by environments such as ${copy.at.location}.`,
                 `This state ${s?"have":"has"} ${only} ${['zero', 'one', 'two', 'three'][ext]} out of three ${Copy.at.observant} dimenssions, which suggests a personality that is ${TENDECIES[ext]}. In this case: ${intros.join("; ").toLocaleLowerCase()}.`,
                 `${extros}`,
-                `If you received this state in your test results and it feels somewhat accurate, consider which of the adjacent states is your second closest. You may find yourself split between the two.`,
+                `If you received this state in your test results and it feels somewhat accurate, consider which of the adjacent states is your second closest. You may find yourself split between the two. Sometimes, identity lies not in one state, but in the habitual movement between many.`,
               ],
               es: [
                 `El estado de color ${copy.at.tone} (${copy.at.color}) es ${copy.at.philosophy}, el estado de ${copy.at.concept}. Representa una psique enfocada en ${copy.at.focus.toLocaleLowerCase()}. Como su arquetipo de ${copy.at.archetype}, se fomenta en entornos de ${copy.at.location}.`,
                 `Este estado presenta ${only} ${['cero', 'una', 'dos', 'tres'][ext]} de las tres dimensiones de la psyche como ${Copy.at.observant}${s}, lo que indica una personalidad ${TENDECIES[ext]}. En este caso: ${intros.join("; ").toLowerCase()}.`,
                 `${extros}`,
-                `Si obtuviste este estado en tus resultados y te parece un poco acertado, considera cuál de los estados adyacentes podría ser el segundo más cercano a ti. Puede que te encuentres en medio de ambos.`,
+                `Si obtuviste este estado en tus resultados y te parece un poco acertado, considera cuál de los estados adyacentes podría ser el segundo más cercano a ti. Puede que te encuentres en medio de ambos. A veces, la identidad no reside en un solo estado, sino en el movimiento habitual entre varios.`,
               ],
             }), {
               tag: 'h3',
@@ -359,13 +356,13 @@ export const model = {
               tag: 'figure',
               display: 'flex',
               justifyContent: 'center',
-              content: _feature.as(hex => new Cube({
+              content: new Cube({
                 vicinity: true,
                 width: 250,
                 height: 200,
                 center: hex.hexToCode(),
                 onclick: state => state && state.code && (window.location.href = "./?rgb=" + state.code.codeToHex()),
-              })),
+              }),
             },
             Copy.text({
               en: [
