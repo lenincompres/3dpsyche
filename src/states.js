@@ -446,7 +446,7 @@ export default {
         code: "102",
         coords: "o-x",
         focus: {
-            en: "Taste and attention",
+            en: "Appreciation and attention",
             es: "Apreciación y atención"
         },
         quality: {
@@ -470,7 +470,7 @@ export default {
             es: "moda",
         },
         color: {
-            en: "stylmagenta blueist",
+            en: "magenta blue",
             es: "magenta azul",
         },
         tone: {

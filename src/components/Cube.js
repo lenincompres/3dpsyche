@@ -6,7 +6,7 @@ const WAIT = 4; //seconds between posts
 const POSTS = 5;
 const RADIUS = 40;
 
-Copy.add({
+let cubeCopy = new Copy({
   actioning: {
     en: 'Physical Execution\n(Action)',
     es: 'Ejecución Física\n(Acción)',
@@ -15,11 +15,11 @@ Copy.add({
     en: 'Physical Observation\n(Sensation)',
     es: 'Observación Física\n(Sensación)',
   },
-  abstraction: {
+  abstracting: {
     en: 'Physical Detachment\n(Abstraction)',
     es: 'Desapego Físico\n(Abstracción)',
   },
-  instinction: {
+  instincting: {
     en: 'Rational Detachment\n(Instinction)',
     es: 'Desapego Racional\n(Instinción)',
   },
@@ -140,28 +140,28 @@ class Cube extends p5Element {
         textAlignLast: "center",
         option: [{
           value: "none",
-          text: Copy.at.animatedView,
+          text: cubeCopy.at.animatedView,
         }, {
           value: 1,
-          text: Copy.at.physicalPlains,
+          text: cubeCopy.at.physicalPlains,
         }, {
           value: 2,
-          text: Copy.at.rationalPlains,
+          text: cubeCopy.at.rationalPlains,
         }, {
           value: 3,
-          text: Copy.at.emotionalPlains,
+          text: cubeCopy.at.emotionalPlains,
         }, {
           value: 4,
-          text: Copy.at.baseTopView,
+          text: cubeCopy.at.baseTopView,
         }, {
           value: 0,
-          text: Copy.at.topView,
+          text: cubeCopy.at.topView,
         }, {
           value: -1,
-          text: Copy.at.centerView,
+          text: cubeCopy.at.centerView,
         }, {
           value: -2,
-          text: Copy.at.baseView,
+          text: cubeCopy.at.baseView,
         }],
         onchange: e => this.view(e.target.value),
       },
@@ -209,24 +209,24 @@ class Cube extends p5Element {
     let y = RADIUS * 4.5;
     let x = RADIUS * 4.8;
     let texts = [
-      [Copy.at.actioning, -x, y],
-      [Copy.at.sensing, 0, y],
-      [Copy.at.abstraction, x, y],
+      [cubeCopy.at.actioning, -x, y],
+      [cubeCopy.at.sensing, 0, y],
+      [cubeCopy.at.abstracting, x, y],
     ];
     if (this.currentPost === 2) texts = [
-      [Copy.at.instinction, -x * 1.12, y],
-      [Copy.at.conceiving, 0, y],
-      [Copy.at.regulating, x * 1.12, y],
+      [cubeCopy.at.instincting, -x * 1.12, y],
+      [cubeCopy.at.conceiving, 0, y],
+      [cubeCopy.at.regulating, x * 1.12, y],
     ];
     else if (this.currentPost === 3) texts = [
-      [Copy.at.detaching, -x, y],
-      [Copy.at.empathizing, 0, y],
-      [Copy.at.valuing, x, y],
+      [cubeCopy.at.detaching, -x, y],
+      [cubeCopy.at.empathizing, 0, y],
+      [cubeCopy.at.valuing, x, y],
     ];
     else if (this.currentPost === 4) texts = [
-      [Copy.at.relaxing, -x * 1.28, y],
-      [Copy.at.periphery, 0, y],
-      [Copy.at.demanding, x * 1.28, y],
+      [cubeCopy.at.relaxing, -x * 1.28, y],
+      [cubeCopy.at.periphery, 0, y],
+      [cubeCopy.at.demanding, x * 1.28, y],
     ];
     this.sketch.fill(0);
     this.sketch.textAlign(this.sketch.CENTER, this.sketch.CENTER);

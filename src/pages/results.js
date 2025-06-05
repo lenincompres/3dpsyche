@@ -43,15 +43,15 @@ Copy.add({
     en: "Emotionally",
     es: "Emocionalmente",
   },
-  relaxed: {
+  detached: {
     en: "detached",
     es: "desapegado",
   },
-  flexible: {
+  observant: {
     en: "observant",
     es: "observante",
   },
-  intense: {
+  executive: {
     en: "executive",
     es: "ejecutor",
   },
@@ -75,6 +75,78 @@ Copy.add({
     en: "and",
     es: "y",
   },
+  abstraction: {
+    en: "abstraction",
+    es: "abstracción",
+  },
+  abstractionTendency: {
+    en: "withdrawal or aloofness",
+    es: "el alejamiento o ensimismamiento",
+  },
+  abstractionDefinition: {
+    en: "Physical detachment",
+    es: "el desapego físico",
+  },
+  action: {
+    en: "action",
+    es: "acción",
+  },
+  actionTendency: {
+    en: "impatience or competitiveness",
+    es: "la impaciencia o competitividad",
+  },
+  actionDefinition: {
+    en: "Physical execution",
+    es: "la ejecución física",
+  },
+  instinction: {
+    en: "instinction",
+    es: "instinción",
+  },
+  instinctionTendency: {
+    en: "impulsiveness or pattern projection",
+    es: "la impulsividad o proyección de patrones",
+  },
+  instinctionDefinition: {
+    en: "Rational detachment",
+    es: "el desapego racional",
+  },
+  regulation: {
+    en: "regulation",
+    es: "regulación",
+  },
+  regulationDefinition: {
+    en: "Rational execution",
+    es: "la ejecución racional",
+  },
+  regulationTendency: {
+    en: "rigidity or righteousnes",
+    es: "la rigidez o rectitud excesiva",
+  },
+  objectivation: {
+    en: "objectivation",
+    es: "objetivación",
+  },
+  objectivationTendency: {
+    en: "apathy or emotional distancing",
+    es: "la apatía o distanciamiento emocional",
+  },
+  objectivationDefinition: {
+    en: "Emotional detachment",
+    es: "el desapego emocional",
+  },
+  valuation: {
+    en: "valuation",
+    es: "valoración",
+  },
+  valuationTendency: {
+    en: "bias or emotional reactivity",
+    es: "el sesgo o reactividad emocional",
+  },
+  valuationDefinition: {
+    en: "Emotional execution",
+    es: "la ejecución emocional",
+  },
 });
 
 const bars = {
@@ -90,41 +162,21 @@ const bars = {
   b: new Bar(Copy.at.emotional, "6em", "blue")
 };
 
-const INTROS = [
-  [
-    Copy.text({
-      en: "Physical detachment—which promotes the ability for abstraction—may lead to withdrawal or aloofness",
-      es: "el desapego físico, que le provee la capacidad de abstracción, también puede llevar al alejamiento o ensimismamiento",
-    }),
-    undefined,
-    Copy.text({
-      en: "Physical execution—which promotes the ability for action—may lead to impatience or competitiveness",
-      es: "La ejecución física, que le provee la capacidad de acción, también puede llevar a la impaciencia o competitividad",
-    }),
-  ],
-  [
-    Copy.text({
-      en: "Rational detachment—which promotes the ability for instinction—may lead to impulsiveness or pattern projection",
-      es: "el desapego racional, que le provee la capacidad de instinción, también puede llevar a la impulsividad o proyección de patrones",
-    }),
-    undefined,
-    Copy.text({
-      en: "Rational execution—which promotes the ability for regulation—may lead to rigidity or righteousnes",
-      es: "la ejecución racional, que le provee la capacidad de regulación, también puede llevar a la rigidez o rectitud excesiva",
-    }),
-  ],
-  [
-    Copy.text({
-      en: "Emotional detachment—which promotes the ability for objectivation—may lead to apathy or emotional distancing",
-      es: "el desapego emocional, que le provee la capacidad de objetivación, también puede llevar a la apatía o distanciamiento emocional",
-    }),
-    undefined,
-    Copy.text({
-      en: "Emotional execution—which promotes the ability for valuation—may lead to bias or emotional reactivity",
-      es: "la ejecución emocional, que le provee la capacidad de valoración, puede conducir al sesgo o reactividad emocional",
-    }),
-  ],
+const DIMENSIONS = [Copy.at.physical, Copy.at.rational, Copy.at.emotional];
+const FUNCTIONS = [Copy.at.detachment, Copy.at.observation, Copy.at.execution];
+const FOCI = [
+  ['abstraction', 'sensation', 'action'],
+  ['instinction', 'conception', 'regulation'],
+  ['objectivation', 'inspiration', 'valuation'],
 ];
+const introText = (a) => {
+  if(FOCI.map(f => f[1]).includes(a)) return;
+  let [definition, focus, tendency] = [Copy.at[a + 'Definition'], Copy.at[a], Copy.at[a + 'Tendency']];
+  return Copy.text({
+    en: `${definition}—which promotes the ability for ${focus}—may lead to ${tendency}`,
+    es: `${definition}, que le provee la capacidad de ${focus}, también promueve ${tendency}`,
+  });
+}
 
 const TENDECIES = [
   Copy.text({
@@ -156,7 +208,7 @@ const level = (d, i) => {
   ][d];
   bullet = [bullet, bullet, bullet][i];
   const dimension = [Copy.at.physically, Copy.at.rationally, Copy.at.emotionally][d];
-  const level = [Copy.at.relaxed, Copy.at.flexible, Copy.at.intense][i];
+  const level = [Copy.at.detached, Copy.at.observant, Copy.at.executive][i];
   return {
     margin: "0.25em",
     html: `${bullet} ${dimension} ${level}`,
@@ -224,24 +276,24 @@ export const model = {
         let ext = code.reduce((o, n) => n === 1 ? (o + 1) : o, 0);
         let s = ext === 1 ? "" : "s";
         let only = ext === 1 ? Copy.at.only : "";
-        let intros = code.map((n, i) => INTROS[i][n]).filter(n => n);
+        let intros = code.map((n, i) => introText(FOCI[i][n])).filter(n => n);
         if (intros.length > 1) intros[intros.length - 1] = Copy.at.and + " " + intros[intros.length - 1];
         else if (!intros.length) intros = [Copy.text({
-          es: "no hay tendecias ejecutivas o de desapego; es una psyque completamente abierta",
-          en: "there are no executive or detached tendencies—this psyche is fully open",
+          es: "no hay tendecias ejecutivas o de desapego; es una psyque completamente abierta, lo que también la hace condicionada o sensible al ambiente social o entorno",
+          en: "there are no executive or detached tendencies—this psyche is fully open, which also makes it condiciotioned o sensitive to the social or immediate environment",
         })];
         return {
           p: [
             Copy.text({
               en: [
                 `The state with the ${copy.at.tone} (${copy.at.color}) color is ${copy.at.philosophy}—the state of ${copy.at.concept}. It represents a psyche focused on ${copy.at.focus.toLocaleLowerCase()}—the archetypical ${copy.at.archetype}, fostered by environments such as ${copy.at.location}.`,
-                `This state ${s?"have":"has"} ${only} ${['zero', 'one', 'two', 'three'][ext]} ${Copy.at.flexible} or extroverted dimension${s} (out of three), which suggests a personality that is ${TENDECIES[ext]}. In this case: ${intros.join("; ").toLocaleLowerCase()}.`,
+                `This state ${s?"have":"has"} ${only} ${['zero', 'one', 'two', 'three'][ext]} ${Copy.at.observant} or extroverted dimension${s} (out of three), which suggests a personality that is ${TENDECIES[ext]}. In this case: ${intros.join("; ").toLocaleLowerCase()}.`,
                 `If you received this state in your test results and it feels somewhat accurate, consider which of the adjacent states is your second closest.`,
               ],
               es: [
                 `El estado de color ${copy.at.tone} (${copy.at.color}) es ${copy.at.philosophy}, el estado de ${copy.at.concept}. Representa una psique enfocada en ${copy.at.focus.toLocaleLowerCase()}. Como su arquetipo de ${copy.at.archetype}, se fomenta en entornos de ${copy.at.location}.`,
-                `Este estado presenta ${only} ${['cero', 'una', 'dos', 'tres'][ext]} de las tres dimensiones de la psyche como ${Copy.at.flexible}${s} o extrovertidas, lo que indica una personalidad ${TENDECIES[ext]}. En este caso: ${intros.join("; ").toLowerCase()}.`,
-                `Si obtuviste este estado en tus resultados y sientes que te representa con un poco de precisión, considera cuál de los estados adyacentes podría ser el segundo más cercano a ti.`,
+                `Este estado presenta ${only} ${['cero', 'una', 'dos', 'tres'][ext]} de las tres dimensiones de la psyche como ${Copy.at.observant}${s} o extrovertidas, lo que indica una personalidad ${TENDECIES[ext]}. En este caso: ${intros.join("; ").toLowerCase()}.`,
+                `Si obtuviste este estado en tus resultados y sientes que te representa con poca de precisión, considera cuál de los estados adyacentes podría ser el segundo más cercano a ti.`,
               ],
             }), {
               tag: 'h3',
@@ -263,9 +315,11 @@ export const model = {
             },
             Copy.text({
               en: [`If you feel more introverted than this state suggests, you may be split between two opposite states on the adjacent spectrum, and the test may have averaged your result into this one.`,
-              `Alternatively, consider whether your second closest state is an adjacent that seems far away in the color spectrum—indicating an internal link.`],
+                `Alternatively, consider whether your second closest state is an adjacent that seems far away in the color spectrum—indicating an internal link.`
+              ],
               es: [`Si sientes que eres más introvertido de lo que este estado sugiere, puede que estés dividido entre dos estados opuestos dentro del espectro adyacente, y que el test haya promediado tus respuestas para ubicarte en este.`,
-              `Alternativamente, considera si tu segundo estado más cercano es un adyacente que parece lejano en el espectro de color; lo que indica un vínculo interno.`],
+                `Alternativamente, considera si tu segundo estado más cercano es un adyacente que parece lejano en el espectro de color (lo que indica un vínculo interno).`
+              ],
             }),
             Copy.text({
               en: `To learn to navigate this and other states of the 3D Psyche, please contact us (below) or consult our manifest and educational dossier.`,
