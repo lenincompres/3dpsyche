@@ -87,8 +87,8 @@ const frequencies = [Copy.text({
   en: 'Occasionally',
   es: "Ocasionalmente",
 }), Copy.text({
-  en: 'Moderately',
-  es: "Moderadamente",
+  en: 'Probably',
+  es: "Probablemente",
 }), Copy.text({
   en: 'Normally',
   es: "Normalmente",
@@ -142,71 +142,77 @@ const modelQuestion = q => {
             position: 'relative',
             order: Math.floor(100 * Math.random()),
             label: {
-              margin: `0 ${isVS ? '3em': '1em'}`,
+              margin: `0 1em`,
               display: 'flex',
               flexDirection: 'row',
-              justifyContent: isVS ? 'space-between' : 'space-around',
-              div: o.map(option => new Object({
-                span: {
+              justifyContent: 'space-around',
+              div: o.map((option, i) => new Object({
+                div: {
                   fontSize: '1.2rem',
                   fontWeight: 'bold',
                   fontFamily: 'title',
                   marginTop: '0.5em',
                   textShadow: 'none',
-                  text: option.choice,
+                  span: [
+                    isVS && !i ? '← ' : undefined,
+                    option.choice,
+                    isVS && i ? ' →' : undefined,
+                  ],
                 },
                 p: {
+                  display: isVS && '!i' ? '← ' : undefined,
                   textAlign: 'center',
                   fontSize: 'small',
                   text: option.hint,
                 }
               }))
             },
-            input: {
-              display: 'block',
-              width: 'calc(100% - 6em)',
-              margin: '0 auto',
-              type: 'range',
-              height: '0.6em',
-              appearance: isVS ? 'none' : undefined,
-              min: 0,
-              max: 100,
-              value: answer.value,
-              oninput: e => {
-                answer.value = parseInt(e.target.value);
-                updateResults();
-              }
-            },
-            div: {
-              lineHeight: '1rem',
-              color: '#0175ff',
-              bottom: 0,
-              margin: '0.5em',
-              left: 0,
-              position: 'absolute',
-              pointerEvents: 'none',
+            section: {
               display: 'flex',
               justifyContent: 'space-between',
-              width: '-webkit-fill-available',
-              small: {
+              span: [{
+                width: '21%',
+                maxWidth: '8em',
+                overflowX: 'hidden',
+                textOverflow: 'ellipsis',
                 fontSize: '0.7em',
-                pointerEvents: 'none',
-                width: '3.8em',
-                overflow: 'hidden',
-                content: [{
-                  marginTop: isVS ? '-2.5em' : undefined,
-                  text: isVS ? '◀' : answer.as(v => frequencies[Math.floor(v * frequencies.length / 100)]),
-                }, {
-                  text: '·',
-                }, {
-                  text: '·',
-                }, {
-                  text: '·',
-                }, {
-                  marginTop: isVS ? '-2.5em' : undefined,
-                  text: isVS ? '▶' : answer.as(v => v + '%'),
-                }]
-              }
+                color: '#0175ff',
+                text: answer.as(v => frequencies[Math.floor(v * frequencies.length / 100)]),
+              }, {
+                position: 'relative',
+                width: '-webkit-fill-available',
+                input: {
+                  height: '0.7em',
+                  width: '100%',
+                  type: 'range',
+                  appearance: isVS ? 'none' : undefined,
+                  min: 0,
+                  max: 100,
+                  value: answer.value,
+                  oninput: e => {
+                    answer.value = parseInt(e.target.value);
+                    updateResults();
+                  }
+                },
+                div: {
+                  position: 'absolute',
+                  bottom: 0,
+                  left: 0,
+                  pointerEvents: 'none',
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                  color: '#0175ff',
+                  width: '100%',
+                  fontSize: '0.7em',
+                  pointerEvents: 'none',
+                  b:' ··· '.split(''),
+                },
+              }, {
+                width: '4em',
+                fontSize: '0.7em',
+                color: '#0175ff',
+                text: answer.as(v => v + '%'),
+              }],
             },
           }
         })
