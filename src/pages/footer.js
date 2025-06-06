@@ -1,11 +1,9 @@
-import * as questionnaire from "./questionnaire.js";
-import * as global from "../global.js";
 import Collapsable from "../components/Collapsable.js";
 import Copy from "../../lib/Copy.js";
 
 const siteFooter = {
   paddingBottom: "2em",
-  background: "#000a",
+  background: "#000b",
   section: {
     maxWidth: "740px",
     padding: "1em",
