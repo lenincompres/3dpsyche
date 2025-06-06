@@ -265,6 +265,7 @@ class Cube extends p5Element {
   }
 
   mouseMoved() {
+    if(this.offsetParent === null) return;
     if (!this.canvas) return;
     if(this.sketch.mouseX < 0 || this.sketch.mouseX > this.width) return;
     if(this.sketch.mouseY < 0 || this.sketch.mouseY > this.height) return;
@@ -288,6 +289,7 @@ class Cube extends p5Element {
   }
 
   mouseReleased() {
+    if(this.offsetParent === null) return;
     if (!this.canvas) return;
     if(this.sketch.mouseX < 0 || this.sketch.mouseX > this.width) return;
     if(this.sketch.mouseY < 0 || this.sketch.mouseY > this.height) return;

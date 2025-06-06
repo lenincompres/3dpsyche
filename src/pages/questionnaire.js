@@ -2,14 +2,9 @@ import * as style from "../style.js";
 import * as AUX from "../../lib/auxiliary.js";
 import QUESTIONS from "../questions.js";
 import Copy from "../../lib/Copy.js";
+import * as global from "../global.js";
 
-/* Methods to calculate the results */
-function getRandomHexColor() {
-  const rand  = () => Math.floor(Math.random() * 256).toString(16).padStart(2, "0");
-  return `#${rand()}${rand()}${rand()}`;
-};
-
-export const _favorite = new Binder(getRandomHexColor());
+export const _favorite = new Binder(global.rand);
 export const _results = new Binder('#808080');
 export const _qCounter = new Binder(-3);
 
@@ -27,6 +22,7 @@ const sampleQuestions = [{
         en: "scarlet, maroon, brick",
         es: "escarlata, vino, labrillo",
       }),
+      value: 100 * global.randRGB[0] / 255,
     },
     {
       choice: Copy.text({
@@ -37,6 +33,7 @@ const sampleQuestions = [{
         en: "lime, army, mint",
         es: "lima, olivo, menta",
       }),
+      value: 100 * global.randRGB[1] / 255,
     },
     {
       choice: Copy.text({
@@ -47,6 +44,7 @@ const sampleQuestions = [{
         en: "sky, sapphire, navy",
         es: "cielo, safiro, marino",
       }),
+      value: 100 * global.randRGB[2] / 255,
     }
   ]
 }, {
@@ -137,7 +135,7 @@ const modelQuestion = q => {
         li: q.options.map(o => {
           var isVS = Array.isArray(o);
           if (!isVS) o = [o];
-          var answer = new Binder(50);
+          var answer = new Binder(Math.round(o[0].value ? o[0].value : 50));
           q.answers.push(answer);
           return {
             backgroundColor: style.whiteScreen,

@@ -29,7 +29,8 @@ class p5Element extends HTMLElement {
       t.p5 = t.sketch = p;
       p.setup = () => {
         t.removeChild(t.loading),
-        t.canvas = p.createCanvas(t.width ? t.width : p.windowWidth, t.height).elt;
+        t.canvas = p.createCanvas(t.width ? t.width : p.windowWidth, t.height, p.P2D).elt;
+        t.canvas.getContext("2d", { willReadFrequently: true });
         t.append(t.canvas);
         if (t.setup) t.setup(p);
       }

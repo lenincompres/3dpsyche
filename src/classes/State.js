@@ -148,7 +148,7 @@ export class State {
   draw(sketch) {
     if (sketch) this.sketch = sketch;
     if (!this.sketch) return;
-    if (!this.image) this.sketch.loadImage('media/symbolsprite.png', img => this.image = img);
+    if (!this.image || !this.image.width) return this.sketch.loadImage('media/symbolsprite.png', img => this.image = img);
     let x = this.value;
     let opacity = !this.interact ? 1 : 0.5 + Math.cos(3 * Math.cos(1.57 * x)) / 2;
     let size = this.radius; // * (!this.interact ?  1 : this.sketch.map(opacity,0,1,0.68,1.14));
