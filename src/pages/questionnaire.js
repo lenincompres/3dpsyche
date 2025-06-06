@@ -242,8 +242,8 @@ export const questionnaire = {
       backgroundColor: style.darkScreen,
       color: 'white',
       html: Copy.text({
-        en: 'The following questionaire averages your answers and map them to a state—a color archetype in the cube. To answer it, you must rate each option individually, but compare them to others in the same group.',
-        es: 'El siguiente cuestionario promedia tus respuestas y las asigna a un estado, a un arquetipo de color en el cubo. Para responder, debes calificar cada opción individualmente, pero compararlas con las demás del mismo grupo.'
+        en: 'The following questionaire averages your answers and map them to a state in the cube. To answer it, rate each option individually, but compare them to others in the same group.',
+        es: 'El siguiente cuestionario promedia tus respuestas y las asigna a un estado en el cubo. Para responder, califica cada opción individualmente, pero compararlas con las demás del mismo grupo.'
       })
     },
     h2: Copy.text({
