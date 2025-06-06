@@ -164,7 +164,8 @@ const modelQuestion = q => {
             },
             input: {
               display: 'block',
-              width: '100%',
+              width: 'calc(100% - 4em)',
+              margin: '0 auto',
               type: 'range',
               height: '0.6em',
               appearance : isVS ? 'none' : undefined,

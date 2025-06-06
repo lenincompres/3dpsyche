@@ -7,8 +7,8 @@ export default [{
     }),
     options: [{
         choice: Copy.text({
-          en: "Execution",
-          es: "Ejecución",
+          en: "The Execution",
+          es: "La Ejecución",
         }),
         hint: Copy.text({
           en: "magnitude, elaboration, dexterity",
@@ -17,8 +17,8 @@ export default [{
       },
       {
         choice: Copy.text({
-          en: "Concept",
-          es: "Concepto",
+          en: "The Concept",
+          es: "El Concepto",
         }),
         hint: Copy.text({
           en: "meaning, idea, message",
@@ -27,8 +27,8 @@ export default [{
       },
       {
         choice: Copy.text({
-          en: "Feeling",
-          es: "Sentimiento",
+          en: "The Feeling",
+          es: "El Sentimiento",
         }),
         hint: Copy.text({
           en: "sentiment, emotion, nostalgia",
@@ -44,8 +44,8 @@ export default [{
     }),
     options: [{
         choice: Copy.text({
-          en: "Practice",
-          es: "Práctica",
+          en: "The Practice",
+          es: "La Práctica",
         }),
         hint: Copy.text({
           en: "training, challenge, competition",
@@ -54,8 +54,8 @@ export default [{
       },
       {
         choice: Copy.text({
-          en: "Knowledge",
-          es: "Conocimiento",
+          en: "The Knowledge",
+          es: "El Conocimiento",
         }),
         hint: Copy.text({
           en: "rules, stats, strategies",
@@ -64,8 +64,8 @@ export default [{
       },
       {
         choice: Copy.text({
-          en: "Camaraderie",
-          es: "Camaradería",
+          en: "The Camaraderie",
+          es: "La Camaradería",
         }),
         hint: Copy.text({
           en: "fandom, environment, team",
@@ -82,7 +82,7 @@ export default [{
     options: [{
         choice: Copy.text({
           en: "Industry",
-          es: "Industria",
+          es: "La Industria",
         }),
         hint: Copy.text({
           en: "application, commerce, production",
@@ -92,7 +92,7 @@ export default [{
       {
         choice: Copy.text({
           en: "Science",
-          es: "Ciencia",
+          es: "La Ciencia",
         }),
         hint: Copy.text({
           en: "logic, structure, functionality",
@@ -102,7 +102,7 @@ export default [{
       {
         choice: Copy.text({
           en: "Culture",
-          es: "Cultura",
+          es: "La Cultura",
         }),
         hint: Copy.text({
           en: "art, literature, history",
@@ -118,8 +118,8 @@ export default [{
     }),
     options: [{
         choice: Copy.text({
-          en: "Feast",
-          es: "Festín",
+          en: "A Feast",
+          es: "Un Festín",
         }),
         hint: Copy.text({
           en: "abundance, indulgence, treats",
@@ -128,18 +128,18 @@ export default [{
       },
       {
         choice: Copy.text({
-          en: "Nutrition",
-          es: "Nutrición",
+          en: "Good Nutrition",
+          es: "Buena Nutrición",
         }),
         hint: Copy.text({
-          en: "diet, balance, timing",
-          es: "dieta, equilibrio, tiempo",
+          en: "complete diet, balance, timing",
+          es: "dieta completa, equilibrio, tiempo",
         }),
       },
       {
         choice: Copy.text({
-          en: "Ceremony",
-          es: "Ceremonia",
+          en: "A Ceremony",
+          es: "Una Ceremonia",
         }),
         hint: Copy.text({
           en: "setting, presentation, company",
@@ -156,7 +156,7 @@ export default [{
     options: [{
         choice: Copy.text({
           en: "Productivity",
-          es: "Productividad",
+          es: "La Productividad",
         }),
         hint: Copy.text({
           en: "execute, deliver, profit",
@@ -166,7 +166,7 @@ export default [{
       {
         choice: Copy.text({
           en: "Methodology",
-          es: "Metodología",
+          es: "La Metodología",
         }),
         hint: Copy.text({
           en: "anylisis, process, assessment",
@@ -176,7 +176,7 @@ export default [{
       {
         choice: Copy.text({
           en: "Service",
-          es: "Servicio",
+          es: "El Servicio",
         }),
         hint: Copy.text({
           en: "help, support, contribute",
@@ -191,8 +191,8 @@ export default [{
     }),
     options: [{
         choice: Copy.text({
-          en: "Action",
-          es: "Acción",
+          en: "The Action",
+          es: "La Acción",
         }),
         hint: Copy.text({
           en: "thrill, pace, audiovisuals",
@@ -201,8 +201,8 @@ export default [{
       },
       {
         choice: Copy.text({
-          en: "Plot",
-          es: "Trama",
+          en: "The Plot",
+          es: "La Trama",
         }),
         hint: Copy.text({
           en: "development, intrigue, sense",
@@ -211,8 +211,8 @@ export default [{
       },
       {
         choice: Copy.text({
-          en: "Drama",
-          es: "Drama",
+          en: "The Drama",
+          es: "El Drama",
         }),
         hint: Copy.text({
           en: "romance, misfortune, joy",

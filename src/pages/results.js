@@ -312,7 +312,11 @@ export const model = {
         es: `El estado ${copy.at.archetype}`,
       })),
     },
-    figure: stateElt,
+    figure: {
+      display: 'flex',
+      justifyContent: 'center',
+      canvas: stateElt,
+    },
     ul: _feature.as(v => ({
       textAlign: "left",
       margin: "0 auto",
@@ -351,7 +355,7 @@ export const model = {
                 `El estado de color ${copy.at.tone} (${copy.at.color}) es ${copy.at.philosophy}, el estado de ${copy.at.concept}. Representa una psique enfocada en ${copy.at.focus.toLocaleLowerCase()}. Como su arquetipo de ${copy.at.archetype}, se fomenta en entornos de ${copy.at.location}.`,
                 `Este estado presenta ${only} ${['cero', 'una', 'dos', 'tres'][ext]} de las tres dimensiones de la psyche como ${Copy.at.observant}${s}, lo que indica una personalidad ${TENDECIES[ext]}. En este caso: ${intros.join("; ").toLowerCase()}.`,
                 `${extros}`,
-                `Si obtuviste este estado en tus resultados y te parece un poco acertado, considera cuál de los estados adyacentes podría ser el segundo más cercano a ti. Puede que te encuentres en medio de ambos. A veces, la identidad no reside en un solo estado, sino en el movimiento habitual entre varios.`,
+                `Si obtuviste este estado en tus resultados y te parece un poco acertado, considera cuál de los estados adyacentes es el segundo más cercano a ti. Puede que te encuentres en medio de ambos. A veces, la identidad no reside en un solo estado, sino en el movimiento habitual entre varios.`,
               ],
             }), {
               tag: 'h3',

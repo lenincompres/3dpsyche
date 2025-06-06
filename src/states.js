@@ -204,8 +204,8 @@ export default {
         code: "012",
         coords: "-ox",
         focus: {
-            en: "Reflection and support",
-            es: "la reflexión y el apoyo"
+            en: "Reflection and essence",
+            es: "la reflexión y lo escencial"
         },
         philosophy: {
             en: "existentialist",

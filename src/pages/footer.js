@@ -7,7 +7,7 @@ const siteFooter = {
   paddingBottom: "2em",
   background: "#000a",
   section: {
-    maxWidth: "40em",
+    maxWidth: "740px",
     padding: "1em",
     margin: "0 auto",
     section: new Collapsable({

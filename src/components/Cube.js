@@ -103,7 +103,14 @@ class Cube extends p5Element {
     view,
     textSize = 10,
   } = {}) {
-    super(width, height);
+    super({
+      width: width,
+      height: height,
+      description: Copy.text({
+        en: 'The 3Dpscyhe Cube',
+        es: 'El cubo de la psyche 3D',
+      }),
+    });
     this.ref = ref;
     this.noLabels = noLabels;
     this.onready = onready;
@@ -122,7 +129,6 @@ class Cube extends p5Element {
     this.states = [];
     if (view !== undefined) this.view(view);
     this.set({
-      tag: "p5-cube",
       display: "flex",
       flexDirection: "column",
       alignItems: "anchor-center",
@@ -133,10 +139,12 @@ class Cube extends p5Element {
     if (this.animated) this.set({
       select: {
         name: "Cube",
-        position: "relative",
+        top: '0.6em',
+        width: '12em',
+        left: 'calc(50% - 6em)',
+        position: "absolute",
         backgroundColor: "transparent",
         zIndex: 10,
-        margin: "2em auto -2em",
         textAlignLast: "center",
         option: [{
           value: "none",
@@ -169,12 +177,12 @@ class Cube extends p5Element {
     });
   };
 
-  set center(val){
+  set center(val) {
     this._center = val;
     this.reset();
   }
 
-  get center(){
+  get center() {
     return this._center;
   }
 
@@ -187,7 +195,7 @@ class Cube extends p5Element {
     this.reset();
   }
 
-  reset(){
+  reset() {
     if (this.animated) this.animate();
     this.states = new Array(27).fill().map((_, i) => new State({
       sketch: this.sketch,
