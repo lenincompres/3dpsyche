@@ -452,7 +452,7 @@ export const model = {
     marginTop: `1em`,
     content: [{
       display: global.rgb ? `none` : `block`,
-      href: DOM.bind([_feature, questionnaire._favorite], (r, f) => `./?global.rgb=${r.substr(1)}&color=${f.substr(1)}`),
+      href: DOM.bind([_feature, questionnaire._favorite], (r, f) => `./?rgb=${r.substr(1)}&fav=${f.substr(1)}`),
       target: '_blank',
       text: Copy.text({
         en: `Link to these results for you to save or share.`,
