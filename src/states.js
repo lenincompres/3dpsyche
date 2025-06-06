@@ -4,7 +4,7 @@ export default {
         coords: "---",
         focus: {
             en: "Silence and inner peace",
-            es: "Silencio y paz interior"
+            es: "el silencio y la paz interior"
         },
         quality: {
             en: "ethereal",
@@ -45,7 +45,7 @@ export default {
         coords: "--o",
         focus: {
             en: "Empathy and presence",
-            es: "Empatía y presencia"
+            es: "la empatía y la presencia"
         },
         quality: {
             en: "inspirational",
@@ -86,7 +86,7 @@ export default {
         coords: "--x",
         focus: {
             en: "Introspection and beauty",
-            es: "Introspección y belleza"
+            es: "la introspección y la belleza"
         },
         quality: {
             en: "sentimental",
@@ -127,7 +127,7 @@ export default {
         coords: "-o-",
         focus: {
             en: "Knowledge and analysis",
-            es: "Conocimiento y análisis"
+            es: "el conocimiento y el análisis"
         },
         philosophy: {
             en: "empirical",
@@ -164,7 +164,7 @@ export default {
         coords: "-oo",
         focus: {
             en: "Narrative and connection",
-            es: "Narrativa y conexión"
+            es: "la narrativa y la conexión"
         },
         quality: {
             en: "ideational",
@@ -205,7 +205,7 @@ export default {
         coords: "-ox",
         focus: {
             en: "Reflection and support",
-            es: "Reflexión y apoyo"
+            es: "la reflexión y el apoyo"
         },
         philosophy: {
             en: "existentialist",
@@ -242,7 +242,7 @@ export default {
         coords: "-x-",
         focus: {
             en: "Calculation and systems",
-            es: "Cálculo y sistemas"
+            es: "el cálculo y los sistemas"
         },
         quality: {
             en: "analytical",
@@ -282,8 +282,8 @@ export default {
         code: "021",
         coords: "-xo",
         focus: {
-            en: "Training and transfer",
-            es: "Entrenamiento y transferencia"
+            en: "understanding and transfer",
+            es: "la comprensión y la transmisión"
         },
         quality: {
             en: "theoretical",
@@ -324,7 +324,7 @@ export default {
         coords: "-xx",
         focus: {
             en: "Thought and contemplation",
-            es: "Pensamiento y contemplación"
+            es: "el pensamiento y la contemplación"
         },
         quality: {
             en: "ethical",
@@ -365,7 +365,7 @@ export default {
         coords: "o--",
         focus: {
             en: "Exploration and alertness",
-            es: "Exploración y alerta"
+            es: "la exploración y la vigilancia"
         },
         quality: {
             en: "sensorial",
@@ -406,7 +406,7 @@ export default {
         coords: "o-o",
         focus: {
             en: "Joy and shared energy",
-            es: "Alegría y energía compartida"
+            es: "la alegría y la energía compartida"
         },
         quality: {
             en: "jovial",
@@ -447,7 +447,7 @@ export default {
         coords: "o-x",
         focus: {
             en: "Appreciation and attention",
-            es: "Apreciación y atención"
+            es: "la apreciación y la atención"
         },
         quality: {
             en: "sensual",
@@ -488,7 +488,7 @@ export default {
         coords: "oo-",
         focus: {
             en: "objectivity and negotiation",
-            es: "objetividad y negociación"
+            es: "la objetividad y la negociación"
         },
         quality: {
             en: "factual",
@@ -529,7 +529,7 @@ export default {
         coords: "ooo",
         focus: {
             en: "Flow and interchange",
-            es: "Fluidez e intercambio"
+            es: "la fluidez e el intercambio"
         },
         quality: {
             en: "social",
@@ -570,7 +570,7 @@ export default {
         coords: "00x",
         focus: {
             en: "harmony and communion",
-            es: "armonía y comunión"
+            es: "la armonía y la comunión"
         },
         quality: {
             en: "congenial",
@@ -610,8 +610,8 @@ export default {
         code: "120",
         coords: "ox-",
         focus: {
-            en: "Implementation and technical skill",
-            es: "Implementación y destreza técnica"
+            en: "Implementation and skill",
+            es: "la implementación y la destreza"
         },
         philosophy: {
             en: "technocratic",
@@ -648,7 +648,7 @@ export default {
         coords: "oxo",
         focus: {
             en: "Organization and logistics",
-            es: "Organización y logística"
+            es: "la organización y la logística"
         },
         philosophy: {
             en: "structuralist",
@@ -684,7 +684,7 @@ export default {
         coords: "oxx",
         focus: {
             en: "Discipline and constructive critique",
-            es: "Disciplina y crítica constructiva"
+            es: "la disciplina y la crítica constructiva"
         },
         philosophy: {
             en: "juridical",
@@ -721,7 +721,7 @@ export default {
         coords: "x--",
         focus: {
             en: "Dynamism and physical energy",
-            es: "Dinamismo y energía física"
+            es: "el dinamismo y la energía física"
         },
         philosophy: {
             en: "vitalist",
@@ -758,7 +758,7 @@ export default {
         coords: "x-o",
         focus: {
             en: "Attitude and expression",
-            es: "Actitud y expresión"
+            es: "la actitud y la expresión"
         },
         philosophy: {
             en: "performative",
@@ -795,7 +795,7 @@ export default {
         coords: "x-x",
         focus: {
             en: "emotion and devotion",
-            es: "emoción y entrega"
+            es: "la emoción y la entrega"
         },
         philosophy: {
             en: "devotional",
@@ -831,8 +831,8 @@ export default {
         code: "210",
         coords: "xo-",
         focus: {
-            en: "Skill and practicality",
-            es: "Habilidad y practicalidad"
+            en: "ability and practicality",
+            es: "la habilidad y la practicalidad"
         },
         philosophy: {
             en: "mechanistic",
@@ -868,8 +868,8 @@ export default {
         code: "211",
         coords: "xoo",
         focus: {
-            en: "Dedication and assistance",
-            es: "Dedicación y asistencia"
+            en: "attentiveness and helpfulness",
+            es: "la atención y la ayuda"
         },
         philosophy: {
             en: "servicial",
@@ -906,7 +906,7 @@ export default {
         coords: "xox",
         focus: {
             en: "Care and protection",
-            es: "Cuidado y protección"
+            es: "el cuidado y la protección"
         },
         philosophy: {
             en: "protectoral",
@@ -943,7 +943,7 @@ export default {
         coords: "xx-",
         focus: {
             en: "Production and efficiency",
-            es: "Producción y eficiencia"
+            es: "la producción y la eficiencia"
         },
         philosophy: {
             en: "industrial",
@@ -980,7 +980,7 @@ export default {
         coords: "xxo",
         focus: {
             en: "Management and goals",
-            es: "Gestión y metas"
+            es: "la gestión y las metas"
         },
         philosophy: {
             en: "managerial",
@@ -1017,7 +1017,7 @@ export default {
         coords: "xxx",
         focus: {
             en: "Power and command",
-            es: "Poder y dominio"
+            es: "el poder y el dominio"
         },
         philosophy: {
             en: "authoritarian",

@@ -329,7 +329,7 @@ export const model = {
         if (intros.length > 1) intros[intros.length - 1] = Copy.at.and + " " + intros[intros.length - 1];
         else if (!intros.length) intros = [Copy.text({
           es: "no hay tendecias ejecutivas o de desapego; es una psyque completamente abierta, lo que también la hace condicionada o sensible al ambiente social o entorno",
-          en: "there are no executive or detached tendencies—this psyche is fully open, which also makes it conditioned o sensitive to the social or immediate environment",
+          en: "there are no executive or detached tendencies—this psyche is fully open, making it both attuned and susceptible to the social or immediate environment",
         })];
 
         let extros = code.map((n, i) => extroText(FOCI[i][n])).filter(n => n);
@@ -368,12 +368,12 @@ export const model = {
             Copy.text({
               en: [
                 !ext ? undefined : `You may also find yourself split between two opposite states on the adjacent spectrum, and the test may have mistakenly averaged your result into this one. Sometimes, this suggests that you may be more introverted than this state implies.`,
-                ext > 3 ? undefined : `Alternatively, consider whether your second closest state is an adjacent that seems far away in the color spectrum—indicating an internal (introverted) loop.`,
+                ext > 2 ? undefined : `Alternatively, consider whether your second closest state is an adjacent that seems far away in the color spectrum—indicating an internal (introverted) loop.`,
                 `To learn to navigate this and other states of the 3D Psyche, please contact us (below) or consult our manifesto and educational dossier.`,
               ],
               es: [
                 !ext ? undefined : `También puede que te muevas entre dos estados opuestos dentro de este espectro adyacente, y que el test haya promediado erróneamente tu resultado en este. A veces, esto sugiere que podrías ser más introvertido de lo que este estado indica.`,
-                ext > 3 ? undefined : `Alternativamente, considera si tu segundo estado más cercano es un adyacente que parece lejano en el espectro de color—lo que indica un vínculo interno (introvertido).`,
+                ext > 2 ? undefined : `Alternativamente, considera si tu segundo estado más cercano es un adyacente que parece lejano en el espectro de color—lo que indica un vínculo interno (introvertido).`,
                 `Para aprender a explorar este y los demás estados de la Psique Tridimensional, contáctanos (más abajo) o refiérete a nuestro manifiesto y dossier educativo.`,
               ],
             }),
