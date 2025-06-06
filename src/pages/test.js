@@ -80,12 +80,12 @@ export const siteTest = {
         es: `Resultados`,
       }),
       small: global.rgb && !global.fav ? undefined : {
-        margin: `1em 0 -2.25em -11em`,
+        margin: `1em 0 -2.25em`,
         zIndex: 1,
-        text: Copy.text({
-          en: `Closest state:`,
-          es: `Estado más cercano:`,
-        }),
+        text: results._feature.as(val => Copy.text({
+          en: `Closest state to the averaged color: ${val}`,
+          es: `Estado más cercano al color promediado: ${val}`,
+        })),
       },
 
       main: results.model,

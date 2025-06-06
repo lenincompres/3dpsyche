@@ -453,6 +453,7 @@ export const model = {
     content: [{
       display: global.rgb ? `none` : `block`,
       href: DOM.bind([_feature, questionnaire._favorite], (r, f) => `./?global.rgb=${r.substr(1)}&color=${f.substr(1)}`),
+      target: '_blank',
       text: Copy.text({
         en: `Link to these results for you to save or share.`,
         es: `Enlace a estos resultados para guardarlos o compartirlos.`,
@@ -467,8 +468,8 @@ export const model = {
       href: `./?global.rgb=${global.fav.substr(1)}`,
       target: `_blank`,
       text: Copy.text({
-        en: `This is the result of your favorite color: ${global.fav}`,
-        es: `Este es el resultado para tu color favorito: ${global.fav}`,
+        en: `And, this is the result of your favorite color: ${global.fav}`,
+        es: `Este otro es el resultado de tu color favorito: ${global.fav}`,
       }),
     }, {
       fontSize: `1.25em`,
