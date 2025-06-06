@@ -227,12 +227,12 @@ const TENDECIES = [
     en: "highly introverted",
   }),
   Copy.text({
-    es: "ligeramente introvertida",
-    en: "slightly introverted",
+    es: "al borde de la introversión",
+    en: "borderline introverted",
   }),
   Copy.text({
-    es: "raramente introvertida",
-    en: "rarely introverted",
+    es: "con un nivel bajo de introversión",
+    en: "barely introverted",
   }),
   Copy.text({
     es: "para nada introvertida",
@@ -328,7 +328,7 @@ export const model = {
         let intros = code.map((n, i) => introText(FOCI[i][n])).filter(n => n);
         if (intros.length > 1) intros[intros.length - 1] = Copy.at.and + " " + intros[intros.length - 1];
         else if (!intros.length) intros = [Copy.text({
-          es: "no hay tendecias ejecutivas o de desapego; es una psyque completamente abierta, lo que también la hace condicionada o sensible al ambiente social o entorno",
+          es: "no hay tendecias ejecutivas o de desapego; es una psyque completamente abierta, lo que la hace tanto receptiva como susceptible al entorno social o inmediato",
           en: "there are no executive or detached tendencies—this psyche is fully open, making it both attuned and susceptible to the social or immediate environment",
         })];
 
