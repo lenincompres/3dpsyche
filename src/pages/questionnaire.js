@@ -138,7 +138,7 @@ const modelQuestion = q => {
           return {
             backgroundColor: style.whiteScreen,
             margin: '1px 0',
-            padding: '0.68em',
+            padding: '0.5em 0.6em 1em',
             position: 'relative',
             order: Math.floor(100 * Math.random()),
             label: {
@@ -171,6 +171,7 @@ const modelQuestion = q => {
               display: 'flex',
               justifyContent: 'space-between',
               span: [{
+                display: isVS ? 'none' : 'block',
                 width: '21%',
                 maxWidth: '8em',
                 overflowX: 'hidden',
@@ -181,6 +182,8 @@ const modelQuestion = q => {
               }, {
                 position: 'relative',
                 width: '-webkit-fill-available',
+                maxWidth: 'calc(100% - 6em)',
+                margin: '0 auto',
                 input: {
                   height: '0.7em',
                   width: '100%',
@@ -208,6 +211,7 @@ const modelQuestion = q => {
                   b:' ··· '.split(''),
                 },
               }, {
+                display: isVS ? 'none' : 'block',
                 width: '4em',
                 fontSize: '0.7em',
                 color: '#0175ff',
