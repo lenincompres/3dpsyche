@@ -368,12 +368,12 @@ export const model = {
             Copy.text({
               en: [
                 !ext ? undefined : `You may also find yourself split between two opposite states on the adjacent spectrum, and the test may have mistakenly averaged your result into this one. Sometimes, this suggests that you may be more introverted than this state implies.`,
-                ext > 2 ? undefined : `Alternatively, consider whether your second closest state is an adjacent that seems far away in the color spectrum—indicating an internal (introverted) loop.`,
+                ext > 2 ? undefined : `Alternatively, consider whether your second closest state is an adjacent that contrasts on the color spectrum—indicating an internal (introverted) loop.`,
                 `To learn to navigate this and other states of the 3D Psyche, please contact us (below) or consult our manifesto and educational dossier.`,
               ],
               es: [
                 !ext ? undefined : `También puede que te muevas entre dos estados opuestos dentro de este espectro adyacente, y que el test haya promediado erróneamente tu resultado en este. A veces, esto sugiere que podrías ser más introvertido de lo que este estado indica.`,
-                ext > 2 ? undefined : `Alternativamente, considera si tu segundo estado más cercano es un adyacente que parece lejano en el espectro de color—lo que indica un vínculo interno (introvertido).`,
+                ext > 2 ? undefined : `Alternativamente, considera si tu segundo estado más cercano es un adyacente que contrasta en el espectro de color—lo que indica un vínculo interno (introvertido).`,
                 `Para aprender a explorar este y los demás estados de la Psique Tridimensional, contáctanos (más abajo) o refiérete a nuestro manifiesto y dossier educativo.`,
               ],
             }),
