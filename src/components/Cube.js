@@ -265,7 +265,9 @@ class Cube extends p5Element {
   }
 
   mouseMoved() {
-    //if (this.canvas && !this.animated) return;
+    if (this.canvas) return;
+    if(this.sketch.mouseX < 0 || this.sketch.mouseX > this.width) return;
+    if(this.sketch.mouseY < 0 || this.sketch.mouseY > this.height) return;
     this.isHover = !!parseInt(this.sketch.get(this.sketch.mouseX, this.sketch.mouseY).join('')); // any pixel color under the mouse
     this.sketch.cursor(this.isHover ? this.sketch.HAND : this.sketch.ARROW);
     if (this.isHover) {
@@ -286,6 +288,9 @@ class Cube extends p5Element {
   }
 
   mouseReleased() {
+    if (this.canvas) return;
+    if(this.sketch.mouseX < 0 || this.sketch.mouseX > this.width) return;
+    if(this.sketch.mouseY < 0 || this.sketch.mouseY > this.height) return;
     if (!this.isHover) return;
     this.onclick(this.overState);
     this.stateClick(this.overState);

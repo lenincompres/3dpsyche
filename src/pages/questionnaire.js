@@ -164,45 +164,50 @@ const modelQuestion = q => {
             },
             input: {
               display: 'block',
-              width: 'calc(100% - 4em)',
+              width: 'calc(100% - 6em)',
               margin: '0 auto',
               type: 'range',
               height: '0.6em',
-              appearance : isVS ? 'none' : undefined,
+              appearance: isVS ? 'none' : undefined,
               min: 0,
               max: 100,
-              //step: 5,
               value: answer.value,
               oninput: e => {
                 answer.value = parseInt(e.target.value);
                 updateResults();
               }
             },
-            small: {
-              fontSize: isVS ? '1em' : 'small',
-              lineHeight: isVS ? '1.6em' : '1rem',
-              color: '#06c',
-              bottom: '3em',
+            div: {
+              lineHeight: '1rem',
+              color: '#0175ff',
+              bottom: 0,
+              margin: '0.5em',
+              left: 0,
               position: 'absolute',
               pointerEvents: 'none',
-              margin: isVS ? '-1em 2em' : '0 1em',
-              maxWidth: '15%',
-              overflow: 'hidden',
-              textOverflow: 'ellipsis',
-              content: [{
-                right: 0,
-                text: isVS ? '▶' : answer.as(v => v + '%')
-              }, {
-                margin: '-1em 0',
-                display: isVS ? 'block': 'none',
-                left: 'calc(50% - 0.5em)',
-                width: '1em',
-                text: '|',
-              }, {
-                left: 0,
-                text: isVS ? '◀' : answer.as(v => frequencies[Math.floor(v * frequencies.length / 100)])
-              }]
-            }
+              //margin: isVS ? '-1em 2em' : '0 1em',
+              display: 'flex',
+              justifyContent: 'space-between',
+              width: '-webkit-fill-available',
+              small: {
+                fontSize: isVS ? '1em' : 'small',
+                pointerEvents: 'none',
+                width: '3.3em',
+                content: [{
+                  overflow: 'hidden',
+                  //textOverflow: 'ellipsis',
+                  text: isVS ? '◀' : answer.as(v => frequencies[Math.floor(v * frequencies.length / 100)]),
+                }, {
+                  text: '·',
+                }, {
+                  text: '·',
+                }, {
+                  text: '·',
+                }, {
+                  text: isVS ? '▶' : answer.as(v => v + '%'),
+                }]
+              }
+            },
           }
         })
       }
