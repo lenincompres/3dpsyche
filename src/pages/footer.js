@@ -3,7 +3,7 @@ import Copy from "../../lib/Copy.js";
 
 const siteFooter = {
   paddingBottom: "2em",
-  background: "#000b",
+  background: "#000a",
   section: {
     maxWidth: "740px",
     padding: "1em",
