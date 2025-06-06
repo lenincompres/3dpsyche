@@ -229,8 +229,8 @@ export const questionnaire = {
       })
     },
     h2: Copy.text({
-      en: "Example<br/><small>(won't influence the results)</small>",
-      es: "Ejemplo<br/><small>(no influenciará el resultado)</small>",
+      en: "Example<br/><small>(This won't influence the results)</small>",
+      es: "Ejemplo<br/><small>(Esto no influenciará el resultado)</small>",
     }),
     section: samples,
     a: {

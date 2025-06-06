@@ -462,8 +462,8 @@ export default [{
     reverse: true,
     options: [{
         choice: Copy.text({
-          en: "Participate in group activities or sports",
-          es: "Participar en actividades grupales o deportes",
+          en: "Participate in group activities",
+          es: "Participar en actividades grupales",
         }),
       },
       {

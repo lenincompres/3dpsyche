@@ -569,8 +569,8 @@ export default {
         code: "112",
         coords: "00x",
         focus: {
-            en: "Representation and tact",
-            es: "Representación y tacto"
+            en: "harmony and communion",
+            es: "armonía y comunión"
         },
         quality: {
             en: "congenial",

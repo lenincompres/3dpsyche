@@ -196,7 +196,7 @@ const bars = {
   r: new Bar(Copy.at.physical, "6em", "red"),
   g: new Bar(Copy.at.rational, "6em", "lime"),
   b: new Bar(Copy.at.emotional, "6em", "blue")
-}; 
+};
 
 const FOCI = [
   ['abstraction', 'sensation', 'action'],
@@ -215,7 +215,7 @@ const extroText = (a) => {
   const extros = FOCI.map(f => f[1]);
   if (!extros.includes(a)) return;
   let [dimenssion, focus, tendency] = [Copy.at[a + 'Definition'], Copy.at[a], Copy.at[a + 'Tendency']];
-  return  Copy.text({
+  return Copy.text({
     en: `${dimenssion} (${focus}), which implies ${tendency}`,
     es: `la ${dimenssion} (${focus}), que implica ${tendency}`,
   });;
@@ -334,10 +334,10 @@ export const model = {
 
         let extros = code.map((n, i) => extroText(FOCI[i][n])).filter(n => n);
         if (extros.length > 1) extros[extros.length - 1] = Copy.at.and + " " + extros[extros.length - 1];
-        if(extros.length) extros = Copy.text({
+        if (extros.length) extros = Copy.text({
           en: `In terms of extroversion, its openness comes through ${extros.join("; ")}.`,
           es: `En cuanto a la extrovesión, su apertura proviene de ${extros.join("; ")}.`,
-        }); 
+        });
         return {
           p: [
             Copy.text({
@@ -368,8 +368,8 @@ export const model = {
             Copy.text({
               en: [
                 !ext ? undefined : `You may also find yourself split between two opposite states on the adjacent spectrum, and the test may have mistakenly averaged your result into this one. Sometimes, this suggests that you may be more introverted than this state implies.`,
-                ext > 3 ? undefined : `Alternatively, consider whether your second closest state is an adjacent that seems far away in the color spectrum—indicating an internal (introverted) link.`,
-                `To learn to navigate this and other states of the 3D Psyche, please contact us (below) or consult our manifest and educational dossier.`,
+                ext > 3 ? undefined : `Alternatively, consider whether your second closest state is an adjacent that seems far away in the color spectrum—indicating an internal (introverted) loop.`,
+                `To learn to navigate this and other states of the 3D Psyche, please contact us (below) or consult our manifesto and educational dossier.`,
               ],
               es: [
                 !ext ? undefined : `También puede que te muevas entre dos estados opuestos dentro de este espectro adyacente, y que el test haya promediado erróneamente tu resultado en este. A veces, esto sugiere que podrías ser más introvertido de lo que este estado indica.`,
@@ -379,7 +379,14 @@ export const model = {
             }),
           ]
         };
-      }),
+      }), {
+        figure: {
+          margin: "0 auto",
+          content: new Cube({
+            onclick: state => state && state.code && (window.location.href = "./?rgb=" + state.code.codeToHex()),
+          }),
+        },
+      },
     ],
   },
   section: {
