@@ -17,7 +17,6 @@ export const _mbti = new Binder("- - - -");
 export const _feature = new Binder("#808080");
 export const _copy = new Binder();
 
-
 Copy.add({
   physical: {
     en: "Physical",

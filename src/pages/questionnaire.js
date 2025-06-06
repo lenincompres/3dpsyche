@@ -4,8 +4,12 @@ import QUESTIONS from "../questions.js";
 import Copy from "../../lib/Copy.js";
 
 /* Methods to calculate the results */
+function getRandomHexColor() {
+  const rand  = () => Math.floor(Math.random() * 256).toString(16).padStart(2, "0");
+  return `#${rand()}${rand()}${rand()}`;
+};
 
-export const _favorite = new Binder('#808080');
+export const _favorite = new Binder(getRandomHexColor());
 export const _results = new Binder('#808080');
 export const _qCounter = new Binder(-3);
 
