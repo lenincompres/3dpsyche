@@ -529,7 +529,7 @@ export default {
         coords: "ooo",
         focus: {
             en: "Flow and interchange",
-            es: "la fluidez e el intercambio"
+            es: "la fluidez y el intercambio"
         },
         quality: {
             en: "social",
