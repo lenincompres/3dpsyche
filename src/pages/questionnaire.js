@@ -185,17 +185,16 @@ const modelQuestion = q => {
               left: 0,
               position: 'absolute',
               pointerEvents: 'none',
-              //margin: isVS ? '-1em 2em' : '0 1em',
               display: 'flex',
               justifyContent: 'space-between',
               width: '-webkit-fill-available',
               small: {
-                fontSize: isVS ? '1em' : 'small',
+                fontSize: '0.7em',
                 pointerEvents: 'none',
-                width: '3.3em',
+                width: '3.8em',
+                overflow: 'hidden',
                 content: [{
-                  overflow: 'hidden',
-                  //textOverflow: 'ellipsis',
+                  marginTop: isVS ? '-2.5em' : undefined,
                   text: isVS ? '◀' : answer.as(v => frequencies[Math.floor(v * frequencies.length / 100)]),
                 }, {
                   text: '·',
@@ -204,6 +203,7 @@ const modelQuestion = q => {
                 }, {
                   text: '·',
                 }, {
+                  marginTop: isVS ? '-2.5em' : undefined,
                   text: isVS ? '▶' : answer.as(v => v + '%'),
                 }]
               }

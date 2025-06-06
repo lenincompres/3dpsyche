@@ -53,7 +53,7 @@ const CSS = {
     textAlign: `center`,
     fontSize: `3rem`,
     color: `#fff`,
-    textShadow: `0 0 3px #000c, 0 0 3px #000c`,
+    textShadow: `0 0 3px #000c, 0 0 3px #000c, 0 0 3px #000c, 0 0 3px #000c`,
     textTransform: `capitalize`,
   },
   h2: {
@@ -62,7 +62,7 @@ const CSS = {
     textAlign: `center`,
     color: `#fff`,
     textTransform: `capitalize`,
-    textShadow: `0 0 3px #000c, 0 0 3px #000c`,
+    textShadow: `0 0 3px #000c, 0 0 3px #000c, 0 0 3px #000c, 0 0 3px #000c`,
   },
   h3: {
     fontSize: `1.15rem`,
