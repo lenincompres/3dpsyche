@@ -458,8 +458,8 @@ export const model = {
       href: DOM.bind([_feature, questionnaire._favorite], (r, f) => `./?rgb=${r.substr(1)}&fav=${f.substr(1)}`),
       target: '_blank',
       text: Copy.text({
-        en: `Link to these results for you to save or share.`,
-        es: `Enlace a estos resultados para guardarlos o compartirlos.`,
+        en: `Here’s your link to save or share your results.`,
+        es: `Aquí tienes tu enlace para guardar o compartir tus resultados.`,
       }),
     }, !global.fav ? undefined : {
       margin: `0 auto`,
@@ -472,7 +472,7 @@ export const model = {
       target: `_blank`,
       text: Copy.text({
         en: `And, this is the result of your favorite color: ${global.fav}`,
-        es: `Este otro es el resultado de tu color favorito: ${global.fav}`,
+        es: `Y este otro es el resultado de tu color favorito: ${global.fav}`,
       }),
     }, {
       fontSize: `1.25em`,

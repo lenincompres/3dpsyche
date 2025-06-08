@@ -3,7 +3,7 @@ import Copy from "../../lib/Copy.js";
 
 const siteFooter = {
   paddingBottom: "2em",
-  background: "linear-gradient(#000f 0%, #0009 100%)",
+  background: "linear-gradient(#000f 0%, #0007 100%)",
   section: {
     maxWidth: "740px",
     padding: "1em",
