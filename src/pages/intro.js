@@ -129,8 +129,14 @@ export default {
           fontSize: 'small',
         }),
       p_: Copy.text({
-        en: [`We shift among these functions to think, create, interact, and rest: math problems require physical abstraction and rational execution; making difficult decisions may benefit from emotional detachment; quick physical reflexes emerge from rational detachment.`, `Some tasks are multidimensional: a dance performance calls for physical and emotional focus; car repair demands physical execution and rational clarity; creative writing lives between rational ideas and emotional resonance.`, `Each position in the cube represents a distinct state of being—an archetype of how we align our focus. While we are all dynamic, we tend to gravitate toward certain states more easily than others.`],
-        es: [`Cambiamos entre estas funciones para pensar, crear, interactuar y descansar: las matemáticas requieren abstracción física y ejecución racional; tomar  decisiones difíciles puede beneficiarse del desapego emocional; los reflejos físicos rápidos surgen del desapego racional.`, `Algunas tareas son multidimensionales: una presentación de danza exige enfoque físico y emocional; reparar un auto requiere ejecución física y claridad racional; la escritura creativa habita entre ideas racionales y resonancia emocional.`, `Cada posición en el cubo representa un estado distinto del ser, un arquetipo de cómo alineamos nuestro enfoque. Aunque todos somos dinámicos, tendemos a gravitar más fácilmente hacia ciertos estados que hacia otros.`],
+        en: [`We shift among these functions to think, create, interact, and rest: solving math problems calls for physical abstraction and rational execution; tough decisions may benefit from emotional detachment; quick reflexes often stem from rational disengagement.`,
+          `Some tasks are multidimensional: a dance performance calls for both physical and emotional focus; repairing a car requires physical execution and rational clarity; creative writing lives between rational structure and emotional resonance.`,
+          `Each position in the cube represents a distinct state of being—an archetype of how we align our focus. While we are all dynamic, we tend to gravitate toward certain states more easily than others.`
+        ],
+        es: [`Transitamos entre estas funciones para pensar, crear, interactuar y descansar: resolver problemas matemáticos requiere abstracción física y ejecución racional; tomar decisiones difíciles puede beneficiarse del desapego emocional; los reflejos físicos rápidos surgen del distanciamiento racional.`,
+          `Algunas tareas son multidimensionales: una presentación de danza requiere enfoque físico y emocional; reparar un automóvil exige ejecución física y claridad racional; la escritura creativa habita entre las ideas racionales y la resonancia emocional.`,
+          `Cada posición en el cubo representa un estado distinto del ser, un arquetipo de cómo alineamos nuestro enfoque. Aunque todos somos dinámicos, tendemos a gravitar más fácilmente hacia ciertos estados que hacia otros.`
+        ],
       }),
     },
   },

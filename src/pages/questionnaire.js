@@ -165,7 +165,7 @@ const modelQuestion = q => {
                   display: isVS && '!i' ? '← ' : undefined,
                   textAlign: 'center',
                   fontSize: 'small',
-                  text: option.hint,
+                  text: option.hint ? `(${option.hint})` : undefined,
                 }
               }))
             },
@@ -242,8 +242,8 @@ export const questionnaire = {
       backgroundColor: style.darkScreen,
       color: 'white',
       html: Copy.text({
-        en: 'The following questionaire averages your answers and map them to a state in the cube. To answer it, rate each option individually, but compare them to others in the same group.',
-        es: 'El siguiente cuestionario promedia tus respuestas y las asigna a un estado en el cubo. Para responder, califica cada opción individualmente, pero compararlas con las demás del mismo grupo.'
+        en: 'This questionnaire averages your answers and maps them to a state within the cube. Rate each option individually, but consider them in relation to the others in the same frame.',
+        es: 'Este cuestionario promedia tus respuestas y las asigna a un estado dentro del cubo. Califica cada opción de forma individual, pero considérelas en relación con las demás dentro del mismo bloque.'
       })
     },
     h2: Copy.text({
