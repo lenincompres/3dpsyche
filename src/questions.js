@@ -377,8 +377,8 @@ export default [{
           es: "Consistente",
         }),
         hint: Copy.text({
-          en: "Tend to do as you always do.",
-          es: "Tiendes a hacer lo que siempre haces.",
+          en: "tend to do as you always do",
+          es: "tiendes a hacer lo que siempre haces",
         }),
       },
       {
@@ -387,8 +387,8 @@ export default [{
           es: "Determinante",
         }),
         hint: Copy.text({
-          en: "Stick to your decisions.",
-          es: "Te ciñes a tus decisiones.",
+          en: "stick to your decisions",
+          es: "te ciñes a tus decisiones",
         }),
       }, {
         choice: Copy.text({
@@ -396,8 +396,8 @@ export default [{
           es: "Particular",
         }),
         hint: Copy.text({
-          en: "Like things the way you like them.",
-          es: "Tienes gustos específicos.",
+          en: "like things the way you like them",
+          es: "tienes gustos específicos",
         }),
       }
     ]
@@ -409,8 +409,8 @@ export default [{
           es: "Alerta",
         }),
         hint: Copy.text({
-          en: "Aware of your surroundings",
-          es: "Consciente de tu entorno.",
+          en: "aware of your surroundings",
+          es: "consciente de tu entorno",
         }),
       },
       {
@@ -419,8 +419,8 @@ export default [{
           es: "Inquisitivo/a",
         }),
         hint: Copy.text({
-          en: "Look to question and clarify",
-          es: "Buscas cuestionar y aclarar.",
+          en: "look to question and clarify",
+          es: "buscas cuestionar y aclarar.",
         }),
       },
       {
@@ -429,8 +429,8 @@ export default [{
           es: "Sensible",
         }),
         hint: Copy.text({
-          en: "Even with strangers and critters.",
-          es: "Incluso con extraños y alimañas.",
+          en: "even with strangers and critters",
+          es: "incluso con extraños y alimañas",
         }),
       }
     ]
