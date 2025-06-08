@@ -364,7 +364,7 @@ export default {
         code: "100",
         coords: "o--",
         focus: {
-            en: "Exploration and alertness",
+            en: "Exploration and vigilance",
             es: "la exploración y la vigilancia"
         },
         quality: {

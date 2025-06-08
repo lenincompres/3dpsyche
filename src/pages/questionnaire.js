@@ -84,19 +84,19 @@ const frequencies = [Copy.text({
   es: "Raramente",
 }), Copy.text({
   en: 'Seldom',
-  es: "Escasamente",
+  es: "Poco",
 }), Copy.text({
-  en: 'Occasionally',
-  es: "Ocasionalmente",
+  en: 'At times',
+  es: "Pocas veces",
 }), Copy.text({
-  en: 'Probably',
-  es: "Probablemente",
+  en: 'Sometimes',
+  es: "A veces",
 }), Copy.text({
   en: 'Normally',
   es: "Normalmente",
 }), Copy.text({
   en: 'Frequently',
-  es: "Fequentemente",
+  es: "Frecuentemente",
 }), Copy.text({
   en: 'Generally',
   es: "Generalmente",
@@ -104,8 +104,8 @@ const frequencies = [Copy.text({
   en: 'Usually',
   es: "Usualmente",
 }), Copy.text({
-  en: 'Extremely',
-  es: "Extremadamente",
+  en: 'Always',
+  es: "Siempre",
 })];
 
 let mqCounter = 1;
@@ -174,8 +174,8 @@ const modelQuestion = q => {
               justifyContent: 'space-between',
               span: [{
                 display: isVS ? 'none' : 'block',
-                width: '21%',
-                maxWidth: '8em',
+                width: '18%',
+                maxWidth: '6em',
                 overflowX: 'hidden',
                 textOverflow: 'ellipsis',
                 fontSize: '0.7em',
@@ -247,8 +247,8 @@ export const questionnaire = {
       })
     },
     h2: Copy.text({
-      en: "Example<br/><small>(This won't influence the results)</small>",
-      es: "Ejemplo<br/><small>(Esto no influenciará el resultado)</small>",
+      en: "Example<br/><small>(This won't influence your test results)</small>",
+      es: "Ejemplo<br/><small>(Esto no influenciará tu resultado)</small>",
     }),
     section: samples,
     a: {
@@ -269,8 +269,8 @@ export const questionnaire = {
       name: 'q0',
     },
     h2: Copy.text({
-      en: 'Questionaire',
-      es: "Cuestionario",
+      en: "Questionaire<br/><small>(This won't influence the background color)</small>",
+      es: "Cuestionario<br/><small>(Esto no influenciará el color de fondo)</small>",
     }),
     section: questions.as(qs => qs.map(q => q.model)),
   }
