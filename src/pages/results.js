@@ -116,7 +116,7 @@ Copy.add({
   },
   abstractionTendency: {
     en: "withdrawal or aloofness",
-    es: "el alejamiento o ensimismamiento",
+    es: "el ensimismamiento o alejamiento",
   },
   abstractionDefinition: {
     en: "Physical detachment",
@@ -345,15 +345,13 @@ export const model = {
           p: [
             Copy.text({
               en: [
-                `The state with the ${copy.at.tone} (${copy.at.color}) color is ${copy.at.philosophy}—the state of ${copy.at.concept}. It represents a psyche focused on ${copy.at.focus.toLocaleLowerCase()}—the archetypical ${copy.at.archetype}, fostered by environments such as ${copy.at.location}.`,
-                `This state ${s?"have":"has"} ${only} ${['zero', 'one', 'two', 'three'][ext]} out of three ${Copy.at.observant} dimenssions, which suggests a personality that is ${TENDECIES[ext]}. In this case: ${intros.join("; ").toLocaleLowerCase()}.`,
-                `${extros}`,
-                `If you received this state in your test results and it feels somewhat accurate, consider which of the adjacent states is your second closest. You may find yourself split between the two. Sometimes, identity lies not in one state, but in the habitual movement between many.`,
+                `The state with the ${copy.at.tone} (${copy.at.color}) color is ${copy.at.philosophy}—the state of ${copy.at.concept}. It represents a psyche focused on ${copy.at.focus.toLocaleLowerCase()}—an archetypical ${copy.at.archetype}, nurtured by environments such as ${copy.at.location}.`,
+                `This state is ${Copy.at.observant} in ${only} ${['zero', 'one', 'two', 'three'][ext]} of the three dimensions, which suggests a personality that is ${TENDECIES[ext]}. In this model, introversion is associated with internal and independent behavior, while extroversion implies openness to external or social influences. For this state: ${intros.join("; ").toLocaleLowerCase()}. ${extros}`,
+                `If you received this state in your test results and it feels somewhat accurate, consider which of the adjacent states is your second closest. You may find yourself split between the two. Sometimes, identity lies not in a single state, but in the habitual movement between several.`,
               ],
               es: [
                 `El estado de color ${copy.at.tone} (${copy.at.color}) es ${copy.at.philosophy}, el estado de ${copy.at.concept}. Representa una psique enfocada en ${copy.at.focus.toLocaleLowerCase()}. Como su arquetipo de ${copy.at.archetype}, se fomenta en entornos de ${copy.at.location}.`,
-                `Este estado presenta ${only} ${['cero', 'una', 'dos', 'tres'][ext]} de las tres dimensiones de la psyche como ${Copy.at.observant}${s}, lo que indica una personalidad ${TENDECIES[ext]}. En este caso: ${intros.join("; ").toLowerCase()}.`,
-                `${extros}`,
+                `Este estado es ${Copy.at.observant} en ${only} ${['cero', 'una', 'dos', 'tres'][ext]} de las tres dimensiones, lo que indica una personalidad ${TENDECIES[ext]}. En este modelo, la introversión se asocia con comportamientos internos e independientes, mientras que la extroversión implica apertura a influencias externas o sociales. Para este estado: ${intros.join("; ").toLowerCase()}. ${extros}`,
                 `Si obtuviste este estado en tus resultados y te parece un poco acertado, considera cuál de los estados adyacentes es el segundo más cercano a ti. Puede que te encuentres en medio de ambos. A veces, la identidad no reside en un solo estado, sino en el movimiento habitual entre varios.`,
               ],
             }), {
@@ -370,13 +368,13 @@ export const model = {
             },
             Copy.text({
               en: [
-                ext > 2 ? undefined : `Consider whether your second closest state is an adjacent one that contrasts in the color spectrum—this may indicate an internal (introverted) loop pulling you away from its opposite, which is likely more social.`,
-                !ext ? undefined : `You may also find yourself split between two opposite states within the adjacent spectrum, and the test may have mistakenly averaged your result into this one. This could suggest that you're more introverted than this state implies.`,
+                ext > 2 ? undefined : `If your second closest state is one that—even if adjacent—contrasts in the color spectrum, this may indicate an internal (introverted) loop pulling you away from its opposite, which is likely more external.`,
+                !ext ? undefined : `You may also find yourself split between two opposite states within the adjacent spectrum, and the test may have mistakenly averaged your result into this one. This may suggest that you're more introverted than borderline.`,
                 `To learn to navigate this and other states of the 3D Psyche, please contact us (below) or consult our manifesto and educational dossier.`,
               ],
               es: [
-                ext > 2 ? undefined : `Considera si tu segundo estado más cercano es un adyacente que contrasta en el espectro de color, lo que indica un vínculo interno (introvertido) que te aleja del opuesto, el cual será más social.`,
-                !ext ? undefined : `También podrías encontrarte dividido entre dos estados opuestos dentro del espectro adyacente, y que el test haya promediado erróneamente tu resultado en este, lo cual podría sugerir que eres más introvertido de lo que este estado indica.`,
+                ext > 2 ? undefined : `Considera si tu segundo estado más cercano es un adyacente que contrasta en el espectro de color, lo que indica un vínculo interno (introvertido) que te aleja del opuesto, el cual será más externo.`,
+                !ext ? undefined : `También podrías desplazarte entre dos estados opuestos dentro del espectro adyacente, y que el test haya promediado erróneamente tu resultado en este, lo que podría sugerir que tu introversión va más allá de estar al borde.`,
                 `Para aprender a explorar este y los demás estados de la Psique Tridimensional, contáctanos (más abajo) o refiérete a nuestro manifiesto y dossier educativo.`,
               ],
             }),
