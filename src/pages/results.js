@@ -368,7 +368,7 @@ export const model = {
             },
             Copy.text({
               en: [
-                ext > 2 ? undefined : `If your second closest state is one that—even if adjacent—contrasts in the color spectrum, this may indicate an internal (introverted) loop pulling you away from its opposite, which would be more social.`,
+                ext > 2 ? undefined : `If your second closest state is one that—even if adjacent—contrasts in the color spectrum, this may indicate an internal (introverted) loop pulling you away from its opposite, which is more social.`,
                 !ext ? undefined : `You may also find yourself split between two opposite states within the adjacent spectrum, and the test may have mistakenly averaged your result into this one. This may suggest that you're more introverted than what this state indicates.`,
                 `To learn to navigate this and other states of the 3D Psyche, please contact us (below) or consult our manifesto and educational dossier.`,
               ],
