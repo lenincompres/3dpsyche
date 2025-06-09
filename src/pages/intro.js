@@ -55,7 +55,7 @@ export default {
       },
       p: Copy.text({
         en: `This psychometric tool maps your states of focus across three internal dimensions: <b style="color:darkred">physical</b> (${STYLE.getIcon('arrowDL')}), <b style="color:darkgreen">rational</b> (${STYLE.getIcon('arrowU')}) & <b style="color:darkblue">emotional</b> (${STYLE.getIcon('arrowDR')}). In each, we interact with the world through <b>observation</b>, <b>execution</b>, and <b>detachment</b>.`,
-        es: `Esta herramienta psicométrica asigna estados de enfoque a tres dimensiones en nuestro panorama interno: <b style="color:darkred">física</b> (↙), <b style="color:darkgreen">racional</b> ( ↑) y <b style="color:darkblue">emocional</b> (↘). En cada una interactuamos con <b>observación</b>, <b>ejecución</b> y <b>desapego</b>.`,
+        es: `Esta herramienta psicométrica asigna estados de enfoque a tres dimensiones en nuestro panorama interno: <b style="color:darkred">física</b> (${STYLE.getIcon('arrowDL')}), <b style="color:darkgreen">racional</b> (${STYLE.getIcon('arrowU')}) y <b style="color:darkblue">emocional</b> (${STYLE.getIcon('arrowDR')}). En cada una interactuamos con <b>observación</b>, <b>ejecución</b> y <b>desapego</b>.`,
       }),
       section: new Collapsable({
           div: [{
