@@ -19,7 +19,7 @@ export default {
     backgroundColor: STYLE.lightScreen,
 
     header: {
-      maxWidth: "740px",
+      maxWidth: "50em",
       width: "calc(100% - 2rem)",
       margin: "0 auto 1rem",
       label: {
@@ -39,7 +39,7 @@ export default {
     },
 
     main: {
-      maxWidth: "740px",
+      maxWidth: "50em",
       width: "calc(100% - 4rem)",
       lineHeight: "2.5em",
       margin: "1em auto 0",

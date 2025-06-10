@@ -18,7 +18,7 @@ export const floatingSign = {
 export const section = {
   margin: '0 auto',
   padding: '3em 1em',
-  maxWidth: '740px',
+  maxWidth: '50em',
 }
 
 export const icon = {
