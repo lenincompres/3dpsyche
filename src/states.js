@@ -844,7 +844,7 @@ export default {
         },
         archetype: {
             en: "mechanician",
-            es: "mecánico",
+            es: "mecanista",
         },
         field: {
             en: "fabrication",
