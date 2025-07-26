@@ -794,7 +794,7 @@ export default {
         code: "202",
         coords: "x-x",
         focus: {
-            en: "emotion and devotion",
+            en: "emotion and dedication",
             es: "la emoción y la entrega"
         },
         philosophy: {
