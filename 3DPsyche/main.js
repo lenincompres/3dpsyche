@@ -222,7 +222,7 @@ DOM.set({
       backgroundColor: "lightsteelblue",
       textAlign: "center",
       h1: "3D Psyche",
-      p: "Created by Lenin Compres",
+      p: "By Lenin Compres",
       h3: "Data collected during 3dpsyche.com test",
       h5: {
         content: results.bind(getTimeRange)

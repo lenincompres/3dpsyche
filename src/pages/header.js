@@ -24,7 +24,7 @@ const siteHeader =  {
   a: {
     display: `block`,
     href: `http://lenino.net`,
-    text: `${Copy.text({en: `Created by`, es: `Creado por`})} Lenin Comprés`,
+    text: `${Copy.text({en: `By`, es: `Por`})} Lenin Comprés`,
   },
 };
 
