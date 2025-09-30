@@ -301,7 +301,7 @@ export default [{
           es: "Cumplir deberes",
         }),
         hint: Copy.text({
-          en: "Gotta be done.",
+          en: "Gotta get done.",
           es: "Hay que hacerlos.",
         }),
       },
@@ -311,7 +311,7 @@ export default [{
           es: "Establecer planes",
         }),
         hint: Copy.text({
-          en: "Want to be clear.",
+          en: "Gotta be clear.",
           es: "Que queden claro.",
         }),
       },
@@ -321,7 +321,7 @@ export default [{
           es: "Defender valores",
         }),
         hint: Copy.text({
-          en: "Won't give them up.",
+          en: "Gotta stay true.",
           es: "No los rendirás.",
         }),
       }
@@ -377,7 +377,7 @@ export default [{
           es: "Consistente",
         }),
         hint: Copy.text({
-          en: "tend to do as you always do",
+          en: "do as you always do",
           es: "tiendes a hacer lo que siempre haces",
         }),
       },
@@ -396,7 +396,7 @@ export default [{
           es: "Particular",
         }),
         hint: Copy.text({
-          en: "like things the way you like them",
+          en: "like things your way",
           es: "tienes gustos específicos",
         }),
       }
@@ -474,7 +474,7 @@ export default [{
       },
       {
         choice: Copy.text({
-          en: "Interact with people unlike yourself",
+          en: "Interact with those unlike yourself",
           es: "Interactuar con personas diferentes a ti",
         }),
       }
