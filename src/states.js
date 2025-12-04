@@ -659,8 +659,8 @@ export default {
             es: "la logística"
         },
         archetype: {
-            en: "coordinador",
-            es: "coordinador",
+            en: "director",
+            es: "director",
         },
         field: {
             en: "logistics",
@@ -806,7 +806,7 @@ export default {
             es: "la pasión"
         },
         archetype: {
-            en: "artist",
+            en: "artiste",
             es: "artista",
         },
         field: {
@@ -835,15 +835,15 @@ export default {
             es: "la habilidad y la practicalidad"
         },
         philosophy: {
-            en: "mechanistic",
-            es: "mecanicista"
+            en: "mechanism",
+            es: "mecanismo"
         },
         concept: {
             en: "aptitude",
             es: "la aptitud"
         },
         archetype: {
-            en: "mechanician",
+            en: "mechanist",
             es: "mecanista",
         },
         field: {
