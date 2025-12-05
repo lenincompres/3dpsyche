@@ -991,8 +991,8 @@ export default {
             es: "la motivación"
         },
         archetype: {
-            en: "manager",
-            es: "gerente",
+            en: "producer",
+            es: "productor",
         },
         field: {
             en: "management",
