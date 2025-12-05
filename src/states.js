@@ -298,8 +298,8 @@ export default {
             es: "las ideas"
         },
         archetype: {
-            en: "educator",
-            es: "educador",
+            en: "author",
+            es: "autor",
         },
         field: {
             en: "educacion",
@@ -544,8 +544,8 @@ export default {
             es: "al comunicación"
         },
         archetype: {
-            en: "communicator",
-            es: "comunicador",
+            en: "speaker",
+            es: "portavoz",
         },
         field: {
             en: "communications",
