@@ -34,7 +34,7 @@ const siteFooter = {
       }, {
         target: "_blank",
         href: "https://github.com/lenincompres/DOM.js",
-        text: "Developed with DOM.js",
+        text: "Developed with BareDOM",
       }],
     },
   }

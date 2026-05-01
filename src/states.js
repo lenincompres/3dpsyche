@@ -544,8 +544,8 @@ export default {
             es: "al comunicación"
         },
         archetype: {
-            en: "speaker",
-            es: "portavoz",
+            en: "herald",
+            es: "orador",
         },
         field: {
             en: "communications",
@@ -622,8 +622,8 @@ export default {
             es: "la funcionalidad"
         },
         archetype: {
-            en: "technician",
-            es: "técnico",
+            en: "technologist",
+            es: "tecnicista",
         },
         field: {
             en: "technology",
@@ -1028,8 +1028,8 @@ export default {
             es: "el control"
         },
         archetype: {
-            en: "chief",
-            es: "jefe",
+            en: "Captain",
+            es: "Capitán",
         },
         field: {
             en: "government",
