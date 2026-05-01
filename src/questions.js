@@ -76,7 +76,7 @@ export default [{
   },
   {
     question: Copy.text({
-      en: "In fields of study, what peaks your interest?",
+      en: "In fields of study, what piques your interest?",
       es: "En los estudios, ¿qué despierta tu interés?",
     }),
     options: [{
@@ -113,33 +113,33 @@ export default [{
   },
   {
     question: Copy.text({
-      en: "As an ideal meal, what comes to your mind?",
-      es: "Como comida ideal, ¿qué te viene a la cabeza?",
+      en: "For your ideal dinner, what comes to your mind?",
+      es: "Como tu cena ideal, ¿qué te viene a la cabeza?",
     }),
     options: [{
         choice: Copy.text({
-          en: "A Feast",
-          es: "Un Festín",
+          en: "Feast",
+          es: "Banquete",
         }),
         hint: Copy.text({
-          en: "abundance, indulgence, treats",
-          es: "abundancia, indulgencia, golosinas",
+          en: "abundance, delicacies, treats",
+          es: "abundancia, exquisiteces, postres",
         }),
       },
       {
         choice: Copy.text({
-          en: "Good Nutrition",
-          es: "Buena Nutrición",
+          en: "Nourishment",
+          es: "Nutrición",
         }),
         hint: Copy.text({
-          en: "complete diet, balance, timing",
-          es: "dieta completa, equilibrio, tiempo",
+          en: "balance, complete diet, mindfulness",
+          es: "equilibrio, dieta completa, consciencia",
         }),
       },
       {
         choice: Copy.text({
-          en: "A Ceremony",
-          es: "Una Ceremonia",
+          en: "Ceremony",
+          es: "Ceremonia",
         }),
         hint: Copy.text({
           en: "setting, presentation, company",
@@ -227,7 +227,7 @@ export default [{
     }),
     options: [{
         choice: Copy.text({
-          en: "Performing activities",
+          en: "Doing activities",
           es: "Realizar actividades",
         }),
         hint: Copy.text({
@@ -383,8 +383,8 @@ export default [{
       },
       {
         choice: Copy.text({
-          en: "Determined",
-          es: "Determinante",
+          en: "Decisive",
+          es: "Decidido/a",
         }),
         hint: Copy.text({
           en: "stick to your decisions",
@@ -441,19 +441,19 @@ export default [{
     }),
     options: [{
         choice: Copy.text({
-          en: "Rather work alone",
+          en: "Working alone",
           es: "Trabajar a solas",
         }),
       },
       {
         choice: Copy.text({
-          en: "Demand freedom and control",
+          en: "Demanding freedom and control",
           es: "Demandar libertad y control",
         }),
       },
       {
         choice: Copy.text({
-          en: "Ignore gossip and drama",
+          en: "Avoiding gossip and drama",
           es: "Ignorar chismes y drama",
         }),
       }
