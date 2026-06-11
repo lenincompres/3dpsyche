@@ -132,9 +132,9 @@ export default {
         {
           markdown: Copy.text({
             en: `We shift among these functions to think, create, interact, and rest. Some tasks require setting one dimension aside to focus on another: math problems call for physical abstraction; tough decisions benefit from emotional detachment; quick reflexes stem from rational disengagement. Other tasks are multidimensional: a dance performance draws on both physical and emotional focus; repairing a car demands physical execution and rational clarity; creative writing thrives between rational structure and emotional resonance.
-            Each position in the cube represents a distinct archetype—a focused state of the psyche. Though we are dynamic, we naturally gravitate toward certain states over others.`,
+            Each color and position in the cube represents a distinct archetype—a focused state of the psyche. Though we are dynamic, we naturally gravitate toward certain states over others.`,
             es: `Transitamos entre estas funciones para pensar, crear, interactuar y descansar. Algunas tareas requieren dejar de lado una dimensión para enfocarse en otra: los problemas matemáticos exigen abstracción física; las decisiones difíciles se benefician del desapego emocional; los reflejos rápidos provienen del desapego racional. Otras tareas son multidimensionales: una presentación de danza requiere tanto enfoque físico como emocional; reparar un coche demanda ejecución física y claridad racional; la escritura creativa se nutre de la estructura racional y la resonancia emocional.
-            Cada posición en el cubo representa un arquetipo distinto: un estado enfocado de la psique. Aunque somos seres dinámicos, tendemos naturalmente a gravitar hacia ciertos estados más que otros.`,
+            Cada color y posición en el cubo representa un arquetipo distinto: un estado enfocado de la psique. Aunque somos seres dinámicos, tendemos naturalmente a gravitar hacia ciertos estados más que otros.`,
           }),
         }
       ]

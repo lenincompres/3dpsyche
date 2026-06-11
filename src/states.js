@@ -72,13 +72,13 @@ export default {
             es: "azul oscuro",
         },
         tone: {
-            en: "sapphire",
-            es: "zafiro",
+            en: "navy",
+            es: "marino",
         },
         mbti: "-nfp",
         location: {
-            en: "gardens and fairs",
-            es: "jardines y ferias"
+            en: "gardens and clubs",
+            es: "jardines y clubes"
         },
     },
     "002": {
