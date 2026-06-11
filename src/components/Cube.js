@@ -1,3 +1,4 @@
+import { capitalize } from "../../lib/auxiliary.js";
 import Copy from "../../lib/Copy.js";
 import State from "../classes/State.js";
 import p5Element from "./p5Element.js";
@@ -130,6 +131,7 @@ class Cube extends p5Element {
     if (view !== undefined) this.view(view);
     this.set({
       display: "flex",
+      flexWrap: "wrap",
       flexDirection: "column",
       alignItems: "anchor-center",
       placeContent: "center",
@@ -215,10 +217,16 @@ class Cube extends p5Element {
     });
     if (this.overState) {
       let c = this.sketch.color('#' + this.overState.code.codeToHex())
-      let l = this.sketch.lightness(c) < 45 || this.sketch.green(c) < 45;
+      this.sketch.strokeWeight(1);
       this.sketch.stroke(c);
-      this.sketch.fill(l ? 255 : 0);
-      this.sketch.text(this.overState.copy.at.archetype.toUpperCase(), this.sketch.mouseX - this.sketch.center[0], this.sketch.mouseY - this.sketch.center[1] - this.textSize);
+      this.sketch.fill(0);
+      this.sketch.text(
+        this.overState.copy.at.tone.toUpperCase() + '\n' + 
+        capitalize(this.overState.copy.at.archetype), 
+        this.sketch.mouseX - this.sketch.center[0], 
+        this.sketch.mouseY - this.sketch.center[1] - 
+        1.5 * this.textSize
+      );
     }
     if (this.changePost) {
       this.states.forEach(state => state.post = state.post === 0 ? this.nextPost : 0);

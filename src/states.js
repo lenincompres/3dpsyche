@@ -113,8 +113,8 @@ export default {
             es: "azul puro",
         },
         tone: {
-            en: "blue",
-            es: "azul",
+            en: "indigo",
+            es: "indigo",
         },
         mbti: "infp",
         location: {
@@ -228,8 +228,8 @@ export default {
             es: "azul ciano",
         },
         tone: {
-            en: "azure",
-            es: "azur",
+            en: "blue",
+            es: "azul",
         },
         mbti: "-nf-",
         location: {
@@ -544,7 +544,7 @@ export default {
             es: "al comunicación"
         },
         archetype: {
-            en: "herald",
+            en: "speaker",
             es: "portavoz",
         },
         field: {
@@ -552,12 +552,12 @@ export default {
             es: "comunicación",
         },
         color: {
-            en: "gray",
-            es: "gris",
+            en: "neutral",
+            es: "neutro",
         },
         tone: {
-            en: "slate",
-            es: "neutro",
+            en: "gray",
+            es: "gris",
         },
         mbti: "e---",
         location: {

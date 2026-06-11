@@ -303,10 +303,11 @@ export const model = {
     padding: "1.5em",
     h2: {
       textTransform: "capitalize",
-      margin: 0,
+      margin: '0 0 0.7em',
       color: "black",
       textShadow: "none",
-      text: _copy.as(copy => Copy.text({
+      big: _copy.as(copy => copy.at.tone + '</br>'),
+      small: _copy.as(copy => Copy.text({
         en: `The ${copy.at.archetype} state`,
         es: `El estado ${copy.at.archetype}`,
       })),

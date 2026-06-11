@@ -1,3 +1,4 @@
+import { capitalize } from "../../lib/auxiliary.js";
 import Copy from "../../lib/Copy.js";
 import STATES from "../states.js";
 
@@ -168,22 +169,21 @@ export class State {
     this.sketch.tint(...this.color, opacity * 255);
     var iSize = size * 0.86;
     if (this.image) this.sketch.image(this.image, -iSize * 0.5, -iSize * 0.5, iSize, iSize, (this.ordinal % 3) * STATE_ICON_GRID, Math.floor(this.ordinal / 3) * STATE_ICON_GRID, STATE_ICON_GRID, STATE_ICON_GRID);
-    // text
-    if (!this.noText && this.copy.at.archetype) {
-      let l = this.sketch.lightness(this.color) < 45 || this.sketch.green(this.color) < 45;
-      this.sketch.fill(l ? 255 : 0, opacity * 255);
-      this.sketch.strokeWeight(2.5);
-      if (!this.interact) this.sketch.stroke(l ? 0 : 255, opacity * 100);
-      this.sketch.textFont('Verdana');
-      this.sketch.textAlign(this.sketch.CENTER, this.sketch.CENTER);
-      this.sketch.textLeading(0);
-      this.sketch.textSize(size * 0.2);
-      this.sketch.text(this.copy.at.archetype.toUpperCase(), 0, size * 0.5);
-    }
     // top
     this.sketch.noStroke();
     drawBox(size, this.color, 0.34 * opacity, false, this.sketch);
     //
+    // text
+    if (!this.noText && this.copy.at.archetype) {
+      this.sketch.fill(0);
+      this.sketch.strokeWeight(3);
+      if (!this.interact) this.sketch.stroke(255, 60);
+      this.sketch.textFont('Verdana');
+      this.sketch.textAlign(this.sketch.CENTER, this.sketch.CENTER);
+      this.sketch.textLeading(0);
+      this.sketch.textSize(size * 0.2);
+      this.sketch.text(capitalize(this.copy.at.archetype), 0, size * 0.5);
+    }
     if (this.selected) {
       this.sketch.fill(0, 0);
       this.sketch.rotate(Math.PI / 6);
