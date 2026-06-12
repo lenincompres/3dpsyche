@@ -27,8 +27,8 @@ export default {
             es: "naturaleza",
         },
         color: {
-            en: "dark",
-            es: "oscuro",
+            en: "pure dark",
+            es: "oscuro puro",
         },
         tone: {
             en: "black",
