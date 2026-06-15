@@ -471,7 +471,7 @@ export default {
         },
         color: {
             en: "magenta blue",
-            es: "magenta azul",
+            es: "azul magenta",
         },
         tone: {
             en: "violet",
