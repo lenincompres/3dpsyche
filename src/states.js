@@ -228,8 +228,8 @@ export default {
             es: "azul ciano",
         },
         tone: {
-            en: "blue",
-            es: "azul",
+            en: "cerulean",
+            es: "celeste",
         },
         mbti: "-nf-",
         location: {
