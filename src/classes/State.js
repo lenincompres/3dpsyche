@@ -175,7 +175,7 @@ export class State {
     //
     // text
     if (!this.noText && this.copy.at.archetype) {
-      this.sketch.fill(0);
+      this.sketch.fill(0, 255 * opacity);
       this.sketch.strokeWeight(3);
       if (!this.interact) this.sketch.stroke(255, 60);
       this.sketch.textFont('Verdana');

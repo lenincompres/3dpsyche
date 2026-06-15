@@ -9,85 +9,85 @@ const RADIUS = 40;
 
 let cubeCopy = new Copy({
   actioning: {
-    en: 'Physical Execution\n(Action)',
-    es: 'Ejecución Física\n(Acción)',
+    en: "Physical Execution\n(Action)",
+    es: "Ejecución Física\n(Acción)",
   },
   sensing: {
-    en: 'Physical Observation\n(Sensation)',
-    es: 'Observación Física\n(Sensación)',
+    en: "Physical Observation\n(Sensation)",
+    es: "Observación Física\n(Sensación)",
   },
   abstracting: {
-    en: 'Physical Detachment\n(Abstraction)',
-    es: 'Desapego Físico\n(Abstracción)',
+    en: "Physical Detachment\n(Abstraction)",
+    es: "Desapego Físico\n(Abstracción)",
   },
   instincting: {
-    en: 'Rational Detachment\n(Instinction)',
-    es: 'Desapego Racional\n(Instinción)',
+    en: "Rational Detachment\n(Instinction)",
+    es: "Desapego Racional\n(Instinción)",
   },
   conceiving: {
-    en: 'Rational Observation\n(Conception)',
-    es: 'Observación Racional\n(Concepción)',
+    en: "Rational Observation\n(Conception)",
+    es: "Observación Racional\n(Concepción)",
   },
   regulating: {
-    en: 'Rational Execution\n(Regulation)',
-    es: 'Ejecución Racional\n(Regulación)',
+    en: "Rational Execution\n(Regulation)",
+    es: "Ejecución Racional\n(Regulación)",
   },
   detaching: {
-    en: 'Emotional Detachment\n(Objectivation)',
-    es: 'Desapego Emotional\n(Objetivación)',
+    en: "Emotional Detachment\n(Objectivation)",
+    es: "Desapego Emotional\n(Objetivación)",
   },
   empathizing: {
-    en: 'Emotional Observation\n(Inspiration)',
-    es: 'Observación Emotional\n(Inspiración)',
+    en: "Emotional Observation\n(Inspiration)",
+    es: "Observación Emotional\n(Inspiración)",
   },
   valuing: {
-    en: 'Emotional Execution\n(Valuation)',
-    es: 'Ejecución Emotional\n(Valoración)',
+    en: "Emotional Execution\n(Valuation)",
+    es: "Ejecución Emotional\n(Valoración)",
   },
   relaxing: {
-    en: 'Detachment',
-    es: 'Desapego',
+    en: "Detachment",
+    es: "Desapego",
   },
   demanding: {
-    en: 'Execution',
-    es: 'Ejecución',
+    en: "Execution",
+    es: "Ejecución",
   },
   periphery: {
-    en: 'Specialization & Observation',
-    es: 'Especialización & Obsevación',
+    en: "Specialization & Observation",
+    es: "Especialización & Obsevación",
   },
   animatedView: {
     en: "Animated view",
-    es: 'Cubo Animado',
+    es: "Cubo Animado",
   },
   physicalPlains: {
     en: "Physical Plains",
-    es: 'Planos Físicos',
+    es: "Planos Físicos",
   },
   rationalPlains: {
     en: "Rational Plains",
-    es: 'Planos Rationales',
+    es: "Planos Rationales",
   },
   emotionalPlains: {
     en: "Emotional Plains",
-    es: 'Planos Emotionales',
+    es: "Planos Emotionales",
   },
   baseTopView: {
     en: "Base vs. Top",
-    es: 'Base y Tope',
+    es: "Base y Tope",
   },
   topView: {
     en: "Top View",
-    es: 'Vista de Tope',
+    es: "Vista de Tope",
   },
   centerView: {
     en: "Center View",
-    es: 'Vista de Centro',
+    es: "Vista de Centro",
   },
   baseView: {
     en: "Base View",
-    es: 'Vista de Base',
-  }
+    es: "Vista de Base",
+  },
 });
 
 class Cube extends p5Element {
@@ -99,7 +99,7 @@ class Cube extends p5Element {
     vicinity = false,
     width = 740,
     height = 400,
-    center = '111',
+    center = "111",
     animated = true,
     view,
     textSize = 10,
@@ -108,8 +108,8 @@ class Cube extends p5Element {
       width: width,
       height: height,
       description: Copy.text({
-        en: 'The 3Dpscyhe Cube',
-        es: 'El cubo de la psyche 3D',
+        en: "The 3Dpscyhe Cube",
+        es: "El cubo de la psyche 3D",
       }),
     });
     this.ref = ref;
@@ -129,6 +129,12 @@ class Cube extends p5Element {
     this.overState;
     this.states = [];
     if (view !== undefined) this.view(view);
+
+    Binder.set(this, {
+      hint: false,
+      mouseX: 0,
+      mouseY: 0,
+    });
     this.set({
       display: "flex",
       flexWrap: "wrap",
@@ -137,47 +143,71 @@ class Cube extends p5Element {
       placeContent: "center",
       position: "relative",
       maxWidth: "100%",
-    });
-    if (this.animated) this.set({
-      select: {
-        name: "Cube",
-        top: '0.6em',
-        width: '12em',
-        left: 'calc(50% - 6em)',
-        position: "absolute",
-        backgroundColor: "transparent",
-        zIndex: 10,
-        textAlignLast: "center",
-        option: [{
-          value: "none",
-          text: cubeCopy.at.animatedView,
-        }, {
-          value: 1,
-          text: cubeCopy.at.physicalPlains,
-        }, {
-          value: 2,
-          text: cubeCopy.at.rationalPlains,
-        }, {
-          value: 3,
-          text: cubeCopy.at.emotionalPlains,
-        }, {
-          value: 4,
-          text: cubeCopy.at.baseTopView,
-        }, {
-          value: 0,
-          text: cubeCopy.at.topView,
-        }, {
-          value: -1,
-          text: cubeCopy.at.centerView,
-        }, {
-          value: -2,
-          text: cubeCopy.at.baseView,
-        }],
-        onchange: e => this.view(e.target.value),
+      section: {
+        content: this._hint,
+        display: this._hint.as("none", "flex"),
+        pointerEvents: 'none',
+        marginTop: '-3em',
+        marginLeft: '-15em',
+        flexDirection: "column",
+        width: '30em',
+        position: "fixed",
+        textShadow: '-1px -1px 2px white',
+        zIndex: 1000,
+        left: this._mouseX.as((v) => v + "px"),
+        top: this._mouseY.as((v) => v + "px"),
       },
-      canvas: this.canvas,
     });
-  };
+    if (this.animated)
+      this.set({
+        select: {
+          name: "Cube",
+          top: "0.6em",
+          width: "12em",
+          left: "calc(50% - 6em)",
+          position: "absolute",
+          backgroundColor: "transparent",
+          zIndex: 10,
+          textAlignLast: "center",
+          option: [
+            {
+              value: "none",
+              text: cubeCopy.at.animatedView,
+            },
+            {
+              value: 1,
+              text: cubeCopy.at.physicalPlains,
+            },
+            {
+              value: 2,
+              text: cubeCopy.at.rationalPlains,
+            },
+            {
+              value: 3,
+              text: cubeCopy.at.emotionalPlains,
+            },
+            {
+              value: 4,
+              text: cubeCopy.at.baseTopView,
+            },
+            {
+              value: 0,
+              text: cubeCopy.at.topView,
+            },
+            {
+              value: -1,
+              text: cubeCopy.at.centerView,
+            },
+            {
+              value: -2,
+              text: cubeCopy.at.baseView,
+            },
+          ],
+          onchange: (e) => this.view(e.target.value),
+        },
+        canvas: this.canvas,
+      });
+  }
 
   set center(val) {
     this._center = val;
@@ -190,7 +220,7 @@ class Cube extends p5Element {
 
   setup() {
     this.sketch.strokeWeight(3);
-    this.sketch.textFont('Verdana');
+    this.sketch.textFont("Verdana");
     this.sketch.textSize(this.textSize);
     this.sketch.center = [this.sketch.width * 0.5, this.sketch.height * 0.5];
     this.sketch.textAlign(this.sketch.CENTER, this.sketch.CENTER);
@@ -199,37 +229,44 @@ class Cube extends p5Element {
 
   reset() {
     if (this.animated) this.animate();
-    this.states = new Array(27).fill().map((_, i) => new State({
-      sketch: this.sketch,
-      center: this.center,
-      index: i,
-    })).filter(state => !this.vicinity || state.isNear()).sort(state => state.tier);
-    if (this.ref) this.states.forEach(state => state.setRef(this.ref));
+    this.states = new Array(27)
+      .fill()
+      .map(
+        (_, i) =>
+          new State({
+            sketch: this.sketch,
+            center: this.center,
+            index: i,
+          }),
+      )
+      .filter((state) => !this.vicinity || state.isNear())
+      .sort((state) => state.tier);
+    if (this.ref) this.states.forEach((state) => state.setRef(this.ref));
   }
 
   draw() {
     this.sketch.clear();
     this.sketch.translate(...this.sketch.center);
-    this.states.forEach(state => {
+    this.states.forEach((state) => {
       state.setRef(this.overState);
       state.interact = !!this.overState;
       state.draw(this.sketch);
     });
-    if (this.overState) {
-      let c = this.sketch.color('#' + this.overState.code.codeToHex())
-      this.sketch.strokeWeight(1);
-      this.sketch.stroke(c);
-      this.sketch.fill(0);
-      this.sketch.text(
-        this.overState.copy.at.tone.toUpperCase() + '\n' + 
-        capitalize(this.overState.copy.at.archetype), 
-        this.sketch.mouseX - this.sketch.center[0], 
-        this.sketch.mouseY - this.sketch.center[1] - 
-        1.5 * this.textSize
-      );
+    this.hint = false;
+    if (this.overState && this.sketch.mouseY > 0 && this.sketch.mouseY < this.sketch.height) {
+      let rect = this.getBoundingClientRect();
+      this.hint =
+        this.overState.copy.at.tone.toUpperCase() +
+        "<small>" +
+        capitalize(this.overState.copy.at.archetype) +
+        "</small>";
+      this.mouseX = rect.left + this.sketch.mouseX
+      this.mouseY = rect.top + this.sketch.mouseY;
     }
     if (this.changePost) {
-      this.states.forEach(state => state.post = state.post === 0 ? this.nextPost : 0);
+      this.states.forEach(
+        (state) => (state.post = state.post === 0 ? this.nextPost : 0),
+      );
       this.currentPost = this.states[0].post;
       this.animate();
       this.changePost = false;
@@ -242,45 +279,63 @@ class Cube extends p5Element {
       [cubeCopy.at.sensing, 0, y],
       [cubeCopy.at.abstracting, x, y],
     ];
-    if (this.currentPost === 2) texts = [
-      [cubeCopy.at.instincting, -x * 1.12, y],
-      [cubeCopy.at.conceiving, 0, y],
-      [cubeCopy.at.regulating, x * 1.12, y],
-    ];
-    else if (this.currentPost === 3) texts = [
-      [cubeCopy.at.detaching, -x, y],
-      [cubeCopy.at.empathizing, 0, y],
-      [cubeCopy.at.valuing, x, y],
-    ];
-    else if (this.currentPost === 4) texts = [
-      [cubeCopy.at.relaxing, -x * 1.28, y],
-      [cubeCopy.at.periphery, 0, y],
-      [cubeCopy.at.demanding, x * 1.28, y],
-    ];
+    if (this.currentPost === 2)
+      texts = [
+        [cubeCopy.at.instincting, -x * 1.12, y],
+        [cubeCopy.at.conceiving, 0, y],
+        [cubeCopy.at.regulating, x * 1.12, y],
+      ];
+    else if (this.currentPost === 3)
+      texts = [
+        [cubeCopy.at.detaching, -x, y],
+        [cubeCopy.at.empathizing, 0, y],
+        [cubeCopy.at.valuing, x, y],
+      ];
+    else if (this.currentPost === 4)
+      texts = [
+        [cubeCopy.at.relaxing, -x * 1.28, y],
+        [cubeCopy.at.periphery, 0, y],
+        [cubeCopy.at.demanding, x * 1.28, y],
+      ];
     this.sketch.fill(0);
     this.sketch.textAlign(this.sketch.CENTER, this.sketch.CENTER);
     this.sketch.textSize(RADIUS * 0.34);
     this.sketch.noStroke();
-    texts.forEach(t => this.sketch.text(...t));
+    texts.forEach((t) => this.sketch.text(...t));
   }
 
   animate(wait = 1000) {
     if (this.timeOut) clearTimeout(this.timeOut);
     if (this.freeze && this.currentPost === this.nextPost) return;
     let isIni = this.currentPost !== 0 || this.nextPost === 0;
-    this.timeOut = setTimeout(() => this.changePost = !this.isHover, wait * (isIni ? WAIT : 0.5));
+    this.timeOut = setTimeout(
+      () => (this.changePost = !this.isHover),
+      wait * (isIni ? WAIT : 0.5),
+    );
     if (isIni) this.nextPost = (this.nextPost + 1) % POSTS;
   }
 
   mouseMoved() {
-    if(this.offsetParent === null) return;
+    if (this.offsetParent === null) return;
     if (!this.canvas) return;
-    if(this.sketch.mouseX < 0 || this.sketch.mouseX > this.width) return;
-    if(this.sketch.mouseY < 0 || this.sketch.mouseY > this.height) return;
-    this.isHover = !!parseInt(this.sketch.get(this.sketch.mouseX, this.sketch.mouseY).join('')); // any pixel color under the mouse
+    if (this.sketch.mouseX < 0 || this.sketch.mouseX > this.width) return;
+    if (this.sketch.mouseY < 0 || this.sketch.mouseY > this.height) return;
+    this.isHover = !!parseInt(
+      this.sketch.get(this.sketch.mouseX, this.sketch.mouseY).join(""),
+    ); // any pixel color under the mouse
     this.sketch.cursor(this.isHover ? this.sketch.HAND : this.sketch.ARROW);
     if (this.isHover) {
-      let newOver = this.states.filter(s => !s.hidden && this.sketch.dist(this.sketch.mouseX - this.sketch.center[0], this.sketch.mouseY - this.sketch.center[1], ...s.coords) < s.radius).pop();
+      let newOver = this.states
+        .filter(
+          (s) =>
+            !s.hidden &&
+            this.sketch.dist(
+              this.sketch.mouseX - this.sketch.center[0],
+              this.sketch.mouseY - this.sketch.center[1],
+              ...s.coords,
+            ) < s.radius,
+        )
+        .pop();
       if (newOver === this.overState) return;
       if (this.overState) this.overState.selected = false;
       this.overState = newOver;
@@ -297,10 +352,10 @@ class Cube extends p5Element {
   }
 
   mouseReleased() {
-    if(this.offsetParent === null) return;
+    if (this.offsetParent === null) return;
     if (!this.canvas) return;
-    if(this.sketch.mouseX < 0 || this.sketch.mouseX > this.width) return;
-    if(this.sketch.mouseY < 0 || this.sketch.mouseY > this.height) return;
+    if (this.sketch.mouseX < 0 || this.sketch.mouseX > this.width) return;
+    if (this.sketch.mouseY < 0 || this.sketch.mouseY > this.height) return;
     if (!this.isHover) return;
     this.onclick(this.overState);
     this.stateClick(this.overState);
@@ -309,17 +364,19 @@ class Cube extends p5Element {
   view(view) {
     this.changePost = true;
     if (isNaN(view) && this.animated) {
-      states.forEach(s => s.hidden = false);
+      states.forEach((s) => (s.hidden = false));
       this.freeze = false;
       this.nextPost = (this.nextPost + 1) % POSTS;
       this.sketch.animate();
       return;
     }
     this.freeze = true;
-    this.states.forEach(s => s.hidden = view < 0 && !s.isRim && s.level - 3 > 2 * view);
+    this.states.forEach(
+      (s) => (s.hidden = view < 0 && !s.isRim && s.level - 3 > 2 * view),
+    );
     this.nextPost = view < 0 ? 0 : parseInt(view);
   }
-};
+}
 
-customElements.define('p5-cube', Cube);
+customElements.define("p5-cube", Cube);
 export default Cube;
