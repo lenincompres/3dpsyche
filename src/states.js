@@ -298,8 +298,8 @@ export default {
             es: "las ideas"
         },
         archetype: {
-            en: "author",
-            es: "autor",
+            en: "theorist",
+            es: "teorista",
         },
         field: {
             en: "educacion",
