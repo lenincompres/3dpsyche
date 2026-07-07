@@ -545,7 +545,7 @@ export default {
         },
         archetype: {
             en: "speaker",
-            es: "portavoz",
+            es: "comunicador",
         },
         field: {
             en: "communications",
