@@ -59,6 +59,15 @@ export const siteTest = {
       location.href = "#q" + questionnaire._qCounter.value;
     },
   },
+  label: {
+    margin: '-2em 0 2em',
+    textShadow: '0 0 1px white',
+    display: 'block',
+    text: questionnaire._qCounter.as(n => n >= 0 ? `${n + 1} ${Copy.text({
+      es: 'de',
+      en: 'of',
+    })} ${qTotal + 1}` : '...'),
+  },
   div: global.rgb ? undefined : {
     display: questionnaire._qCounter.as(n => n > qTotal ? 'block' : 'none'),
     height: `60rem`,
