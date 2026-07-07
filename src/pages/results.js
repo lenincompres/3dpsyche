@@ -406,25 +406,21 @@ export const model = {
                 justifyContent: "center",
                 canvas: vicinityElt,
               },
+              ext > 2
+                ? undefined
+                : Copy.text({
+                    en: `If your second closest state is one that—even if adjacent—contrasts in the color spectrum, this may indicate an internal (introverted) loop pulling you away from the opposite adjacent, which will be more social.`,
+                    es: `Considera si tu segundo estado más cercano es un adyacente que contrasta en el espectro de color, lo que indica un vínculo interno (introvertido) que te aleja del adjacente opuesto, el cual será más social.`,
+                  }),
+              !ext
+                ? undefined
+                : Copy.text({
+                    en: `You may also find yourself split between two states on each side of this adjacent spectrum, and the test may have mistakenly averaged your result into this one. This may suggest that you're more introverted than what this state indicates.`,
+                    es: `También podrías desplazarte entre dos estados a ambos lados dentro de estos adyacentes, y que el test haya promediado erróneamente tu resultado en este, lo que podría sugerir que tu introversión va más allá de lo que indica este estado.`,
+                  }),
               Copy.text({
-                en: [
-                  ext > 2
-                    ? undefined
-                    : `If your second closest state is one that—even if adjacent—contrasts in the color spectrum, this may indicate an internal (introverted) loop pulling you away from the opposite adjacent, which will be more social.`,
-                  !ext
-                    ? undefined
-                    : `You may also find yourself split between two opposite states within the adjacent spectrum, and the test may have mistakenly averaged your result into this one. This may suggest that you're more introverted than what this state indicates.`,
-                  `To learn to navigate this and other states of the 3D Psyche, please contact us (below) or consult our manifesto and educational dossier.`,
-                ],
-                es: [
-                  ext > 2
-                    ? undefined
-                    : `Considera si tu segundo estado más cercano es un adyacente que contrasta en el espectro de color, lo que indica un vínculo interno (introvertido) que te aleja del adjacente opuesto, el cual será más social.`,
-                  !ext
-                    ? undefined
-                    : `También podrías desplazarte entre dos estados opuestos dentro del espectro adyacente, y que el test haya promediado erróneamente tu resultado en este, lo que podría sugerir que tu introversión va más allá de lo que indica este estado.`,
-                  `Para aprender a explorar este y los demás estados de la Psique Tridimensional, contáctanos (más abajo) o refiérete a nuestro manifiesto y dossier educativo.`,
-                ],
+                en: `To learn to navigate this and other states of the 3D Psyche, please contact us (below) or consult our manifesto and educational dossier.`,
+                es: `Para aprender a explorar este y los demás estados de la Psique Tridimensional, contáctanos (más abajo) o refiérete a nuestro manifiesto y dossier educativo.`,
               }),
             ],
           };
