@@ -807,7 +807,7 @@ export default {
         },
         archetype: {
             en: "artisan",
-            es: "artisano",
+            es: "artesano",
         },
         field: {
             en: "artistry",

@@ -4,9 +4,7 @@ import * as style from "../style.js";
 import * as AUX from "../../lib/auxiliary.js";
 import Stats from "../components/Stats.js";
 import Copy from "../../lib/Copy.js";
-import {
-  colorBullet
-} from "../../lib/auxiliary.js";
+import { colorBullet } from "../../lib/auxiliary.js";
 import StateElement from "../components/StateElement.js";
 import * as global from "../global.js";
 import * as questionnaire from "./questionnaire.js";
@@ -194,30 +192,38 @@ const bars = {
   sup: new Bar("Superego", "6em", "cyan"),
   r: new Bar(Copy.at.physical, "6em", "red"),
   g: new Bar(Copy.at.rational, "6em", "lime"),
-  b: new Bar(Copy.at.emotional, "6em", "blue")
+  b: new Bar(Copy.at.emotional, "6em", "blue"),
 };
 
 const FOCI = [
-  ['abstraction', 'sensation', 'action'],
-  ['instinction', 'conception', 'regulation'],
-  ['objectivation', 'inspiration', 'valuation'],
+  ["abstraction", "sensation", "action"],
+  ["instinction", "conception", "regulation"],
+  ["objectivation", "inspiration", "valuation"],
 ];
 const introText = (a) => {
-  if (FOCI.map(f => f[1]).includes(a)) return;
-  let [definition, focus, tendency] = [Copy.at[a + 'Definition'], Copy.at[a], Copy.at[a + 'Tendency']];
+  if (FOCI.map((f) => f[1]).includes(a)) return;
+  let [definition, focus, tendency] = [
+    Copy.at[a + "Definition"],
+    Copy.at[a],
+    Copy.at[a + "Tendency"],
+  ];
   return Copy.text({
     en: `${definition}—which enables ${focus}—may lead to ${tendency}`,
     es: `${definition}, que le proporciona la ${focus}, también promueve ${tendency}`,
   });
 };
 const extroText = (a) => {
-  const extros = FOCI.map(f => f[1]);
+  const extros = FOCI.map((f) => f[1]);
   if (!extros.includes(a)) return;
-  let [dimenssion, focus, tendency] = [Copy.at[a + 'Definition'], Copy.at[a], Copy.at[a + 'Tendency']];
+  let [dimenssion, focus, tendency] = [
+    Copy.at[a + "Definition"],
+    Copy.at[a],
+    Copy.at[a + "Tendency"],
+  ];
   return Copy.text({
     en: `${dimenssion} (${focus}), which implies ${tendency}`,
     es: `la ${dimenssion} (${focus}), que implica ${tendency}`,
-  });;
+  });
 };
 
 const TENDECIES = [
@@ -249,7 +255,11 @@ const level = (d, i) => {
     colorBullet(`#0000${vals[i]}`, icons[i]),
   ][d];
   bullet = [bullet, bullet, bullet][i];
-  const dimension = [Copy.at.physically, Copy.at.rationally, Copy.at.emotionally][d];
+  const dimension = [
+    Copy.at.physically,
+    Copy.at.rationally,
+    Copy.at.emotionally,
+  ][d];
   const level = [Copy.at.detached, Copy.at.observant, Copy.at.executive][i];
   return {
     margin: "0.25em",
@@ -262,25 +272,35 @@ var vicinityElt = new Cube({
   vicinity: true,
   width: 250,
   height: 200,
-  onclick: state => state && state.code && (window.location.href = "./?rgb=" + state.code.codeToHex()),
+  onclick: (state) =>
+    state &&
+    state.code &&
+    (window.location.href = "./?rgb=" + state.code.codeToHex()),
 });
 
-_feature.onChange(hex => {
+_feature.onChange((hex) => {
   if (!hex) return;
   let code = hex.hexToCode();
   stateElt.code = code;
   vicinityElt.center = code;
   _copy.value = new Copy(STATES[code]);
-  let [r, g, b] = AUX.rgb(hex).map(v => v * 100 / 255);
+  let [r, g, b] = AUX.rgb(hex).map((v) => (v * 100) / 255);
   //let getI = n => 100 * Math.pow(Math.abs(n - 50) / 50, 0.68);
   let j = (r + g + b) / 3;
-  let t = 100 * g / (g + b);
-  let s = 100 * r / (0.5 * (g + b) + r);
-  let e = 100 - 100 * AUX.dist(r, g, b, 50, 50, 50) / AUX.dist(0, 0, 0, 50, 50, 50);
+  let t = (100 * g) / (g + b);
+  let s = (100 * r) / (0.5 * (g + b) + r);
+  let e =
+    100 - (100 * AUX.dist(r, g, b, 50, 50, 50)) / AUX.dist(0, 0, 0, 50, 50, 50);
   //let e = 100 - (getI(r) + getI(g) + getI(b)) / 3;
 
-  const binar = (v, A, B, N = "-", T = 100, D = 1) => v > T / 2 + D ? A : v < T / 2 - D ? B : N;
-  _mbti.value = [binar(e, "E", "I"), binar(s, "S", "N"), binar(t, "T", "F"), binar(j, "J", "P")].join(" ");
+  const binar = (v, A, B, N = "-", T = 100, D = 1) =>
+    v > T / 2 + D ? A : v < T / 2 - D ? B : N;
+  _mbti.value = [
+    binar(e, "E", "I"),
+    binar(s, "S", "N"),
+    binar(t, "T", "F"),
+    binar(j, "J", "P"),
+  ].join(" ");
 
   bars.r.value = r;
   bars.g.value = g;
@@ -303,11 +323,11 @@ export const model = {
     padding: "1.5em",
     h2: {
       textTransform: "capitalize",
-      margin: '0 0 0.7em',
+      margin: "0 0 0.7em",
       color: "black",
       textShadow: "none",
-      content: _copy.as(copy => ({
-        big: copy.at.tone + '</br>',
+      content: _copy.as((copy) => ({
+        big: copy.at.tone + "</br>",
         small: Copy.text({
           en: `The ${copy.at.archetype} state`,
           es: `El estado ${copy.at.archetype}`,
@@ -315,83 +335,113 @@ export const model = {
       })),
     },
     figure: {
-      display: 'flex',
-      justifyContent: 'center',
+      display: "flex",
+      justifyContent: "center",
       canvas: stateElt,
     },
-    ul: _feature.as(v => ({
+    ul: _feature.as((v) => ({
       textAlign: "left",
       margin: "0 auto",
       width: "fit-content",
-      li: [...STATES[v.hexToCode()].code].map((n, i) => level(i, parseInt(n) || 0)),
+      li: [...STATES[v.hexToCode()].code].map((n, i) =>
+        level(i, parseInt(n) || 0),
+      ),
     })),
-    section: [
-      _copy.with(_feature).as((copy, hex) => {
-        let code = [...STATES[hex.hexToCode()].code].map(n => parseInt(n));
-        let ext = code.reduce((o, n) => n === 1 ? (o + 1) : o, 0);
-        let s = ext === 1 ? "" : "s";
-        let only = ext === 1 ? Copy.at.only : "";
-        let intros = code.map((n, i) => introText(FOCI[i][n])).filter(n => n);
-        if (intros.length > 1) intros[intros.length - 1] = Copy.at.and + " " + intros[intros.length - 1];
-        else if (!intros.length) intros = [Copy.text({
-          es: "no hay tendecias ejecutivas o de desapego; es una psyque completamente abierta, lo que la hace tanto receptiva como susceptible al entorno social o inmediato",
-          en: "there are no executive or detached tendencies—this psyche is fully open, making it both attuned and susceptible to the social or immediate environment",
-        })];
-
-        let extros = code.map((n, i) => extroText(FOCI[i][n])).filter(n => n);
-        if (extros.length > 1) extros[extros.length - 1] = Copy.at.and + " " + extros[extros.length - 1];
-        if (extros.length) extros = Copy.text({
-          en: `In terms of extroversion, its openness comes through ${extros.join("; ")}.`,
-          es: `En cuanto a la extrovesión, su apertura proviene de ${extros.join("; ")}.`,
-        });
-        return {
-          p: [
-            Copy.text({
-              en: [
-                `The state with the ${copy.at.tone} (${copy.at.color}) color is ${copy.at.philosophy}—the state of ${copy.at.concept}. It represents a psyche focused on ${copy.at.focus.toLocaleLowerCase()}—an archetypical ${copy.at.archetype}, nurtured by environments such as ${copy.at.location}.`,
-                `This state is ${Copy.at.observant} in ${only} ${['zero', 'one', 'two', 'three'][ext]} of the three dimensions, which suggests a personality that is ${TENDECIES[ext]}. In this model, introversion is associated with internal and independent behavior, while extroversion implies openness to external or social influences. For this state: ${intros.join("; ").toLocaleLowerCase()}. ${extros}`,
-                `If you received this state in your test results and it feels somewhat accurate, consider which of the adjacent states is your second closest. You may find yourself split between the two. Sometimes, identity lies not in a single state, but in the habitual movement between several.`,
-              ],
-              es: [
-                `El estado de color ${copy.at.tone} (${copy.at.color}) es ${copy.at.philosophy}, el estado de ${copy.at.concept}. Representa una psique enfocada en ${copy.at.focus.toLocaleLowerCase()}. Como su arquetipo de ${copy.at.archetype}, se fomenta en entornos de ${copy.at.location}.`,
-                `Este estado es ${Copy.at.observant} en ${only} ${['cero', 'una', 'dos', 'tres'][ext]} de las tres dimensiones, lo que indica una personalidad ${TENDECIES[ext]}. En este modelo, la introversión se asocia con comportamientos internos e independientes, mientras que la extroversión implica apertura a influencias externas o sociales. Para este estado: ${intros.join("; ").toLowerCase()}. ${extros}`,
-                `Si obtuviste este estado en tus resultados y te parece un poco acertado, considera cuál de los estados adyacentes es el segundo más cercano a ti. Puede que te encuentres en medio de ambos. A veces, la identidad no reside en un solo estado, sino en el movimiento habitual entre varios.`,
-              ],
-            }), {
-              tag: 'h3',
-              text: Copy.text({
-                en: 'Adjacent States',
-                es: 'Estados adyacentes',
+    section: {
+      content: [
+        _copy.with(_feature).as((copy, hex) => {
+          let code = [...STATES[hex.hexToCode()].code].map((n) => parseInt(n));
+          let ext = code.reduce((o, n) => (n === 1 ? o + 1 : o), 0);
+          let s = ext === 1 ? "" : "s";
+          let only = ext === 1 ? Copy.at.only : "";
+          let intros = code
+            .map((n, i) => introText(FOCI[i][n]))
+            .filter((n) => n);
+          if (intros.length > 1)
+            intros[intros.length - 1] =
+              Copy.at.and + " " + intros[intros.length - 1];
+          else if (!intros.length)
+            intros = [
+              Copy.text({
+                es: "no hay tendecias ejecutivas o de desapego; es una psyque completamente abierta, lo que la hace tanto receptiva como susceptible al entorno social o inmediato",
+                en: "there are no executive or detached tendencies—this psyche is fully open, making it both attuned and susceptible to the social or immediate environment",
               }),
-            }, {
-              tag: 'figure',
-              display: 'flex',
-              justifyContent: 'center',
-              canvas: vicinityElt,
-            },
-            Copy.text({
-              en: [
-                ext > 2 ? undefined : `If your second closest state is one that—even if adjacent—contrasts in the color spectrum, this may indicate an internal (introverted) loop pulling you away from the opposite adjacent, which will be more social.`,
-                !ext ? undefined : `You may also find yourself split between two opposite states within the adjacent spectrum, and the test may have mistakenly averaged your result into this one. This may suggest that you're more introverted than what this state indicates.`,
-                `To learn to navigate this and other states of the 3D Psyche, please contact us (below) or consult our manifesto and educational dossier.`,
-              ],
-              es: [
-                ext > 2 ? undefined : `Considera si tu segundo estado más cercano es un adyacente que contrasta en el espectro de color, lo que indica un vínculo interno (introvertido) que te aleja del adjacente opuesto, el cual será más social.`,
-                !ext ? undefined : `También podrías desplazarte entre dos estados opuestos dentro del espectro adyacente, y que el test haya promediado erróneamente tu resultado en este, lo que podría sugerir que tu introversión va más allá de lo que indica este estado.`,
-                `Para aprender a explorar este y los demás estados de la Psique Tridimensional, contáctanos (más abajo) o refiérete a nuestro manifiesto y dossier educativo.`,
-              ],
+            ];
+
+          let extros = code
+            .map((n, i) => extroText(FOCI[i][n]))
+            .filter((n) => n);
+          if (extros.length > 1)
+            extros[extros.length - 1] =
+              Copy.at.and + " " + extros[extros.length - 1];
+          if (extros.length)
+            extros = Copy.text({
+              en: `In terms of extroversion, its openness comes through ${extros.join("; ")}.`,
+              es: `En cuanto a la extrovesión, su apertura proviene de ${extros.join("; ")}.`,
+            });
+          return {
+            p: [
+              Copy.text({
+                en: [
+                  `The state with the ${copy.at.tone} (${copy.at.color}) color is ${copy.at.philosophy}—the state of ${copy.at.concept}. It represents a psyche focused on ${copy.at.focus.toLocaleLowerCase()}—an archetypical ${copy.at.archetype}, nurtured by environments such as ${copy.at.location}.`,
+                  `This state is ${Copy.at.observant} in ${only} ${["zero", "one", "two", "three"][ext]} of the three dimensions, which suggests a personality that is ${TENDECIES[ext]}. In this model, introversion is associated with internal and independent behavior, while extroversion implies openness to external or social influences. For this state: ${intros.join("; ").toLocaleLowerCase()}. ${extros}`,
+                  `If you received this state in your test results and it feels somewhat accurate, consider which of the adjacent states is your second closest. You may find yourself split between the two. Sometimes, identity lies not in a single state, but in the habitual movement between several.`,
+                ],
+                es: [
+                  `El estado de color ${copy.at.tone} (${copy.at.color}) es ${copy.at.philosophy}, el estado de ${copy.at.concept}. Representa una psique enfocada en ${copy.at.focus.toLocaleLowerCase()}. Como su arquetipo de ${copy.at.archetype}, se fomenta en entornos de ${copy.at.location}.`,
+                  `Este estado es ${Copy.at.observant} en ${only} ${["cero", "una", "dos", "tres"][ext]} de las tres dimensiones, lo que indica una personalidad ${TENDECIES[ext]}. En este modelo, la introversión se asocia con comportamientos internos e independientes, mientras que la extroversión implica apertura a influencias externas o sociales. Para este estado: ${intros.join("; ").toLowerCase()}. ${extros}`,
+                  `Si obtuviste este estado en tus resultados y te parece un poco acertado, considera cuál de los estados adyacentes es el segundo más cercano a ti. Puede que te encuentres en medio de ambos. A veces, la identidad no reside en un solo estado, sino en el movimiento habitual entre varios.`,
+                ],
+              }),
+              {
+                tag: "h3",
+                text: Copy.text({
+                  en: "Adjacent States",
+                  es: "Estados adyacentes",
+                }),
+              },
+              {
+                tag: "figure",
+                display: "flex",
+                justifyContent: "center",
+                canvas: vicinityElt,
+              },
+              Copy.text({
+                en: [
+                  ext > 2
+                    ? undefined
+                    : `If your second closest state is one that—even if adjacent—contrasts in the color spectrum, this may indicate an internal (introverted) loop pulling you away from the opposite adjacent, which will be more social.`,
+                  !ext
+                    ? undefined
+                    : `You may also find yourself split between two opposite states within the adjacent spectrum, and the test may have mistakenly averaged your result into this one. This may suggest that you're more introverted than what this state indicates.`,
+                  `To learn to navigate this and other states of the 3D Psyche, please contact us (below) or consult our manifesto and educational dossier.`,
+                ],
+                es: [
+                  ext > 2
+                    ? undefined
+                    : `Considera si tu segundo estado más cercano es un adyacente que contrasta en el espectro de color, lo que indica un vínculo interno (introvertido) que te aleja del adjacente opuesto, el cual será más social.`,
+                  !ext
+                    ? undefined
+                    : `También podrías desplazarte entre dos estados opuestos dentro del espectro adyacente, y que el test haya promediado erróneamente tu resultado en este, lo que podría sugerir que tu introversión va más allá de lo que indica este estado.`,
+                  `Para aprender a explorar este y los demás estados de la Psique Tridimensional, contáctanos (más abajo) o refiérete a nuestro manifiesto y dossier educativo.`,
+                ],
+              }),
+            ],
+          };
+        }),
+        {
+          figure: {
+            margin: "0 auto",
+            content: new Cube({
+              onclick: (state) =>
+                state &&
+                state.code &&
+                (window.location.href = "./?rgb=" + state.code.codeToHex()),
             }),
-          ]
-        };
-      }), {
-        figure: {
-          margin: "0 auto",
-          content: new Cube({
-            onclick: state => state && state.code && (window.location.href = "./?rgb=" + state.code.codeToHex()),
-          }),
+          },
         },
-      },
-    ],
+      ],
+    },
   },
   section: {
     css: style.floatingSign,
@@ -403,10 +453,12 @@ export const model = {
         en: "Break down and extrapolation to other frameworks",
         es: "Desglose y extrapolación a otros sistemas.",
       }),
-      small: _feature.as(v => Copy.text({
-        en: `RGB color code: ${v}`,
-        es: `Código de color RGB: ${v}`,
-      })),
+      small: _feature.as((v) =>
+        Copy.text({
+          en: `RGB color code: ${v}`,
+          es: `Código de color RGB: ${v}`,
+        }),
+      ),
     },
     ul: {
       css: {
@@ -419,7 +471,7 @@ export const model = {
           margin: "0.5em 0",
           width: "9em",
           p: {
-            margin: ".75em 0 0.25em"
+            margin: ".75em 0 0.25em",
           },
         },
       },
@@ -434,55 +486,69 @@ export const model = {
         new Stats("3D Psyche", [bars.r, bars.g, bars.b], true),
         new Stats("Freud", [bars.id, bars.ego, bars.sup], true),
         new Stats("Jung", [bars.e, bars.s, bars.t], true),
-        new Stats("MBTI", [{
-            fontWeight: 'bold',
-            display: "block",
-            margin: "1em 0",
-            fontSize: "2em",
-            fontFamily: "monospace",
-            text: _mbti,
-          },
-          bars.j,
-        ], true)
-      ].map(s => ({
+        new Stats(
+          "MBTI",
+          [
+            {
+              fontWeight: "bold",
+              display: "block",
+              margin: "1em 0",
+              fontSize: "2em",
+              fontFamily: "monospace",
+              text: _mbti,
+            },
+            bars.j,
+          ],
+          true,
+        ),
+      ].map((s) => ({
         stat: s,
       })),
     },
     menu: siteMenu,
-    dragstart: () => _fixed.value = !_fixed.value,
+    dragstart: () => (_fixed.value = !_fixed.value),
   },
   a: {
     display: `block`,
     marginTop: `1em`,
-    content: [{
-      display: global.rgb ? `none` : `block`,
-      href: DOM.bind([_feature, questionnaire._favorite], (r, f) => `./?rgb=${r.substr(1)}&fav=${f.substr(1)}`),
-      target: '_blank',
-      text: Copy.text({
-        en: `Here’s your link to save or share your results.`,
-        es: `Aquí tienes tu enlace para guardar o compartir tus resultados.`,
-      }),
-    }, !global.fav ? undefined : {
-      margin: `0 auto`,
-      padding: `0.5em 1em`,
-      width: `fit-content`,
-      borderRadius: `0.5em`,
-      boxShadow: `1px 1px 2px #000c`,
-      backgroundColor: global.fav,
-      href: `./?global.rgb=${global.fav.substr(1)}`,
-      target: `_blank`,
-      text: Copy.text({
-        en: `And, this is the result of your favorite color: ${global.fav}`,
-        es: `Y este otro es el resultado de tu color favorito: ${global.fav}`,
-      }),
-    }, {
-      fontSize: `1.25em`,
-      href: `./`,
-      text: Copy.text({
-        en: `${global.rgb ? `Take` : `Restart`} the test.`,
-        es: `${global.rgb ? `Toma` : `Reinicia`} el test.`,
-      }),
-    }]
+    content: [
+      {
+        display: global.rgb ? `none` : `block`,
+        href: DOM.bind(
+          [_feature, questionnaire._favorite],
+          (r, f) => `./?rgb=${r.substr(1)}&fav=${f.substr(1)}`,
+        ),
+        target: "_blank",
+        text: Copy.text({
+          en: `Here’s your link to save or share your results.`,
+          es: `Aquí tienes tu enlace para guardar o compartir tus resultados.`,
+        }),
+      },
+      !global.fav
+        ? undefined
+        : {
+            margin: `0 auto`,
+            padding: `0.5em 1em`,
+            width: `fit-content`,
+            borderRadius: `0.5em`,
+            boxShadow: `1px 1px 2px #000c`,
+            backgroundColor: global.fav,
+            href: `./?global.rgb=${global.fav.substr(1)}`,
+            target: `_blank`,
+            text: Copy.text({
+              en: `And, this is the result of your favorite color: ${global.fav}`,
+              es: `Y este otro es el resultado de tu color favorito: ${global.fav}`,
+            }),
+          },
+      {
+        fontSize: `1.25em`,
+        href: `./`,
+        text: Copy.text({
+          en: `${global.rgb ? `Take` : `Restart`} the test.`,
+          es: `${global.rgb ? `Toma` : `Reinicia`} el test.`,
+        }),
+      },
+    ],
   },
 };
 
