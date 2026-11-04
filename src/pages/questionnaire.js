@@ -5,246 +5,279 @@ import Copy from "../../lib/Copy.js";
 import * as global from "../global.js";
 
 export const _favorite = new Binder(global.rand);
-export const _results = new Binder('#808080');
+export const _results = new Binder("#808080");
 export const _qCounter = new Binder(-3);
 
-const sampleQuestions = [{
-  question: Copy.text({
-    en: "How much do you like these colors?",
-    es: "Qué tanto te gustan estos colores?",
-  }),
-  options: [{
-      choice: Copy.text({
-        en: "Reds",
-        es: "Rojos",
-      }),
-      hint: Copy.text({
-        en: "scarlet, maroon, brick",
-        es: "escarlata, vino, labrillo",
-      }),
-      value: 100 * global.randRGB[0] / 255,
-    },
-    {
-      choice: Copy.text({
-        en: "Greens",
-        es: "Verdes",
-      }),
-      hint: Copy.text({
-        en: "lime, army, mint",
-        es: "lima, olivo, menta",
-      }),
-      value: 100 * global.randRGB[1] / 255,
-    },
-    {
-      choice: Copy.text({
-        en: "Blues",
-        es: "Azules",
-      }),
-      hint: Copy.text({
-        en: "sky, sapphire, navy",
-        es: "cielo, safiro, marino",
-      }),
-      value: 100 * global.randRGB[2] / 255,
-    }
-  ]
-}, {
-  question: Copy.text({
-    en: "Adjust your color preference given these tendencies.",
-    es: "Ajusta tu preferencia de color de acuerdo a estas tendencias.",
-  }),
-  options: [
-    [{
-      choice: Copy.text({
-        en: "Neutral",
-        es: "Opaco",
-      }),
-    }, {
-      choice: Copy.text({
-        en: "Bright",
-        es: "Brillante",
-      }),
-    }],
-    [{
-      choice: Copy.text({
-        en: "Dark",
-        es: "Oscuro",
-      }),
-    }, {
-      choice: Copy.text({
-        en: "Light",
-        es: "Claro",
-      }),
-    }]
-  ]
-}];
+const sampleQuestions = [
+  {
+    question: Copy.text({
+      en: "How much do you like these colors?",
+      es: "Qué tanto te gustan estos colores?",
+    }),
+    options: [
+      {
+        choice: Copy.text({
+          en: "Reds",
+          es: "Rojos",
+        }),
+        hint: Copy.text({
+          en: "scarlet, maroon, brick",
+          es: "escarlata, vino, labrillo",
+        }),
+        value: (100 * global.randRGB[0]) / 255,
+      },
+      {
+        choice: Copy.text({
+          en: "Greens",
+          es: "Verdes",
+        }),
+        hint: Copy.text({
+          en: "lime, army, mint",
+          es: "lima, olivo, menta",
+        }),
+        value: (100 * global.randRGB[1]) / 255,
+      },
+      {
+        choice: Copy.text({
+          en: "Blues",
+          es: "Azules",
+        }),
+        hint: Copy.text({
+          en: "sky, sapphire, navy",
+          es: "cielo, safiro, marino",
+        }),
+        value: (100 * global.randRGB[2]) / 255,
+      },
+    ],
+  },
+  {
+    question: Copy.text({
+      en: "Adjust your color preference given these tendencies.",
+      es: "Ajusta tu preferencia de color de acuerdo a estas tendencias.",
+    }),
+    options: [
+      [
+        {
+          choice: Copy.text({
+            en: "Neutral",
+            es: "Opaco",
+          }),
+        },
+        {
+          choice: Copy.text({
+            en: "Bright",
+            es: "Brillante",
+          }),
+        },
+      ],
+      [
+        {
+          choice: Copy.text({
+            en: "Dark",
+            es: "Oscuro",
+          }),
+        },
+        {
+          choice: Copy.text({
+            en: "Light",
+            es: "Claro",
+          }),
+        },
+      ],
+    ],
+  },
+];
 
-
-const frequencies = [Copy.text({
-  en: 'Rarely',
-  es: "Raramente",
-}), Copy.text({
-  en: 'Seldom',
-  es: "Poco",
-}), Copy.text({
-  en: 'At times',
-  es: "Pocas veces",
-}), Copy.text({
-  en: 'Sometimes',
-  es: "A veces",
-}), Copy.text({
-  en: 'Normally',
-  es: "Normalmente",
-}), Copy.text({
-  en: 'Frequently',
-  es: "Frecuentemente",
-}), Copy.text({
-  en: 'Generally',
-  es: "Generalmente",
-}), Copy.text({
-  en: 'Usually',
-  es: "Usualmente",
-}), Copy.text({
-  en: 'Always',
-  es: "Siempre",
-})];
+const frequencies = [
+  Copy.text({
+    en: "Rarely",
+    es: "Raramente",
+  }),
+  Copy.text({
+    en: "Seldom",
+    es: "Poco",
+  }),
+  Copy.text({
+    en: "At times",
+    es: "Pocas veces",
+  }),
+  Copy.text({
+    en: "Sometimes",
+    es: "A veces",
+  }),
+  Copy.text({
+    en: "Normally",
+    es: "Normalmente",
+  }),
+  Copy.text({
+    en: "Frequently",
+    es: "Frecuentemente",
+  }),
+  Copy.text({
+    en: "Generally",
+    es: "Generalmente",
+  }),
+  Copy.text({
+    en: "Usually",
+    es: "Usualmente",
+  }),
+  Copy.text({
+    en: "Always",
+    es: "Siempre",
+  }),
+];
 
 let mqCounter = 1;
 
-const modelQuestion = q => {
+const modelQuestion = (q) => {
   q.answers = [];
   q.name = _qCounter.value + mqCounter++;
   q.model = {
     a: {
-      name: 'q' + q.name,
+      name: "q" + q.name,
     },
     section: {
-      display: _qCounter.as(n => n >= q.name ? 'block' : 'none'),
-      marginTop: q.question ? '2em' : undefined,
-      borderRadius: '1em',
-      overflow: 'hidden',
-      h3: !q.question ? undefined : {
-        color: '#fff',
-        backgroundColor: style.darkScreen,
-        padding: '0.6em 1em',
-        text: q.question,
-      },
+      display: _qCounter.as((n) =>
+        n >= q.name - (!q.question ? 1 : 0) ? "block" : "none",
+      ),
+      marginTop: q.question ? "2em" : undefined,
+      borderRadius: "1em",
+      overflow: "hidden",
+      h3: !q.question
+        ? undefined
+        : {
+            color: "#fff",
+            backgroundColor: style.darkScreen,
+            padding: "0.6em 1em",
+            text: q.question,
+          },
       ul: {
         padding: 0,
-        display: 'flex',
-        flexDirection: 'column',
-        li: q.options.map(o => {
+        display: "flex",
+        flexDirection: "column",
+        li: q.options.map((o) => {
           var isVS = Array.isArray(o);
           if (!isVS) o = [o];
           var answer = new Binder(Math.round(o[0].value ? o[0].value : 50));
           q.answers.push(answer);
           return {
             backgroundColor: style.whiteScreen,
-            margin: '1px 0',
-            padding: '0.5em 0.6em 1em',
-            position: 'relative',
+            margin: "1px 0",
+            padding: "0.5em 0.6em 1em",
+            position: "relative",
             order: Math.floor(100 * Math.random()),
             label: {
               margin: `0 1em`,
-              display: 'flex',
-              flexDirection: 'row',
-              justifyContent: 'space-around',
-              div: o.map((option, i) => new Object({
-                div: {
-                  fontSize: '1.2rem',
-                  fontWeight: 'bold',
-                  fontFamily: 'title',
-                  marginTop: '0.5em',
-                  textShadow: 'none',
-                  span: [
-                    isVS && !i ? '← ' : undefined,
-                    option.choice,
-                    isVS && i ? ' →' : undefined,
-                  ],
-                },
-                p: {
-                  display: isVS && '!i' ? '← ' : undefined,
-                  textAlign: 'center',
-                  fontSize: 'small',
-                  text: option.hint ? `(${option.hint})` : undefined,
-                }
-              }))
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "space-around",
+              div: o.map(
+                (option, i) =>
+                  new Object({
+                    div: {
+                      fontSize: "1.2rem",
+                      fontWeight: "bold",
+                      fontFamily: "title",
+                      marginTop: "0.5em",
+                      textShadow: "none",
+                      span: [
+                        isVS && !i ? "← " : undefined,
+                        option.choice,
+                        isVS && i ? " →" : undefined,
+                      ],
+                    },
+                    p: {
+                      display: isVS && "!i" ? "← " : undefined,
+                      textAlign: "center",
+                      fontSize: "small",
+                      text: option.hint ? `(${option.hint})` : undefined,
+                    },
+                  }),
+              ),
             },
             section: {
-              display: 'flex',
-              justifyContent: 'space-between',
-              span: [{
-                display: isVS ? 'none' : 'block',
-                width: '18%',
-                maxWidth: '6em',
-                overflowX: 'hidden',
-                textOverflow: 'ellipsis',
-                fontSize: '0.7em',
-                color: '#0175ff',
-                text: answer.as(v => frequencies[Math.floor(v * frequencies.length / 100)]),
-              }, {
-                position: 'relative',
-                width: '-webkit-fill-available',
-                maxWidth: 'calc(100% - 6em)',
-                margin: '0 auto',
-                input: {
-                  height: '0.7em',
-                  width: '100%',
-                  type: 'range',
-                  appearance: isVS ? 'none' : undefined,
-                  min: 0,
-                  max: 100,
-                  value: answer.value,
-                  oninput: e => {
-                    answer.value = parseInt(e.target.value);
-                    updateResults();
-                  }
+              display: "flex",
+              justifyContent: "space-between",
+              span: [
+                {
+                  display: isVS ? "none" : "block",
+                  width: "18%",
+                  maxWidth: "6em",
+                  overflowX: "hidden",
+                  textOverflow: "ellipsis",
+                  fontSize: "0.7em",
+                  color: "#0175ff",
+                  text: answer.as(
+                    (v) =>
+                      frequencies[Math.floor((v * frequencies.length) / 100)],
+                  ),
                 },
-                div: {
-                  position: 'absolute',
-                  bottom: 0,
-                  left: 0,
-                  pointerEvents: 'none',
-                  display: 'flex',
-                  justifyContent: 'space-between',
-                  color: '#0175ff',
-                  width: '100%',
-                  fontSize: '0.7em',
-                  pointerEvents: 'none',
-                  b:' ··· '.split(''),
+                {
+                  position: "relative",
+                  width: "-webkit-fill-available",
+                  maxWidth: "calc(100% - 6em)",
+                  margin: "0 auto",
+                  input: {
+                    height: "0.7em",
+                    width: "100%",
+                    type: "range",
+                    appearance: isVS ? "none" : undefined,
+                    min: 0,
+                    max: 100,
+                    value: answer.value,
+                    oninput: (e) => {
+                      answer.value = parseInt(e.target.value);
+                      updateResults();
+                    },
+                  },
+                  div: {
+                    position: "absolute",
+                    bottom: 0,
+                    left: 0,
+                    pointerEvents: "none",
+                    display: "flex",
+                    justifyContent: "space-between",
+                    color: "#0175ff",
+                    width: "100%",
+                    fontSize: "0.7em",
+                    pointerEvents: "none",
+                    b: " ··· ".split(""),
+                  },
                 },
-              }, {
-                display: isVS ? 'none' : 'block',
-                width: '4em',
-                fontSize: '0.7em',
-                color: '#0175ff',
-                text: answer.as(v => v + '%'),
-              }],
+                {
+                  display: isVS ? "none" : "block",
+                  width: "4em",
+                  fontSize: "0.7em",
+                  color: "#0175ff",
+                  text: answer.as((v) => v + "%"),
+                },
+              ],
             },
-          }
-        })
-      }
+          };
+        }),
+      },
     },
-  }
+  };
   return q;
 };
 
-const samples = sampleQuestions.map(q => modelQuestion(q).model);
+const samples = sampleQuestions.map((q) => modelQuestion(q).model);
 const questions = new Binder(QUESTIONS.map(modelQuestion));
 
 export const questionnaire = {
   style: style.section,
   a: {
-    name: 'q-2',
+    name: "q-2",
   },
   header: {
     p: {
       style: style.floatingSign,
       backgroundColor: style.darkScreen,
-      color: 'white',
+      color: "white",
       html: Copy.text({
-        en: 'This questionnaire averages your answers and maps them to a state within the cube. Rate each option individually, but consider them in relation to the others in the same frame.',
-        es: 'Este cuestionario promedia tus respuestas y las asigna a un estado dentro del cubo. Califica cada opción de forma individual, pero considérelas en relación con las demás dentro del mismo bloque.'
-      })
+        en: "This questionnaire averages your answers and maps them to a state within the cube. Rate each option individually, but consider them in relation to the others in the same frame.",
+        es: "Este cuestionario promedia tus respuestas y las asigna a un estado dentro del cubo. Califica cada opción de forma individual, pero considérelas en relación con las demás dentro del mismo bloque.",
+      }),
     },
     h2: Copy.text({
       en: "Example<br/><small>(This won't influence your test results)</small>",
@@ -252,45 +285,54 @@ export const questionnaire = {
     }),
     section: samples,
     a: {
-      marginTop: '1em',
-      target: '_blank',
-      display: _qCounter.as(v => v < 0 ? 'none' : 'block'),
-      text: _favorite.as(v => Copy.text({
-        en: 'The RGB code for the resulting color is: ',
-        es: "El código RGB para el color resultante es:",
-      }) + v),
-      href: _favorite.as(v => './?rgb=' + v.substr(1)),
+      marginTop: "1em",
+      target: "_blank",
+      display: _qCounter.as((v) => (v < 0 ? "none" : "block")),
+      text: _favorite.as(
+        (v) =>
+          Copy.text({
+            en: "The RGB code for the resulting color is: ",
+            es: "El código RGB para el color resultante es:",
+          }) + v,
+      ),
+      href: _favorite.as((v) => "./?rgb=" + v.substr(1)),
     },
   },
   main: {
-    marginTop: '4em',
-    display: _qCounter.as(n => n >= 0 ? 'block' : 'none'),
+    marginTop: "4em",
+    display: _qCounter.as((n) => (n >= 0 ? "block" : "none")),
     a: {
-      name: 'q0',
+      name: "q0",
     },
     h2: Copy.text({
       en: "Questionaire<br/><small>(This won't influence the background color)</small>",
       es: "Cuestionario<br/><small>(Esto no influenciará el color de fondo)</small>",
     }),
-    section: questions.as(qs => qs.map(q => q.model)),
-  }
+    section: questions.as((qs) => qs.map((q) => q.model)),
+  },
 };
-
 
 const getAverage = (first, last) => {
   var output = Array(questions.value[first].answers.length).fill(0);
-  questions.value.filter((q, i) => i >= first && i <= last).forEach(q => output = output.plus(q.answers.map(a => !q.reverse ? a.value : 100 - a.value)));
-  return output.map(v => v / (last - first + 1));
-}
+  questions.value
+    .filter((q, i) => i >= first && i <= last)
+    .forEach(
+      (q) =>
+        (output = output.plus(
+          q.answers.map((a) => (!q.reverse ? a.value : 100 - a.value)),
+        )),
+    );
+  return output.map((v) => v / (last - first + 1));
+};
 
-const updateResults = _ => {
+const updateResults = (_) => {
   // Sample question favorite color
   _favorite.value = AUX.hex(
-    ...sampleQuestions[0].answers.map(v => v.value * 255 / 100),
-    ...sampleQuestions[1].answers.map(v => v.value)
+    ...sampleQuestions[0].answers.map((v) => (v.value * 255) / 100),
+    ...sampleQuestions[1].answers.map((v) => v.value),
   );
   //PRE results
-  let rgb = getAverage(0, 5).map(v => v * 255 / 100);
+  let rgb = getAverage(0, 5).map((v) => (v * 255) / 100);
   let light = getAverage(0, 9);
   let sat = getAverage(10, 13);
   //console.log(rgb, sats, lights, );
@@ -298,10 +340,13 @@ const updateResults = _ => {
   let G = AUX.rgb(AUX.hex(...rgb, sat[1], light[1]))[1];
   let B = AUX.rgb(AUX.hex(...rgb, sat[2], light[2]))[2];
   //_results.value = AUX.hex(R, G, B);
-  let [r, g, b] = AUX.rgb(AUX.hex(...rgb,
-    sat.reduce((o, v) => v + o, 0) / 3,
-    light.reduce((o, v) => v + o, 0) / 3,
-  ));
+  let [r, g, b] = AUX.rgb(
+    AUX.hex(
+      ...rgb,
+      sat.reduce((o, v) => v + o, 0) / 3,
+      light.reduce((o, v) => v + o, 0) / 3,
+    ),
+  );
   //_results.value = AUX.hex(r, g, b);
   _results.value = AUX.hex((R + r) / 2, (G + g) / 2, (B + b) / 2);
 };

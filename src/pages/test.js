@@ -56,13 +56,9 @@ export const siteTest = {
       ? "none"
       : questionnaire._qCounter.as((n) => (n > qTotal ? "none" : "block")),
     click: () => {
-      if (questionnaire._qCounter.value <= qTotal) {
-        questionnaire._qCounter.value += 1;
-        if ([10, 12].includes(questionnaire._qCounter.value)) {
-          questionnaire._qCounter.value += 1;
-        }
-        location.href = "#q" + questionnaire._qCounter.value;
-      }
+      questionnaire._qCounter.value +=
+        1 + ([11, 13].includes(questionnaire._qCounter.value) ? 1 : 0);
+      location.href = "#q" + questionnaire._qCounter.value;
     },
   },
   span: {
@@ -71,12 +67,10 @@ export const siteTest = {
     display: questionnaire._qCounter.as((n) => (n >= 0 ? "block" : "none")),
     text: questionnaire._qCounter.as((n) =>
       n >= 0
-        ? `${n > 11 ? 12 : n + (n < 10 ? 1 : 0)} ${Copy.text(
-            {
-              es: "de",
-              en: "of",
-            },
-          )} ${qTotal - 1}`
+        ? `${n > 11 ? 12 : n + (n < 10 ? 1 : 0)} ${Copy.text({
+            es: "de",
+            en: "of",
+          })} ${qTotal - 1}`
         : "...",
     ),
   },
