@@ -65,10 +65,10 @@ export const siteTest = {
       }
     },
   },
-  label: {
+  span: {
     margin: "-2em 0 2em",
-    textShadow: "0 0 1px white",
-    display: "block",
+    textShadow: "0 0 3px white",
+    display: questionnaire._qCounter.as((n) => (n >= 0 ? "block" : "none")),
     text: questionnaire._qCounter.as((n) =>
       n >= 0
         ? `${n > 11 ? 12 : n + (n < 10 ? 1 : 0)} ${Copy.text(

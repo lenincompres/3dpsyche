@@ -421,8 +421,8 @@ export const model = {
                     es: `También podrías desplazarte entre dos estados a ambos lados dentro de estos adyacentes, y que el test haya promediado erróneamente tu resultado en este, lo que podría sugerir que tu introversión va más allá de lo que indica este estado.`,
                   }),
               Copy.text({
-                en: `To learn to navigate this and other states of the 3D Psyche, please contact us (below) or consult our manifesto and educational dossier.`,
-                es: `Para aprender a explorar este y los demás estados de la Psique Tridimensional, contáctanos (más abajo) o refiérete a nuestro manifiesto y dossier educativo.`,
+                en: `To learn to navigate this and other states of the 3D Psyche, please contact us (below) or consult <a href="manifesto.html" target="_blank">our manifesto</a> and <a href="educationalDossier.pdf" target="_blank">educational dossier</a>.`,
+                es: `Para aprender a explorar este y los demás estados de la Psique Tridimensional, contáctanos (más abajo) o refiérete a <a href="manifesto.html" target="_blank">nuestro manifiesto</a> y <a href="dossierEducativo.pdf" target="_blank">dossier educativo</a>.`,
               }),
             ],
           };
