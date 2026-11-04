@@ -196,9 +196,9 @@ const bars = {
 };
 
 const FOCI = [
-  ["abstraction", "sensation", "action"],
-  ["instinction", "conception", "regulation"],
-  ["objectivation", "inspiration", "valuation"],
+  [Copy.at.abstraction, Copy.at.sensation, Copy.at.action],
+  [Copy.at.instinction, Copy.at.conception, Copy.at.regulation],
+  [Copy.at.objectivation, Copy.at.inspiration, Copy.at.valuation],
 ];
 const introText = (a) => {
   if (FOCI.map((f) => f[1]).includes(a)) return;
@@ -385,12 +385,12 @@ export const model = {
             p: [
               Copy.text({
                 en: [
-                  `The state with the ${copy.at.tone} (${copy.at.color}) color is ${copy.at.philosophy}—the state of ${copy.at.concept}. It represents a psyche focused on ${copy.at.focus.toLocaleLowerCase()}—an archetypical ${copy.at.archetype}, nurtured by environments such as ${copy.at.location}.`,
+                  `The state with the ${copy.at.tone} (${copy.at.color}) color is ${copy.at.philosophy}—the state of ${copy.at.concept}. It represents a psyche focused on ${copy.at.focus.toLocaleLowerCase()}—an archetypical ${copy.at.archetype}, nurtured by environments such as ${copy.at.location}. It's strength lies in the combination of ${FOCI[0][code[0]]}, ${FOCI[1][code[1]]}, and ${FOCI[2][code[2]]}.`,
                   `This state is ${Copy.at.observant} in ${only} ${["zero", "one", "two", "three"][ext]} of the three dimensions, which suggests a personality that is ${TENDECIES[ext]}. In this model, introversion is associated with internal and independent behavior, while extroversion implies openness to external or social influences. For this state: ${intros.join("; ").toLocaleLowerCase()}. ${extros}`,
                   `If you received this state in your test results and it feels somewhat accurate, consider which of the adjacent states is your second closest. You may find yourself split between the two. Sometimes, identity lies not in a single state, but in the habitual movement between several.`,
                 ],
                 es: [
-                  `El estado de color ${copy.at.tone} (${copy.at.color}) es ${copy.at.philosophy}, el estado de ${copy.at.concept}. Representa una psique enfocada en ${copy.at.focus.toLocaleLowerCase()}. Como su arquetipo de ${copy.at.archetype}, se fomenta en entornos de ${copy.at.location}.`,
+                  `El estado de color ${copy.at.tone} (${copy.at.color}) es ${copy.at.philosophy}, el estado de ${copy.at.concept}. Representa una psique enfocada en ${copy.at.focus.toLocaleLowerCase()}. Como su arquetipo de ${copy.at.archetype}, se fomenta en entornos de ${copy.at.location}. Su fortaleza radica en la combinacion de ${FOCI[0][code[0]]}, ${FOCI[1][code[1]]} y ${FOCI[2][code[2]]}.`,
                   `Este estado es ${Copy.at.observant} en ${only} ${["cero", "una", "dos", "tres"][ext]} de las tres dimensiones, lo que indica una personalidad ${TENDECIES[ext]}. En este modelo, la introversión se asocia con comportamientos internos e independientes, mientras que la extroversión implica apertura a influencias externas o sociales. Para este estado: ${intros.join("; ").toLowerCase()}. ${extros}`,
                   `Si obtuviste este estado en tus resultados y te parece un poco acertado, considera cuál de los estados adyacentes es el segundo más cercano a ti. Puede que te encuentres en medio de ambos. A veces, la identidad no reside en un solo estado, sino en el movimiento habitual entre varios.`,
                 ],
