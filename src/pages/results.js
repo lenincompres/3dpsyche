@@ -339,14 +339,16 @@ export const model = {
       justifyContent: "center",
       canvas: stateElt,
     },
-    ul: _feature.as((v) => ({
-      textAlign: "left",
-      margin: "0 auto",
-      width: "fit-content",
-      li: [...STATES[v.hexToCode()].code].map((n, i) =>
-        level(i, parseInt(n) || 0),
-      ),
-    })),
+    ul: {
+      content: _feature.as((v) => ({
+        textAlign: "left",
+        margin: "0 auto",
+        width: "fit-content",
+        li: [...STATES[v.hexToCode()].code].map((n, i) =>
+          level(i, parseInt(n) || 0),
+        ),
+      })),
+    },
     section: {
       content: [
         _copy.with(_feature).as((copy, hex) => {
@@ -449,12 +451,14 @@ export const model = {
         en: "Break down and extrapolation to other frameworks",
         es: "Desglose y extrapolación a otros sistemas.",
       }),
-      small: _feature.as((v) =>
-        Copy.text({
-          en: `RGB color code: ${v}`,
-          es: `Código de color RGB: ${v}`,
-        }),
-      ),
+      small: {
+        content: _feature.as((v) =>
+          Copy.text({
+            en: `RGB color code: ${v}`,
+            es: `Código de color RGB: ${v}`,
+          }),
+        ),
+      },
     },
     ul: {
       css: {
