@@ -166,7 +166,7 @@ const modelQuestion = (q) => {
             padding: "0.5em 0.6em 1em",
             position: "relative",
             order: Math.floor(100 * Math.random()),
-            label: {
+            div: {
               margin: `0 1em`,
               display: "flex",
               flexDirection: "row",

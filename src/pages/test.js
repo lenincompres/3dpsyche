@@ -56,15 +56,17 @@ export const siteTest = {
       ? "none"
       : questionnaire._qCounter.as((n) => (n > qTotal ? "none" : "block")),
     click: () => {
-      questionnaire._qCounter.value +=
-        1 + ([11, 13].includes(questionnaire._qCounter.value) ? 1 : 0);
+      questionnaire._qCounter.value += 1;
       location.href = "#q" + questionnaire._qCounter.value;
+      if([10, 12].includes(questionnaire._qCounter.value)) {
+        questionnaire._qCounter.value += 1;
+      }
     },
   },
   span: {
     margin: "-2em 0 2em",
     textShadow: "0 0 3px white",
-    display: questionnaire._qCounter.as((n) => (n >= 0 ? "block" : "none")),
+    display: questionnaire._qCounter.as((n) => (n >= 0 && n <= qTotal ? "block" : "none")),
     text: questionnaire._qCounter.as((n) =>
       n >= 0
         ? `${n > 11 ? 12 : n + (n < 10 ? 1 : 0)} ${Copy.text({
@@ -77,10 +79,15 @@ export const siteTest = {
   div: global.rgb
     ? undefined
     : {
+        text:Copy.text({
+          en: "↓ Scroll to see your results.",
+          es: "↓ Desplázate para ver tus resultados.",
+        }),
+        textShadow: "0 0 3px white",
         display: questionnaire._qCounter.as((n) =>
           n > qTotal ? "block" : "none",
         ),
-        height: `60rem`,
+        height: `65rem`,
         background: global.rgb
           ? global.rgb
           : results._feature.as(
@@ -116,8 +123,8 @@ export const siteTest = {
               zIndex: 1,
               text: results._feature.as((val) =>
                 Copy.text({
-                  en: `Closest state to the averaged color: ${val}`,
-                  es: `Estado más cercano al color promediado: ${val}`,
+                  en: `Closest state to your averaged color: ${val}`,
+                  es: `Estado más cercano a tu color promediado: ${val}`,
                 }),
               ),
             },
