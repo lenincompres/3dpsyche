@@ -409,7 +409,7 @@ export default [{
           es: "Alerta",
         }),
         hint: Copy.text({
-          en: "aware of your surroundings",
+          en: "stay aware of your surroundings",
           es: "consciente de tu entorno",
         }),
       },
@@ -419,7 +419,7 @@ export default [{
           es: "Inquisitivo/a",
         }),
         hint: Copy.text({
-          en: "look to question and clarify",
+          en: "ask questions and clarify",
           es: "buscas cuestionar y aclarar.",
         }),
       },

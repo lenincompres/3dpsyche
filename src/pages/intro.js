@@ -55,64 +55,76 @@ export default {
       },
       section: [{
           p: Copy.text({
-            en: `This psychometric tool maps your states of focus across three internal dimensions: <b style="color:darkred">physical</b> (${STYLE.getIcon('arrowDL')}), <b style="color:darkgreen">rational</b> (${STYLE.getIcon('arrowU')}) & <b style="color:darkblue">emotional</b> (${STYLE.getIcon('arrowDR')}). In each, we interact with the world through <b>observation</b>, <b>execution</b>, and <b>detachment</b>.`,
-            es: `Esta herramienta psicométrica asigna estados de enfoque a tres dimensiones en nuestro panorama interno: <b style="color:darkred">física</b> (${STYLE.getIcon('arrowDL')}), <b style="color:darkgreen">racional</b> (${STYLE.getIcon('arrowU')}) y <b style="color:darkblue">emocional</b> (${STYLE.getIcon('arrowDR')}). En cada una interactuamos con <b>observación</b>, <b>ejecución</b> y <b>desapego</b>.`,
+            en: `This psychometric tool maps your states of focus across three internal dimensions: <b style="color:darkred">physical</b> (${STYLE.getIcon('arrowDL')}), <b style="color:darkgreen">rational</b> (${STYLE.getIcon('arrowU')}) & <b style="color:darkblue">emotional</b> (${STYLE.getIcon('arrowDR')}). In each, we interact with the world through three modes of engagement: <b>observation</b>, <b>execution</b>, and <b>detachment</b>.`,
+            es: `Esta herramienta psicométrica asigna estados de enfoque a tres dimensiones en nuestro panorama interno: <b style="color:darkred">física</b> (${STYLE.getIcon('arrowDL')}), <b style="color:darkgreen">racional</b> (${STYLE.getIcon('arrowU')}) y <b style="color:darkblue">emocional</b> (${STYLE.getIcon('arrowDR')}). En cada una adoptamos tres modos de interacción: <b>observación</b>, <b>ejecución</b> y <b>desapego</b>.`,
           }),
         }, new Collapsable({
             div: [{
               h3: Copy.text({
-                en: 'Observation: how we take in information and stimuli.',
-                es: 'Observación: cómo asimilamos información y estímulos.',
+                en: 'Observation: our open and receptive mode',
+                es: 'Observación: nuestro modo abierto y receptivo.',
+              }),
+              package: Copy.text({
+                en: 'How we take in information and stimuli.',
+                es: 'Cómo asimilamos información y estímulos.',
               }),
               ul: {
                 li: Copy.text({
                   en: [
-                    `${colorBullet('#800', 'o')} Physical observation (sensation): sensory awareness of surroundings`,
-                    `${colorBullet('#080', 'o')} Rational observation (conception): grasping ideas, meanings, and patterns`,
-                    `${colorBullet('#008', 'o')} Emotional observation (inspiration): feeling moods, vibes, and empathy`,
+                    `${colorBullet('#800', 'o')} Physical observation (sensation): perceiving our immediate sensory surroundings.`,
+                    `${colorBullet('#080', 'o')} Rational observation (conception): contemplating ideas, meanings, and patterns.`,
+                    `${colorBullet('#008', 'o')} Emotional observation (inspiration): empathizing and perceiving affective states.`,
                   ],
                   es: [
                     `${colorBullet('#800', 'o')} Observación física (sensación): percibir el entorno sensorial inmediato.`,
-                    `${colorBullet('#080', 'o')} Observación racional (concepción): contemplar ideas, significados y datos.`,
-                    `${colorBullet('#008', 'o')} Observación emocional (inspiración): empatizar o percibir ánimos y vibras.`,
+                    `${colorBullet('#080', 'o')} Observación racional (concepción): contemplar ideas, significados y patrones.`,
+                    `${colorBullet('#008', 'o')} Observación emocional (inspiración): empatizar y percibir estados afectivos.`,
                   ]
                 }),
               },
             }, {
               h3: Copy.text({
-                en: 'Execution: how we reach conclusive judgments or behaviors.',
-                es: 'Ejecución: cómo creamos juicios concluyentes o comportamientos.',
+                en: 'Execution: our conclusive and resolving mode.',
+                es: 'Ejecución: nuestro modo conclusivo y resolutivo.',
+              }),
+              p: Copy.text({
+                en: 'How we reach conclusive judgments or behaviors.',
+                es: 'Cómo creamos juicios concluyentes o comportamientos.',
               }),
               ul: {
                 li: Copy.text({
                   en: [
-                    `${colorBullet('#d00', 'x')} Physical execution (action): exerting change on the environment`,
-                    `${colorBullet('#0d0', 'x')} Rational execution (regulation): arriving at thinking-based conclusions`,
-                    `${colorBullet('#00d', 'x')} Emotional execution (valuation): judging based on emotional affect`,
+                    `${colorBullet('#d00', 'x')} Physical execution (action): exerting change on the environment.`,
+                    `${colorBullet('#0d0', 'x')} Rational execution (regulation): establishing rules through reasoning.`,
+                    `${colorBullet('#00d', 'x')} Emotional execution (valuation): assigning importance through affect.`,
                   ],
                   es: [
-                    `${colorBullet('#d00', 'x')} Ejecución física (acción): ejercer cambios en el medio ambiente.`,
-                    `${colorBullet('#0d0', 'x')} Ejecución racional (regulación): concluir en base al pensamiento.`,
-                    `${colorBullet('#00d', 'x')} Ejecución emocional (valoración): apreciar basándonos en el afecto.`,
+                    `${colorBullet('#d00', 'x')} Ejecución física (acción): ejercer cambios en el entorno.`,
+                    `${colorBullet('#0d0', 'x')} Ejecución racional (regulación): establecer reglas mediante el pensamiento.`,
+                    `${colorBullet('#00d', 'x')} Ejecución emocional (valoración): asignar importancia según el afecto.`,
                   ],
                 }),
               },
             }, {
               h3: Copy.text({
-                en: `Detachment: how we neglect one dimension to focus on others.`,
-                es: `Desapego: cómo ignoramos una dimensión para centrarnos en otras.`,
+                en: `Detachment: our disengaging and withdrawing mode.`,
+                es: `Desapego: nuestro modo de retirada y desvinculación.`,
+              }),
+              p: Copy.text({
+                en: `How we neglect one dimension to focus on others.`,
+                es: `Cómo ignoramos una dimensión o dirigimos la atención a otras.`,
               }),
               ul: {
                 li: Copy.text({
                   en: [
-                    `${colorBullet('#300', '-')} Physical detachment (abstraction): halting action to reflect or imagine`,
-                    `${colorBullet('#030', '-')} Rational detachment (instinction): letting go of logic to trust intuition`,
-                    `${colorBullet('#003', '-')} Emotional detachment (objectivation): gaining clarity by pausing feelings`
+                    `${colorBullet('#300', '-')} Physical detachment (abstraction): suspending action to reflect or imagine.`,
+                    `${colorBullet('#030', '-')} Rational detachment (instinction): setting aside logic to trust intuition.`,
+                    `${colorBullet('#003', '-')} Emotional detachment (objectivation): distancing ourselves from feelings to gain clarity.`
                   ],
                   es: [
-                    `${colorBullet('#300', '-')} Desapego físico (abstracción): ayuda al análisis y a la creatividad.`,
-                    `${colorBullet('#030', '-')} Desapego racional (instinción): permite respuestas rápidas e intuitivas.`,
-                    `${colorBullet('#003', '-')} Desapego emocional (objetivación): proporciona claridad pragmática.`
+                    `${colorBullet('#300', '-')} Desapego físico (abstracción): suspender la acción para reflexionar o imaginar.`,
+                    `${colorBullet('#030', '-')} Desapego racional (instinción): dejar de lado la lógica para confiar en la intuición.`,
+                    `${colorBullet('#003', '-')} Desapego emocional (objetivación): distanciarse de los sentimientos para ganar claridad.`
                   ],
                 })
               }

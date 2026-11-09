@@ -269,8 +269,8 @@ export default {
             es: "verde puro",
         },
         tone: {
-            en: "green",
-            es: "verde",
+            en: "emerald",
+            es: "esmeralda",
         },
         mbti: "intp",
         location: {
@@ -744,8 +744,8 @@ export default {
             es: "rojo puro",
         },
         tone: {
-            en: "red",
-            es: "rojo",
+            en: "scarlet",
+            es: "escarlata",
         },
         mbti: "is-p",
         location: {
@@ -930,7 +930,7 @@ export default {
         },
         tone: {
             en: "pink",
-            es: "rosado",
+            es: "rosa",
         },
         mbti: "-sfj",
         location: {
