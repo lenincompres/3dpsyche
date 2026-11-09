@@ -151,7 +151,7 @@ export class State {
     if (!this.sketch) return;
     if (!this.image || !this.image.width) return this.sketch.loadImage('media/symbolsprite.png', img => this.image = img);
     let x = this.value;
-    let opacity = !this.interact ? 1 : 0.5 + Math.cos(3 * Math.cos(1.57 * x)) / 2;
+    let opacity = !this.interact ? 1 : 0.5 + Math.cos( 3.25 * Math.cos(1.57 * x)) / 2;
     let size = this.radius; // * (!this.interact ?  1 : this.sketch.map(opacity,0,1,0.68,1.14));
     this.onupdate(this);
     if (isNaN(this.post)) this.post = 0;
