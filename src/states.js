@@ -769,8 +769,8 @@ export default {
             es: "la expresividad"
         },
         archetype: {
-            en: "protagonist",
-            es: "protagonista",
+            en: "performer",
+            es: "intérprete",
         },
         field: {
             en: "histrionism",
