@@ -113,8 +113,8 @@ export default {
             es: "azul puro",
         },
         tone: {
-            en: "indigo",
-            es: "indigo",
+            en: "blue",
+            es: "azul",
         },
         mbti: "infp",
         location: {
@@ -150,8 +150,8 @@ export default {
             es: "verde oscuro",
         },
         tone: {
-            en: "emerald",
-            es: "esmeralda",
+            en: "forest",
+            es: "bosque",
         },
         mbti: "-ntp",
         location: {
@@ -269,8 +269,8 @@ export default {
             es: "verde puro",
         },
         tone: {
-            en: "emerald",
-            es: "esmeralda",
+            en: "green",
+            es: "verde",
         },
         mbti: "intp",
         location: {
@@ -634,8 +634,8 @@ export default {
             es: "verde amarillo",
         },
         tone: {
-            en: "lime",
-            es: "lima",
+            en: "chartreuse",
+            es: "chartreuse",
         },
         mbti: "--t-",
         location: {
@@ -744,8 +744,8 @@ export default {
             es: "rojo puro",
         },
         tone: {
-            en: "scarlet",
-            es: "escarlata",
+            en: "red",
+            es: "rojo",
         },
         mbti: "is-p",
         location: {
