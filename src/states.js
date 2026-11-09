@@ -757,20 +757,20 @@ export default {
         code: "201",
         coords: "x-o",
         focus: {
-            en: "Attitude and expression",
-            es: "la actitud y la expresión"
+            en: "Attitude and charisma",
+            es: "la actitud y la carisma"
         },
         philosophy: {
             en: "performative",
             es: "performativo"
         },
         concept: {
-            en: "expression",
-            es: "la expresión"
+            en: "expressiveness",
+            es: "la expresividad"
         },
         archetype: {
-            en: "performer",
-            es: "intérprete",
+            en: "protagonist",
+            es: "protagonista",
         },
         field: {
             en: "histrionism",

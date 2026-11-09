@@ -117,12 +117,12 @@ export default {
               ul: {
                 li: Copy.text({
                   en: [
-                    `${colorBullet('#300', '-')} Physical detachment (abstraction): suspending action to reflect or imagine.`,
+                    `${colorBullet('#300', '-')} Physical detachment (abstraction): disengaging from bodily experience in favor of thoughts.`,
                     `${colorBullet('#030', '-')} Rational detachment (instinction): setting aside logic to trust intuition.`,
                     `${colorBullet('#003', '-')} Emotional detachment (objectivation): distancing ourselves from feelings to gain clarity.`
                   ],
                   es: [
-                    `${colorBullet('#300', '-')} Desapego físico (abstracción): suspender la acción para reflexionar o imaginar.`,
+                    `${colorBullet('#300', '-')} Desapego físico (abstracción): obviar la experiencia corporal en favor del pensamiento.`,
                     `${colorBullet('#030', '-')} Desapego racional (instinción): dejar de lado la lógica para confiar en la intuición.`,
                     `${colorBullet('#003', '-')} Desapego emocional (objetivación): distanciarse de los sentimientos para ganar claridad.`
                   ],
