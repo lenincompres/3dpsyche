@@ -319,7 +319,7 @@ const _fixed = new Binder(false);
 
 export const model = {
   main: {
-    style: style.floatingSign,
+    css: style.floatingSign,
     position: "relative",
     padding: "1.5em",
     h2: {
